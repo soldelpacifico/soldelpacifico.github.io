@@ -28,7 +28,10 @@ nav {
 ul {
     list-style-type: none;
 }
-
+#Logo {
+    width: 333;
+    height: 66;
+}
 #txtLogo {
     font-size: 40px;
     font-family: 'Coneria Script';
@@ -39,16 +42,15 @@ ul {
 }
 
 #spnSol {
-    margin-right: 10.5%;
+    margin-right: 1.5%;
 }
 
 #bgLogo {
     background-image: linear-gradient(#ffff00, #ff0000);
     border-radius: 100%;
-    width: 98.08px;
+    width: 50.08px;
     margin: 0 0;
     padding: 2% 2% 0% 0%;
-    position: relative;
 }
 
 #spnDel {
