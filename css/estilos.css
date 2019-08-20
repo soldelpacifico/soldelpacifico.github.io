@@ -1,9 +1,24 @@
 * {
     margin: 0;
 }
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+
 @font-face {
     font-family: 'Coneria Script';
-    src: URL('Fonts/Demo_ConeriaScript.ttf') format('truetype');
+    src: URL('Fonts/Demo_ConeriaScript.ttf');
   }
 
 nav {
@@ -20,30 +35,31 @@ ul {
     text-decoration: none;
     color: #000000;
     text-align: center;
-    clear: both;
+    margin: 2% 5%;
 }
 
 #spnSol {
-    margin-right: 0.5%;
-    float: left;
+    margin-right: 10.5%;
 }
 
 #bgLogo {
     background-image: linear-gradient(#ffff00, #ff0000);
     border-radius: 100%;
-    width: 70px;
+    width: 98.08px;
     margin: 0 0;
-    padding: 20px 7px 0px 0px;
+    padding: 2% 2% 0% 0%;
     position: relative;
 }
 
 #spnDel {
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
+    margin-bottom: 10%;
+    margin-top: 7.5%;
 }
 
 #spnPacifico {
-    margin-left: 0.5%;
+    margin-left: 0;
 }
 
 nav ul {
@@ -101,19 +117,6 @@ nav a {
     height: 60%
 }
 
-@keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    95% {margin-left: -300%;}
-}
 
 footer {
     background-color: #9f0000;
