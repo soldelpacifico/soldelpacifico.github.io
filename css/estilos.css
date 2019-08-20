@@ -8,11 +8,6 @@
 
 nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 1% 20%
-}
-
-hr {
-    clear: both;
 }
 
 ul {
@@ -24,46 +19,43 @@ ul {
     font-family: 'Coneria Script';
     text-decoration: none;
     color: #000000;
-    margin: 1%;
     text-align: center;
-    float: left;
-
-}
-
-#logo {
-    background-image: linear-gradient(#ffff00, #ff0000);
-    border-radius: 100%;
-    font-size: 32px;
-    width: 70px;
-    margin: 0 0;
-    text-align: center;
-    padding: 20px 7px 0px 0px;
-}
-
-#txtLogo span {
-    margin: 0 1rem;
-}
-
-nav #logo {
-    width: 100%;
-}
-
-nav #menu {
     clear: both;
 }
 
-nav #menu ul {
+#spnSol {
+    margin-right: 0.5%;
+    float: left;
+}
+
+#bgLogo {
+    background-image: linear-gradient(#ffff00, #ff0000);
+    border-radius: 100%;
+    width: 70px;
+    margin: 0 0;
+    padding: 20px 7px 0px 0px;
+    position: relative;
+}
+
+#spnDel {
+    font-size: 32px;
+    text-align: center;
+}
+
+#spnPacifico {
+    margin-left: 0.5%;
+}
+
+nav ul {
     display: inline-block;
-    width: 40%;
-    margin: 0 30%;
 }
 
 nav li {
     display: inline-block;
     background-color: #e9e9e9;
     border-radius: 20px;
-    padding: 7px;
     color: #000000;
+    padding: 5px 3px;
 }
 
 nav li:hover {
@@ -93,7 +85,6 @@ nav a {
     display: flex;
     padding: 0;
     width: 400%;
-
     animation: cambio 15s infinite;
 }
 
@@ -107,7 +98,7 @@ nav a {
 }
 
 #slider #img1 {
-    height: 74.6%
+    height: 60%
 }
 
 @keyframes cambio {
@@ -125,23 +116,13 @@ nav a {
 }
 
 footer {
-    margin: 0;
-    width: 100%;
     background-color: #9f0000;
     text-decoration-color: #ffffff;
     color: #ffffff;
-    height: 25%;
 }
 
-footer div {
-    width: 50%;
-}
 
 footer a {
     text-decoration: none;
     color: #ffffff;
-}
-
-footer #Contacto {
-    float: left;
 }
