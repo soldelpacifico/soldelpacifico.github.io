@@ -21,6 +21,17 @@
     src: URL('Fonts/Demo_ConeriaScript.ttf');
   }
 
+@media (min-width:768px){
+    nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #000000;
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 20px;
+    }
+}
+
 nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -64,8 +75,10 @@ ul {
     margin-left: 0;
 }
 
-nav ul {
+#navegacion {
+    padding-inline-start: 0;
     display: inline-block;
+    margin: 20px auto;
 }
 
 nav li {
@@ -104,6 +117,7 @@ nav a {
     padding: 0;
     width: 400%;
     animation: cambio 15s infinite;
+    margin-top: 5px;
 }
 
 #slider li{
