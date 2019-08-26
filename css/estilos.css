@@ -1,147 +1,253 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
-@keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    95% {margin-left: -300%;}
+body {
+  min-width: 340px;
 }
 
 @font-face {
-    font-family: 'Coneria Script';
-    src: URL('Fonts/Demo_ConeriaScript.ttf');
+  font-family: "Coneria Script";
+  src: URL("Fonts/Demo_ConeriaScript.ttf");
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.show {
+  display: block !important;
+  visibility: visible;
+}
+
+@media (min-width:940px) {
+  #dpMenu{
+    display: none;
   }
-
-@media (min-width:768px){
-    nav a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #000000;
-        border-radius: 20px;
-        display: inline-block;
-        font-size: 20px;
-    }
 }
 
-nav {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@media (min-width: 940px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3%;
+  }
 }
 
-ul {
-    list-style-type: none;
-}
-#Logo {
-    width: 333;
-    height: 66;
-}
-#txtLogo {
-    font-size: 40px;
-    font-family: 'Coneria Script';
-    text-decoration: none;
-    color: #000000;
-    text-align: center;
-    margin: 2% 5%;
+.header > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
-#spnSol {
-    margin-right: 1.5%;
+.header nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#bgLogo {
-    background-image: linear-gradient(#ffff00, #ff0000);
-    border-radius: 100%;
-    width: 50.08px;
-    margin: 0 0;
-    padding: 2% 2% 0% 0%;
+.header nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.header .Logo {
+  text-align: center;
+}
+.header .Logo .txtLogo {
+  font-size: 40px;
+  font-family: "Coneria Script";
+  text-decoration: none;
+  color: #000000;
+  margin: 2% 5%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 940px) {
+  .header .Logo .txtLogo {
+    justify-content: flex-start;
+  }
 }
 
-#spnDel {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 10%;
-    margin-top: 7.5%;
+button {
+  font-weight: bold;
+  color: #000000;
+  border-radius: 20px;
+  padding: 0.75rem 2rem;
+  text-align: center;
 }
 
-#spnPacifico {
-    margin-left: 0;
+.mostrarMenu {
+  display: block;
+  visibility: visible;
 }
 
-#navegacion {
-    padding-inline-start: 0;
-    display: inline-block;
-    margin: 20px auto;
+.spnSol {
+  margin-right: 1.5%;
 }
 
-nav li {
-    display: inline-block;
-    background-color: #e9e9e9;
-    border-radius: 20px;
-    color: #000000;
-    padding: 5px 3px;
+.bgLogo {
+  background-image: linear-gradient(#ffff00, #ff0000);
+  border-radius: 100%;
+  width: 50.08px;
+  min-width: 50px;
+  margin: 0 0;
+  padding: 2% 2% 0% 0%;
+}
+
+.spnDel {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10%;
+  margin-top: 7.5%;
+}
+
+.spnPacifico {
+  margin-left: 0;
+}
+
+.navegacion {
+  margin: 0;
+  display: none;
+}
+
+@media (min-width: 940px) {
+  nav.navegacion ul {
+    display: flex;
+    justify-content: right;
+  }
+}
+
+.header nav li {
+  background-color: #e9e9e9;
+  border-radius: 20px;
+  color: #000000;
+
+  margin: 1rem;
+  transition: background-color 0.2s ease-in;
+}
+
+@media (min-width: 940px) {
+  .navegacion{
+    display: block;
+    visibility: visible;
+  }
 }
 
 nav li:hover {
-    background-color: #000000;
-    color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 nav li:hover a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #000000;
-    border-radius: 20px;
-    display: inline-block;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+  border-radius: 20px;
+  padding: 0.75rem 2rem;
+  text-align: center;
+}
+@media (min-width: 940px) {
+  nav a {
+    width: auto;
+  }
 }
 
-#slider {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
+/* =======================================
+@Section -> Slider
+==========================================*/
+
+.slider {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  height: 1000px;
 }
 
-#slider ul {
-    display: flex;
-    padding: 0;
-    width: 400%;
-    animation: cambio 15s infinite;
-    margin-top: 5px;
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 15s infinite;
+  margin-top: 5px;
 }
 
-#slider li{
-    width: 100%;
-    list-style: none;
+.slider li {
+  width: 100%;
+  list-style: none;
 }
 
-#slider img {
-    width: 100%;
+.slider img {
+  width: 100%;
 }
 
-#slider #img1 {
-    height: 60%
+.lider .img1 {
+  height: 60%;
 }
 
+/* =======================================
+@Section -> Footer
+==========================================*/
 
-footer {
-    background-color: #9f0000;
-    text-decoration-color: #ffffff;
-    color: #ffffff;
+.footer-info {
+  background-color: #9f0000;
+  text-decoration-color: #ffffff;
+  color: #ffffff;
+  padding: 4rem 4rem 8rem;
+  display: flex;
+  flex-direction: column;
 }
-
 
 footer a {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.contacto {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* =======================================
+@Section -> Animations
+==========================================*/
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }
 }
