@@ -14,7 +14,7 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 15px 5px;
 }
 
 .show {
@@ -196,6 +196,7 @@ nav a {
 
 .slider img {
   width: 100%;
+  height: auto;
 }
 
 .lider .img1 {
@@ -207,7 +208,7 @@ nav a {
 ==========================================*/
 
 .footer-info {
-  background-color: #9f0000;
+  background-color: #270000;
   text-decoration-color: #ffffff;
   color: #ffffff;
   padding: 4rem 4rem 8rem;
