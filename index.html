@@ -23,15 +23,22 @@
         <div class="spnPacifico">Pacífico</div>
       </a>
     </div>
-    <button id="dpMenu" onclick="mostrar()">
-      Menu
-    </button>
+    <div class="row">
+        <button id="dpMenu" onclick="mostrar()">
+          <div class="col-xs-6">
+            <img src="Images/Menu.png" alt="Menu" id="imgMenu">
+          </div>
+          <div class="col-xs-6" id="btxtMenu">
+            <span>Menu</span>
+            </div>
+        </button>
+    </div>
     <nav class="navegacion">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="tarifas.html">Tarifas</a></li>
         <li><a href="Contacto.html">Contacto</a></li>
-        <li><a href="#Contacto">About</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </nav>
   </header>
@@ -51,7 +58,7 @@
     </div>
   </article>
   <hr />
-  <footer class="footer-info">
+  <footer class="footer-info" id="about">
     <div class="contacto">
       <h3>Informacion de Contacto</h3>
       <ul>
