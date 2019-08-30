@@ -22,17 +22,17 @@ body {
   visibility: visible;
 }
 
-@media (min-width:940px) {
+@media (min-width:1100px) {
   #dpMenu{
     display: none;
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 1100px) {
   .header {
     flex-direction: row;
     justify-content: space-between;
-    padding: 3%;
+    padding: 10px 2%;
   }
 }
 
@@ -49,6 +49,7 @@ body {
 .header nav ul {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 20px;
 }
 .header .Logo {
   text-align: center;
@@ -62,7 +63,7 @@ body {
   display: flex;
   justify-content: center;
 }
-@media (min-width: 940px) {
+@media (min-width: 1100px) {
   .header .Logo .txtLogo {
     justify-content: flex-start;
   }
@@ -71,8 +72,8 @@ body {
 button {
   font-weight: bold;
   color: #000000;
-  border-radius: 20px;
-  padding: 0.4rem 1rem;
+  border-radius: 0px;
+  padding: 0.4rem 0;
   text-align: center;
   width: 100%;
   display: flex;
@@ -123,7 +124,7 @@ button {
   display: none;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 1100px) {
   nav.navegacion ul {
     display: flex;
     justify-content: right;
@@ -132,14 +133,21 @@ button {
 
 .header nav li {
   background-color: #e9e9e9;
-  border-radius: 20px;
   color: #000000;
-
-  margin: 1rem;
+  margin: 2px auto;
   transition: background-color 0.2s ease-in;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 1100px) {
+  .header nav li {
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    color: #000000;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1100px) {
   .navegacion{
     display: block;
     visibility: visible;
@@ -164,7 +172,7 @@ nav a {
   padding: 0.75rem 2rem;
   text-align: center;
 }
-@media (min-width: 940px) {
+@media (min-width: 1100px) {
   nav a {
     width: auto;
   }
@@ -178,7 +186,7 @@ nav a {
   width: 100%;
   margin: 0;
   overflow: hidden;
-  height: 1000px;
+  height: auto;
 }
 
 .slider ul {
