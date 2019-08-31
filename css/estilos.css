@@ -146,6 +146,9 @@ button {
     margin: auto;
   }
 }
+/* =======================================
+----------------Nav-----------------------
+==========================================*/
 
 @media (min-width: 1100px) {
   .navegacion{
@@ -179,7 +182,7 @@ nav a {
 }
 
 /* =======================================
-@Section -> Slider
+----------------Slider--------------------
 ==========================================*/
 
 .slider {
@@ -212,8 +215,12 @@ nav a {
 }
 
 /* =======================================
-@Section -> Footer
+----------------Footer--------------------
 ==========================================*/
+
+footer ul{
+  list-style-type: none;
+}
 
 .footer-info {
   background-color: #270000;
@@ -241,7 +248,44 @@ footer a {
 }
 
 /* =======================================
-@Section -> Animations
+----------------Redes Sociales------------
+==========================================*/
+
+#social-media {
+  justify-content: center;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.fa-facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: linear-gradient(#405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+  color: white;
+}
+
+/* =======================================
+----------------Animations----------------
 ==========================================*/
 
 @keyframes cambio {
