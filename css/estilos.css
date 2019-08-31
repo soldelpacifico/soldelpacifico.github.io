@@ -215,6 +215,21 @@ nav a {
 }
 
 /* =======================================
+----------------Content-------------------
+==========================================*/
+article h1 {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 50px;
+}
+
+article p {
+  margin: 10px 10%;
+  text-align: justify;
+  font-size: 20px;
+}
+
+/* =======================================
 ----------------Footer--------------------
 ==========================================*/
 
@@ -223,7 +238,7 @@ footer ul{
 }
 
 .footer-info {
-  background-color: #270000;
+  background-color: #212121;
   text-decoration-color: #ffffff;
   color: #ffffff;
   padding: 4rem 4rem 8rem;
