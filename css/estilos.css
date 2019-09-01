@@ -232,6 +232,17 @@ article p {
   font-weight: 300;
 }
 
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid #000000;
+  padding: 0.5em;
+  margin: 0;
+}
+
 /* =======================================
 ----------------Footer--------------------
 ==========================================*/
