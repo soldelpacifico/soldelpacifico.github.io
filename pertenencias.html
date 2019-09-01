@@ -50,10 +50,19 @@
     <h3>¿Se te perdio algo dentro de un bus?</h3>
     <p>Comunicate con nosotros para ver si te podemos ayudar...</p>
     <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
-        <input type="text" name="Nombre Completo" placeholder="Nombre Completo">
-        <input type="email" name="Correo" placeholder="Correo Electronico">
-        <input type="text">
-        <input type="submit" value="Send">
+        <input type="text" name="Nombre Completo" placeholder="Nombre Completo"required="required">
+        <input type="email" name="Correo" placeholder="Correo Electronico" required="required">
+        <input type="text" name="Rut" placeholder="Rut(12345678-9)"required="required" pattern="\d{3,8}-[\d|kK]{1}">
+        <input type="number" name="Telefono" placeholder="Telefono" required="required">
+        <input type="number" name="Nro Boleto" placeholder="Nro Boleto">
+        <input type="number" name="Valor Boleto" placeholder="Valor Boleto">
+        <h4>Detalles del extravio</h4>
+        <input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus">
+        <input type="datetime-local" name="Fecha y hora" required="required">
+        <input type="text" name="Lugar del bus" placeholder="Lugar del bus donde extravio">
+        <textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea>
+        <p></p>
+        <input type="submit" value="Enviar">
       </form>
   </article>
   <hr />

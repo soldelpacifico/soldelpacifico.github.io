@@ -224,6 +224,12 @@ article h1 {
   font-size: 50px;
 }
 
+article h3 {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 40px;
+}
+
 article p {
   margin: 20px 10%;
   text-align: justify;
