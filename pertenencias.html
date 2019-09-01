@@ -50,18 +50,17 @@
     <h3>¿Se te perdio algo dentro de un bus?</h3>
     <p>Comunicate con nosotros para ver si te podemos ayudar...</p>
     <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
-        <input type="text" name="Nombre Completo" placeholder="Nombre Completo"required="required">
-        <input type="email" name="Correo" placeholder="Correo Electronico" required="required">
-        <input type="text" name="Rut" placeholder="Rut(12345678-9)"required="required" pattern="\d{3,8}-[\d|kK]{1}">
-        <input type="number" name="Telefono" placeholder="Telefono" required="required">
-        <input type="number" name="Nro Boleto" placeholder="Nro Boleto">
-        <input type="number" name="Valor Boleto" placeholder="Valor Boleto">
+        <p>Nombre Completo </p><input type="text" name="Nombre Completo" placeholder="Javier Robles Cepeda"required="required">
+        <p>Correo </p><input type="email" name="Correo" placeholder="JavierRoblesC@hotmail.com" required="required">
+        <p>Rut </p><input type="text" name="Rut" placeholder="12345678-9"required="required" pattern="\d{3,8}-[\d|kK]{1}">
+        <p>Telefono </p><input type="number" name="Telefono" placeholder="569 12345678" required="required" minlength="8">
+        <p>Numero de Boleto </p><input type="number" name="Nro Boleto" placeholder="05715764">
+        <p>Valor Boleto $</p><input type="number" name="Valor Boleto" placeholder="1700">
         <h4>Detalles del extravio</h4>
-        <input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus">
-        <input type="datetime-local" name="Fecha y hora" required="required">
-        <input type="text" name="Lugar del bus" placeholder="Lugar del bus donde extravio">
-        <textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea>
-        <p></p>
+        <p>Lugar de Abordo </p><input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus">
+        <p>Fecha del Abordo </p><input type="datetime-local" name="Fecha y hora" required="required">
+        <p>Lugar en el bus </p><input type="text" name="Lugar del bus" placeholder="Lugar en el bus donde extravio algo">
+        <p>Detalles objeto </p><textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea>
         <input type="submit" value="Enviar">
       </form>
   </article>
