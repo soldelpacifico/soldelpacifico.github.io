@@ -4,6 +4,7 @@
 
 body {
   min-width: 340px;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 @font-face {
@@ -224,9 +225,11 @@ article h1 {
 }
 
 article p {
-  margin: 10px 10%;
+  margin: 20px 10%;
   text-align: justify;
-  font-size: 20px;
+  font-size: 24px;
+  color: #373a41;
+  font-weight: 300;
 }
 
 /* =======================================
@@ -241,7 +244,7 @@ footer ul{
   background-color: #212121;
   text-decoration-color: #ffffff;
   color: #ffffff;
-  padding: 4rem 4rem 8rem;
+  padding: 4rem 4rem 1rem;
   display: flex;
   flex-direction: column;
 }
