@@ -25,7 +25,7 @@
         <div class="spnPacifico">Pacífico</div>
       </a>
     </div>
-    <div>
+    <div >
         <button id="dpMenu" onclick="mostrar()">
             <img src="Images/Menu.png" alt="Menu" id="imgMenu">
           <div id="btxtMenu">
@@ -49,20 +49,23 @@
   <article>
     <h3>¿Se te perdio algo dentro de un bus?</h3>
     <p>Comunicate con nosotros para ver si te podemos ayudar...</p>
-    <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
-        <p>Nombre Completo </p><input type="text" name="Nombre Completo" placeholder="Javier Robles Cepeda"required="required">
-        <p>Correo </p><input type="email" name="Correo" placeholder="JavierRoblesC@hotmail.com" required="required">
-        <p>Rut </p><input type="text" name="Rut" placeholder="12345678-9"required="required" pattern="\d{3,8}-[\d|kK]{1}">
-        <p>Telefono </p><input type="number" name="Telefono" placeholder="569 12345678" required="required" minlength="8">
-        <p>Numero de Boleto </p><input type="number" name="Nro Boleto" placeholder="05715764">
-        <p>Valor Boleto $</p><input type="number" name="Valor Boleto" placeholder="1700">
+    <div id="form">
+      <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
+        <h4>Informacion Personal</h4>
+        <div class="linea"><span>Nombre Completo </span><input type="text" name="Nombre Completo" placeholder="Javier Robles Cepeda"required="required"></div><br>
+        <div class="linea"><span>Correo </span><input type="email" name="Correo" placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
+        <div class="linea"><span>Rut </span><input type="text" name="Rut" placeholder="12345678-9"required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
+        <div class="linea"><span>Telefono </span><input type="number" name="Telefono" placeholder="569 12345678" required="required" minlength="8"></div><br>
+        <div class="linea"><span>Numero de Boleto </span><input type="number" name="Nro Boleto" placeholder="05715764"></div><br>
+        <div class="linea"><span>Valor Boleto $</span><input type="number" name="Valor Boleto" placeholder="1700"></div><br>
         <h4>Detalles del extravio</h4>
-        <p>Lugar de Abordo </p><input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus">
-        <p>Fecha del Abordo </p><input type="datetime-local" name="Fecha y hora" required="required">
-        <p>Lugar en el bus </p><input type="text" name="Lugar del bus" placeholder="Lugar en el bus donde extravio algo">
-        <p>Detalles objeto </p><textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea>
-        <input type="submit" value="Enviar">
+        <div class="linea"><span>Lugar de Abordo </span><input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus"></div><br>
+        <div class="linea"><span>Fecha del Abordo </span><input type="datetime-local" name="Fecha y hora" required="required"></div><br>
+        <div class="linea"><span>Lugar en el bus </span><input type="text" name="Lugar del bus" placeholder="Lugar en el bus donde extravio algo"></div><br>
+        <div class="linea"><span>Detalles objeto </span><textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
+        <input type="submit" value="ENVIAR" id="btnSubmit">
       </form>
+    </div>
   </article>
   <hr />
   <footer class="footer-info" id="about">
