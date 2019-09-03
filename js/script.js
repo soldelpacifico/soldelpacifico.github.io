@@ -5,7 +5,7 @@ function mostrar(){
 function changeBg(elemento ,colorUno, ColorDos){
     $(elemento).animate({
 		backgroundColor: colorUno
-    }, 1000 );
+    }, 500 );
     $(elemento).animate({
 		backgroundColor: ColorDos
 	}, 1000 );
@@ -14,7 +14,7 @@ function changeBg(elemento ,colorUno, ColorDos){
 function irhacia(id){
     $('html, body').animate({
         scrollTop: $(id).offset().top
-    }, 2000);
+    }, 1500);
 }
 
 function about(){

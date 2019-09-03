@@ -12,11 +12,6 @@ body {
   src: URL("Fonts/Demo_ConeriaScript.ttf");
 }
 
-.boxej {
-  width: 100%;
-  height: 1000px;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -48,7 +43,7 @@ body {
   flex-basis: auto;
 }
 
-.header nav {
+nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -188,6 +183,22 @@ nav a {
   }
 }
 
+.navtarifa{
+  background: #e4e4e4;
+}
+
+.navtarifa ul{
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+.navtarifa ul li {
+  width: 100%;
+  justify-content: center;
+}
+
+
 /* =======================================
 ----------------Slider--------------------
 ==========================================*/
@@ -235,6 +246,10 @@ article h3 {
 
 article h4 {
   margin-bottom: 10px;
+}
+
+article h5 {
+  font-size: 30px;
 }
 
 article p {
@@ -294,6 +309,38 @@ article #form {
   font-size: 20px;
   font-weight: bold;
 }
+
+/* =======================================
+----------------Pases---------------------
+==========================================*/
+
+#contenerdorPases{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+@media (min-width: 1100px) {
+  #contenedorPases{
+    display: none;
+  }
+}
+
+.contPase {
+  background: #d3d3d3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contPase p {
+  font-size: 15px;
+}
+
 /* =======================================
 ----------------Footer--------------------
 ==========================================*/
