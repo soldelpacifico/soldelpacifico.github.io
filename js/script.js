@@ -36,3 +36,18 @@ function horarios(){
     irhacia("#horarios");
     changeBg("#horarios", "#000000", "#ffffff");
 }
+
+window.onscroll = function() {arrastrarPagina()};
+
+function arrastrarPagina() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnSubir").style.display = "block";
+  } else {
+    document.getElementById("btnSubir").style.display = "none";
+  }
+}
+
+function subir() {
+  document.body.scrollTop = 0; // Para Safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE and Opera
+}

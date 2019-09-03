@@ -15,6 +15,7 @@
 </head>
 
 <body class="layout">
+  <button onclick="subir()" id="btnSubir" title="Subir">^</button>
   <header class="header">
     <div class="Logo">
       <a class="txtLogo" href="index">
@@ -52,17 +53,17 @@
     <div id="form">
       <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
         <h4>Informacion Personal</h4>
-        <div class="linea"><span>Nombre Completo </span><input type="text" name="Nombre Completo" placeholder="Javier Robles Cepeda"required="required"></div><br>
-        <div class="linea"><span>Correo </span><input type="email" name="Correo" placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
-        <div class="linea"><span>Rut </span><input type="text" name="Rut" placeholder="12345678-9"required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
-        <div class="linea"><span>Telefono </span><input type="number" name="Telefono" placeholder="569 12345678" required="required" minlength="8"></div><br>
-        <div class="linea"><span>Numero de Boleto </span><input type="number" name="Nro Boleto" placeholder="05715764"></div><br>
-        <div class="linea"><span>Valor Boleto $</span><input type="number" name="Valor Boleto" placeholder="1700"></div><br>
+        <div class="linea"><label for="Nombre Completo">Nombre Completo </label><input type="text" name="Nombre Completo" placeholder="Javier Robles Cepeda"required="required"></div><br>
+        <div class="linea"><label for="Correo">Correo </label><input type="email" name="Correo" placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
+        <div class="linea"><label for="Rut">Rut </label><input type="text" name="Rut" placeholder="12345678-9"required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
+        <div class="linea"><label for="Telefono">Telefono </label><input type="number" name="Telefono" placeholder="569 12345678" required="required" minlength="8"></div><br>
+        <div class="linea"><label for="Nro Boleto">Numero de Boleto </label><input type="number" name="Nro Boleto" placeholder="05715764"></div><br>
+        <div class="linea"><label for="Valor Boleto">Valor Boleto $</label><input type="number" name="Valor Boleto" placeholder="1700"></div><br>
         <h4>Detalles del extravio</h4>
-        <div class="linea"><span>Lugar de Abordo </span><input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus"></div><br>
-        <div class="linea"><span>Fecha del Abordo </span><input type="datetime-local" name="Fecha y hora" required="required"></div><br>
-        <div class="linea"><span>Lugar en el bus </span><input type="text" name="Lugar del bus" placeholder="Lugar en el bus donde extravio algo"></div><br>
-        <div class="linea"><span>Detalles objeto </span><textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
+        <div class="linea"><label for="Lugar de Abordo">Lugar de Abordo </label><input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus"></div><br>
+        <div class="linea"><label for="Fecha y hora">Fecha del Abordo </label><input type="datetime-local" name="Fecha y hora" required="required"></div><br>
+        <div class="linea"><label for="Lugar del bus">Lugar en el bus </label><input type="text" name="Lugar del bus" placeholder="Lugar en el bus donde extravio algo"></div><br>
+        <div class="linea"><label for="Detalles objeto">Detalles objeto </label><textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
         <input type="submit" value="ENVIAR" id="btnSubmit">
       </form>
     </div>
