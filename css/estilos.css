@@ -12,6 +12,11 @@ body {
   src: URL("Fonts/Demo_ConeriaScript.ttf");
 }
 
+.boxej {
+  width: 100%;
+  height: 1000px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
