@@ -2,13 +2,13 @@ function mostrar(){
     $("nav").toggleClass("show")
 }
 
-function changeBg(elemento ,colorUno, ColorDos){
+function changeBg(elemento){
     $(elemento).animate({
-		backgroundColor: colorUno
+		opacity: 0
     }, 500 );
     $(elemento).animate({
-		backgroundColor: ColorDos
-	}, 1000 );
+		opacity: 100
+	}, 8000 );
 }
 
 function irhacia(id){
@@ -19,22 +19,22 @@ function irhacia(id){
 
 function about(){
     irhacia("#about");
-    changeBg("#about","#ffffff", "#212121");
+    changeBg("#about");
 }
 
 function tarifas(){
     irhacia("#tarifas");
-    changeBg("#tarifas", "#000000", "#ffffff");
+    changeBg("#tarifas");
 }
 
 function pases(){
     irhacia("#pases");
-    changeBg("#pases", "#000000", "#ffffff");
+    changeBg("#pases");
 }
 
 function horarios(){
     irhacia("#horarios");
-    changeBg("#horarios", "#000000", "#ffffff");
+    changeBg("#horarios");
 }
 
 window.onscroll = function() {arrastrarPagina()};
