@@ -3,12 +3,8 @@ function mostrar(){
 }
 
 function changeBg(elemento){
-    $(elemento).animate({
-		opacity: 0
-    }, 500 );
-    $(elemento).animate({
-		opacity: 100
-	}, 8000 );
+    $(elemento).fadeOut(0);
+    $(elemento).fadeIn(2000);
 }
 
 function irhacia(id){
