@@ -4,7 +4,7 @@ function mostrar(){
 
 function changeBg(elemento){
     $(elemento).fadeOut(0);
-    $(elemento).fadeIn(2000);
+    $(elemento).fadeIn(2200);
 }
 
 function irhacia(id){
