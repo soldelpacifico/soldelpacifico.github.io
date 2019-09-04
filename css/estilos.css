@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -347,6 +348,7 @@ article #form {
 #contenerdorPases{
   display: flex;
   flex-wrap: wrap;
+  justify-content: justify;
 }
 
 .contPase {
@@ -396,6 +398,14 @@ footer a {
   }
 }
 
+#info li{
+  margin: 10px 0;
+}
+
+#info li img {
+  width: 20px;
+  margin-right: 5px;
+}
 /* =======================================
 ----------------Redes Sociales------------
 ==========================================*/
