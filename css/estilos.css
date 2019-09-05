@@ -18,6 +18,12 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1100ffef;
+}
+
 @font-face {
     font-family: "Coneria Script";
     src: URL("Fonts/Demo_ConeriaScript.ttf");
@@ -375,6 +381,7 @@ article #form {
 #pases p {
     font-size: 18px;
     color: #000000;
+    margin: 5px 15px;
 }
 
 .row > div {
