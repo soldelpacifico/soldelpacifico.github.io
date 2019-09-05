@@ -199,6 +199,7 @@ button {
 nav li:hover {
     background-color: #000000;
     color: #ffffff;
+    box-shadow:0 10px 15px 0 rgba(0, 0, 0, 0.452);
 }
 
 nav li:hover a {
@@ -507,4 +508,8 @@ footer a {
     95% {
         margin-left: -300%;
     }
+}
+
+input[type=submit]:hover,  {
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
 }
