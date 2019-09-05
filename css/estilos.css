@@ -29,6 +29,10 @@ input[type=number] {
     padding: 15px 5px;
 }
 
+.negrita{
+    font-weight: bold;
+}
+
 .show {
     display: block !important;
     visibility: visible;
