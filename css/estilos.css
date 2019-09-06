@@ -105,6 +105,10 @@ button {
     height: 40px;
 }
 
+#subir {
+    width: 20px;
+}
+
 #btnSubir {
     display: none;
     position: fixed;
@@ -122,8 +126,7 @@ button {
 }
 
 #btnSubir:hover {
-    background-color: #555;
-    /* Add a dark-grey background on hover */
+    background-color: #555555;
 }
 
 #btxtMenu {
@@ -209,7 +212,7 @@ button {
 nav li:hover {
     background-color: #000000;
     color: #ffffff;
-    box-shadow:0 10px 15px 0 rgba(0, 0, 0, 0.452);
+    box-shadow:0 5px 10spx 0 rgba(0, 0, 0, 0.507);
 }
 
 nav li:hover a {
@@ -257,6 +260,7 @@ nav a {
     margin: 0;
     overflow: hidden;
     height: auto;
+    max-height: 750px;
 }
 
 .slider ul {
@@ -270,11 +274,14 @@ nav a {
 .slider li {
     width: 100%;
     list-style: none;
+    justify-content: center;
+    display: flex;
 }
 
 .slider img {
     width: 100%;
     height: auto;
+    max-width: 1350px;
 }
 
 
