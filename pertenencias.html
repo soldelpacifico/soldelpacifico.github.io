@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,13 +10,13 @@
   <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css" />
   <link rel="stylesheet" type="text/css" href="css/estilos.css" />
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon.png">
-  <script language="javascript" type="text/javascript"src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
-  <script src="js/script.js" type="text/javascript"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body class="layout">
-  <button onclick="subir()" id="btnSubir" title="Subir"><img src="Images/up.png" id="subir"></button>
+  <button onclick="subir()" id="btnSubir" title="Subir"><img src="Images/up.png" id="subir" alt="top"></button>
   <header class="header">
     <div class="Logo">
       <a class="txtLogo" href="index">
@@ -27,13 +27,11 @@
         <div class="spnPacifico">Pacífico</div>
       </a>
     </div>
-    <div >
-        <button id="dpMenu" onclick="mostrar()">
-            <img src="Images/Menu.png" alt="Menu" id="imgMenu">
-          <div id="btxtMenu">
-            <span>Menu</span>
-            </div>
-        </button>
+    <div>
+      <button id="dpMenu" onclick="mostrar()">
+        <img src="Images/Menu.png" alt="Menu" id="imgMenu">
+          <span id="btxtMenu">Menu</span>
+      </button>
     </div>
     <nav class="navegacion">
       <ul>
@@ -54,17 +52,27 @@
     <div id="form">
       <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
         <h4>Informacion Personal</h4>
-        <div class="linea"><label for="Nombre Completo">Nombre Completo </label><input type="text" name="Nombre Completo" placeholder="Javier Robles Cepeda"required="required"></div><br>
-        <div class="linea"><label for="Correo">Correo </label><input type="email" name="Correo" placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
-        <div class="linea"><label for="Rut">Rut </label><input type="text" name="Rut" placeholder="12345678-9"required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
-        <div class="linea"><label for="Telefono">Teléfono </label><input type="number" name="Telefono" placeholder="569 12345678" required="required" minlength="8"></div><br>
-        <div class="linea"><label for="Nro Boleto">Número de Boleto </label><input type="number" name="Nro Boleto" placeholder="05715764"></div><br>
-        <div class="linea"><label for="Valor Boleto">Valor Boleto $</label><input type="number" name="Valor Boleto" placeholder="1700"></div><br>
+        <div class="linea"><label for="NombreCompleto">Nombre Completo </label><input type="text"
+            id="NombreCompleto" placeholder="Javier Robles Cepeda" required="required"></div><br>
+        <div class="linea"><label for="Correo">Correo </label><input type="email" id="Correo"
+            placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
+        <div class="linea"><label for="Rut">Rut </label><input type="text" id="Rut" placeholder="12345678-9"
+            required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
+        <div class="linea"><label for="Telefono">Teléfono </label><input type="tel" id="Telefono"
+            placeholder="569 12345678" required="required" minlength="8"></div><br>
+        <div class="linea"><label for="NroBoleto">Número de Boleto </label><input type="number" id="NroBoleto"
+            placeholder="05715764"></div><br>
+        <div class="linea"><label for="ValorBoleto">Valor Boleto $</label><input type="number" id="ValorBoleto"
+            placeholder="1700"></div><br>
         <h4>Detalles del extravío</h4>
-        <div class="linea"><label for="Lugar de Abordo">Lugar de Abordaje </label><input type="text" name="Lugar de Abordo" placeholder="Lugar donde abordo el bus"></div><br>
-        <div class="linea"><label for="Fecha y hora">Fecha del Abordaje </label><input type="datetime-local" name="Fecha y hora" required="required"></div><br>
-        <div class="linea"><label for="Lugar del bus">Lugar en el bus </label><input type="text" name="Lugar del bus" placeholder="Lugar en el bus donde extravio algo"></div><br>
-        <div class="linea"><label for="Detalles objeto">Detalles objeto </label><textarea type="text" name="Detalles objeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
+        <div class="linea"><label for="LugarAbordo">Lugar de Abordaje </label><input type="text"
+            id="LugarAbordo" placeholder="Lugar donde abordo el bus"></div><br>
+        <div class="linea"><label for="FechaHora">Fecha del Abordaje </label><input type="datetime-local"
+            id="FechaHora" required="required"></div><br>
+        <div class="linea"><label for="LugarBus">Lugar en el bus </label><input type="text" id="LugarBus"
+            placeholder="Lugar en el bus donde extravio algo"></div><br>
+        <div class="linea"><label for="DetallesObjeto">Detalles objeto </label><textarea
+            id="DetallesObjeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
         <input type="submit" value="ENVIAR" id="btnSubmit">
       </form>
     </div>
@@ -74,16 +82,23 @@
     <div class="contacto">
       <h3>Empresa de Transportes y Servicios Rurales Sol del Pacífico.</h3>
       <ul id="info">
-        <li><a href="mailto:secretaria@soldelpacifico.cl"><img src="Images/email.png"><span class="negrita">Correo</span>: secretaria@soldelpacifico.cl</a></li>
-        <li><a href="tel:322795700"><img src="Images/phone.png"><span class="negrita">Telefono</span>: (32) 279 57 00</a></li>
-        <li><a href="https://www.google.cl/maps/place/Galvarino+110,+Valpara%C3%ADso,+Regi%C3%B3n+de+Valpara%C3%ADso/@-33.0265012,-71.6461921,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e6b80ed13925:0x1fa79fdd955b5ebe!8m2!3d-33.0265057!4d-71.6440034"><img src="Images/map.png"><span class="negrita">Dirección</span>: Galvarino 110, Playa Ancha, Valparaíso.</a></li>
+        <li><a href="mailto:secretaria@soldelpacifico.cl"><img src="Images/email.png" alt="correo"><span
+              class="negrita">Correo</span>: secretaria@soldelpacifico.cl</a></li>
+        <li><a href="tel:322795700"><img src="Images/phone.png" alt="fono"><span class="negrita">Telefono</span>: (32) 279 57
+            00</a></li>
+        <li><a
+            href="https://www.google.cl/maps/place/Galvarino+110,+Valpara%C3%ADso,+Regi%C3%B3n+de+Valpara%C3%ADso/@-33.0265012,-71.6461921,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e6b80ed13925:0x1fa79fdd955b5ebe!8m2!3d-33.0265057!4d-71.6440034"><img
+              src="Images/map.png" alt="mapa"><span class="negrita">Dirección</span>: Galvarino 110, Playa Ancha, Valparaíso.</a>
+        </li>
       </ul>
     </div>
     <div class="social-media">
       <h3>Redes Sociales</h3>
       <ul>
-        <li><a href="https://www.facebook.com/pg/soldelpacificosur" class="fa fa-facebook" target="_blank"></a><a href="https://www.facebook.com/pg/soldelpacificosur" target="_blank"> Facebook</a></li>
-        <li><a href="https://www.instagram.com/busessoldelpacifico" target="_blank" class="fa fa-instagram"></a><a href="https://www.instagram.com/busessoldelpacifico" target="_blank"> Instagram</a></li>
+        <li><a href="https://www.facebook.com/pg/soldelpacificosur" class="fa fa-facebook" target="_blank"></a><a
+            href="https://www.facebook.com/pg/soldelpacificosur" target="_blank"> Facebook</a></li>
+        <li><a href="https://www.instagram.com/busessoldelpacifico" target="_blank" class="fa fa-instagram"></a><a
+            href="https://www.instagram.com/busessoldelpacifico" target="_blank"> Instagram</a></li>
       </ul>
     </div>
   </footer>

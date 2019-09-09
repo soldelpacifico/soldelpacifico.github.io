@@ -212,7 +212,7 @@ button {
 nav li:hover {
     background-color: #000000;
     color: #ffffff;
-    box-shadow:0 5px 10spx 0 rgba(0, 0, 0, 0.507);
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
 
 nav li:hover a {

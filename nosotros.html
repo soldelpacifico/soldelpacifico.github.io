@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,13 +10,13 @@
   <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css" />
   <link rel="stylesheet" type="text/css" href="css/estilos.css" />
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon.png">
-  <script language="javascript" type="text/javascript"src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
-  <script src="js/script.js" type="text/javascript"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body class="layout">
-  <button onclick="subir()" id="btnSubir" title="Subir"><img src="Images/up.png" id="subir"></button>
+  <button onclick="subir()" id="btnSubir" title="Subir"><img src="Images/up.png" id="subir" alt="top"></button>
   <header class="header">
     <div class="Logo">
       <a class="txtLogo" href="index">
@@ -30,9 +30,7 @@
     <div>
       <button id="dpMenu" onclick="mostrar()">
         <img src="Images/Menu.png" alt="Menu" id="imgMenu">
-        <div id="btxtMenu">
-          <span>Menu</span>
-        </div>
+          <span id="btxtMenu">Menu</span>
       </button>
     </div>
     <nav class="navegacion">
@@ -102,9 +100,14 @@
     <div class="contacto">
       <h3>Empresa de Transportes y Servicios Rurales Sol del Pacífico.</h3>
       <ul id="info">
-        <li><a href="mailto:secretaria@soldelpacifico.cl"><img src="Images/email.png"><span class="negrita">Correo</span>: secretaria@soldelpacifico.cl</a></li>
-        <li><a href="tel:322795700"><img src="Images/phone.png"><span class="negrita">Telefono</span>: (32) 279 57 00</a></li>
-        <li><a href="https://www.google.cl/maps/place/Galvarino+110,+Valpara%C3%ADso,+Regi%C3%B3n+de+Valpara%C3%ADso/@-33.0265012,-71.6461921,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e6b80ed13925:0x1fa79fdd955b5ebe!8m2!3d-33.0265057!4d-71.6440034"><img src="Images/map.png"><span class="negrita">Dirección</span>: Galvarino 110, Playa Ancha, Valparaíso.</a></li>
+        <li><a href="mailto:secretaria@soldelpacifico.cl"><img src="Images/email.png" alt="correo"><span
+              class="negrita">Correo</span>: secretaria@soldelpacifico.cl</a></li>
+        <li><a href="tel:322795700"><img src="Images/phone.png" alt="fono"><span class="negrita">Telefono</span>: (32) 279 57
+            00</a></li>
+        <li><a
+            href="https://www.google.cl/maps/place/Galvarino+110,+Valpara%C3%ADso,+Regi%C3%B3n+de+Valpara%C3%ADso/@-33.0265012,-71.6461921,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e6b80ed13925:0x1fa79fdd955b5ebe!8m2!3d-33.0265057!4d-71.6440034"><img
+              src="Images/map.png" alt="mapa"><span class="negrita">Dirección</span>: Galvarino 110, Playa Ancha, Valparaíso.</a>
+        </li>
       </ul>
     </div>
     <div class="social-media">
