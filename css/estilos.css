@@ -212,7 +212,7 @@ button {
 nav li:hover {
     background-color: #000000;
     color: #ffffff;
-    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+    
 }
 
 nav li:hover a {
@@ -369,6 +369,34 @@ article #form {
     font-weight: bold;
 }
 
+/* =======================================
+----------------Tablas---------------------
+==========================================*/
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+    margin-top: 8px;
+  }
+  
+  table td, table th {
+    border: 1.2px solid rgb(0, 0, 0);
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){background-color: #ffffff;}
+  
+  table tr:hover {background: rgb(226, 226, 226);}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background: linear-gradient(#ffffae, #ff9393);;
+    color: rgb(0, 0, 0);
+  }
 
 /* =======================================
 ----------------Pases---------------------
