@@ -33,6 +33,7 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     padding: 15px 5px;
+    background: #FE9900;
 }
 
 .negrita{
@@ -250,6 +251,48 @@ nav a {
     justify-content: center;
 }
 
+li.liDesp {
+    display: inline-block;
+  }
+  
+  #liCont1 {
+    min-width: 175px;
+  }
+
+  #liCont2 {
+    min-width: 183px;
+  }
+
+  .contDesp {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .contDescontDespplegable a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .contDesp a:hover {
+      background-color: #919191;
+      border-radius: 0;
+      transition: 0.3s;
+    }
+  
+  .liDesp:hover .contDesp {
+    display: block;
+  }
+
+  .liDesp:hover {
+      border-radius: 0;
+  }
+
 
 /* =======================================
 ----------------Slider--------------------
@@ -268,7 +311,6 @@ nav a {
     padding: 0;
     width: 400%;
     animation: cambio 15s infinite;
-    margin-top: 5px;
 }
 
 .slider li {
@@ -289,9 +331,14 @@ nav a {
 ----------------Content-------------------
 ==========================================*/
 
+.border {
+    border: 1px solid #000000;
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
 article h1 {
     text-align: center;
-    margin: 40px 0;
+    margin: 20px 0;
     font-size: 50px;
 }
 
@@ -310,9 +357,9 @@ article h5 {
 }
 
 article p {
-    margin: 20px 10%;
+    margin: 10px 2%;
     text-align: justify;
-    font-size: 24px;
+    font-size: 17px;
     color: #373a41;
     font-weight: 300;
 }
