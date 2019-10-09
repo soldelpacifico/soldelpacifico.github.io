@@ -255,13 +255,28 @@ li.liDesp {
     display: inline-block;
   }
   
-  #liCont1 {
-    min-width: 175px;
-  }
+@media (max-width: 1100px) {
+    li.liDesp {
+        display: flex;
+        justify-content: center;
+    }
+    #liCont1 {
+        width: 99%;
+    }
+    #liCont2 {
+        width: 99%;
+    }
+}
 
-  #liCont2 {
-    min-width: 183px;
-  }
+@media (min-width: 1100px) {
+    #liCont1 {
+        min-width: 175px;
+      }
+    
+      #liCont2 {
+        min-width: 184px;
+      }
+}
 
   .contDesp {
     display: none;
