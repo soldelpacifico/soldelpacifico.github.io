@@ -36,10 +36,10 @@
     </div>
     <nav class="navegacion">
       <ul>
-        <li><a href="index">Inicio</a></li>
-        <li><a href="tarifas">Tarifas</a></li>
-        <li><a href="pertenencias">Extravíos</a></li>
-        <li><a href="nosotros">Conócenos</a></li>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
+        <li><a href="{% url 'pertenencias' %}">Extravíos</a></li>
+        <li><a href="{% url 'nosotros' %}">Conócenos</a></li>
         <li><a onclick="about()">Contacto</a></li>
       </ul>
     </nav>

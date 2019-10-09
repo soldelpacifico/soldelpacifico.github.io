@@ -6,11 +6,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Sol Del Pacifico | Extravíos</title>
+  <meta name="google-site-verification" content="K2rK3j57aYlQ__tCQxR_NMBX1B5nzfEtZuSE7S3ynHc" />
+  <title>Sol Del Pacifico | Inicio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/flexboxgrid.min.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}" />
-  <link rel="icon" type="image/x-icon" sizes="16x16" href="{% static 'favicon.ico' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'Images/favicon.ico' %}">
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
   <script src="{% static 'js/script.js' %}"></script>
@@ -36,10 +37,10 @@
     </div>
     <nav class="navegacion">
       <ul>
-        <li><a href="index">Inicio</a></li>
-        <li><a href="tarifas">Tarifas</a></li>
-        <li><a href="pertenencias">Extravíos</a></li>
-        <li><a href="nosotros">Conócenos</a></li>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
+        <li><a href="{% url 'pertenencias' %}">Extravíos</a></li>
+        <li><a href="{% url 'nosotros' %}">Conócenos</a></li>
         <li><a onclick="about()">Contacto</a></li>
       </ul>
     </nav>
@@ -47,38 +48,18 @@
 
   <hr />
 
-  <article>
-    <h3>¿Se te perdió algo dentro de un bus?</h3>
-    <p>Comunícate con nosotros para ver si te podemos ayudar...</p>
-    <div id="form">
-      <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
-        <h4>Informacion Personal</h4>
-        <div class="linea"><label for="NombreCompleto">Nombre Completo </label><input type="text"
-            id="NombreCompleto" placeholder="Javier Robles Cepeda" required="required"></div><br>
-        <div class="linea"><label for="Correo">Correo </label><input type="email" id="Correo"
-            placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
-        <div class="linea"><label for="Rut">Rut </label><input type="text" id="Rut" placeholder="12345678-9"
-            required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
-        <div class="linea"><label for="Telefono">Teléfono </label><input type="tel" id="Telefono"
-            placeholder="569 12345678" required="required" minlength="8"></div><br>
-        <div class="linea"><label for="NroBoleto">Número de Boleto </label><input type="number" id="NroBoleto"
-            placeholder="05715764"></div><br>
-        <div class="linea"><label for="ValorBoleto">Valor Boleto $</label><input type="number" id="ValorBoleto"
-            placeholder="1700"></div><br>
-        <h4>Detalles del extravío</h4>
-        <div class="linea"><label for="LugarAbordo">Lugar de Abordaje </label><input type="text"
-            id="LugarAbordo" placeholder="Lugar donde abordo el bus"></div><br>
-        <div class="linea"><label for="FechaHora">Fecha del Abordaje </label><input type="datetime-local"
-            id="FechaHora" required="required"></div><br>
-        <div class="linea"><label for="LugarBus">Lugar en el bus </label><input type="text" id="LugarBus"
-            placeholder="Lugar en el bus donde extravio algo"></div><br>
-        <div class="linea"><label for="DetallesObjeto">Detalles objeto </label><textarea
-            id="DetallesObjeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
-        <input type="submit" value="ENVIAR" id="btnSubmit">
-      </form>
-    </div>
-  </article>
+  <div class="slider">
+    <ul>
+      <li><img src="{% static 'Images/Carrusel/bus1.jpg' %}" alt="bus1"/></li>
+      <li><img src="{% static 'Images/Carrusel/bus2.png' %}" alt="bus2"/></li>
+      <li><img src="{% static 'Images/Carrusel/bus3.png' %}" alt="bus3"/></li>
+      <li><img src="{% static 'Images/Carrusel/bus4.png' %}" alt="bus4"/></li>
+    </ul>
+  </div>
+
+
   <hr />
+
   <footer class="footer-info" id="about">
     <div class="contacto">
       <h3>Empresa de Transportes y Servicios Rurales Sol del Pacífico.</h3>
