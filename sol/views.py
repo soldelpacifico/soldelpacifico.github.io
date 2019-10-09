@@ -11,5 +11,5 @@ def tarifas(request):
 def pertenencias(request):
     return render(request, 'sol/pertenencias.html', {})
 
-def nosotros(request):
-    return render(request, 'sol/nosotros.html', {})
+def historia(request):
+    return render(request, 'sol/historia.html', {})

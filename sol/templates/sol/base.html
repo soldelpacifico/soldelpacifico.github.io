@@ -37,16 +37,16 @@
         </div>
         <nav class="navegacion">
           <ul>
-            <li><a href="{% url 'index.html' %]">Inicio</a></li>
-            <li><a href="tarifas.html">Historia</a></li>
-            <li class="liDesp"><a class="btnDesp" href="pertenencias.html">Informacion</a>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'historia' %}">Historia</a></li>
+            <li class="liDesp"><a class="btnDesp" href="#">Informacion</a>
               <div class="contDesp" id="liCont1">
-                <a href="#">Pasajes</a>
+                <a href="{% url 'tarifas' %}">Pasajes</a>
                 <a href="#">Recorridos</a>
                 <a href="#">Equipaje</a>
               </div>
             </li>
-            <li class="liDesp"><a class="btnDesp" href="nosotros.html">Comunicados</a>
+            <li class="liDesp"><a class="btnDesp" href="#">Comunicados</a>
               <div class="contDesp" id="liCont2">
                 <a href="#">TNE</a>
                 <a href="#">Practicas</a>
