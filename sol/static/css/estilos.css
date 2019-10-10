@@ -443,7 +443,7 @@ article #form {
 .noticia {
     background: #ff8d23;
     padding: 10px 20px;
-    border-radius: 1%;
+    border-radius: 2%;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
 
@@ -465,6 +465,7 @@ article #form {
 #noticias p {
     color: #000000
 }
+
 /* =======================================
 ----------------Tablas---------------------
 ==========================================*/
