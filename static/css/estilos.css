@@ -432,6 +432,41 @@ article #form {
 }
 
 /* =======================================
+----------------Noticias-------------------
+==========================================*/
+#noticias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.noticia {
+    background: #ff8d23;
+    padding: 10px 20px;
+    border-radius: 2%;
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
+#noticias h1 {
+    font-size: 5.5vw;
+}
+
+#noticias h2 {
+    font-size: 1.8vw;
+    margin-top: 5px;
+}
+ 
+#noticias h6 {
+    font: 1.1vw cursive;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+#noticias p {
+    color: #000000
+}
+
+/* =======================================
 ----------------Tablas---------------------
 ==========================================*/
 
@@ -456,7 +491,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background: linear-gradient(#e6e620, #fb3737);;
+    background: linear-gradient(#e6e620, #FF8000, #ff6565);;
     color: rgb(0, 0, 0);
   }
 
@@ -492,6 +527,7 @@ table {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     border-radius: 20px;
+    background: #00000024;
 }
 
 #pases h2{
