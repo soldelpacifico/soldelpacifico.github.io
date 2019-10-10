@@ -38,9 +38,9 @@
   <h1>Últimos comunicados</h1>
   {% for noticia in Noticias %} 
   <div class="noticia col-xs-11">
-    <h6>{{noticia.fecha_Publicacion}}</h6>
     <h2>{{noticia.titulo}}</h2>
-    <p>{{noticia.texto}}</p>
+    <h6>{{noticia.fecha_Publicacion}}</h6>
+    <p>{{noticia.texto|urlize}}</p>
   </div>
   {% endfor %}
 </article>

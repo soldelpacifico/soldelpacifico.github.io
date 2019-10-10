@@ -452,18 +452,27 @@ article #form {
 }
 
 #noticias h2 {
-    font-size: 1.8vw;
+    font-size: 2vw;
     margin-top: 5px;
+    float: left;
 }
  
 #noticias h6 {
     font: 1.1vw cursive;
-    margin-left: 10px;
+    margin-right: 10px;
     color: #ffffff;
+    text-align: end;
 }
 
 #noticias p {
-    color: #000000
+    color: #000000;
+    clear: both;
+    margin-top: 2vw;
+    font-size: 1.2vw;
+}
+
+#noticias p a {
+    color: #ffffff;
 }
 
 /* =======================================
