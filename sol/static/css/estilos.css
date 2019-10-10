@@ -492,7 +492,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background: linear-gradient(#e6e620, rgb(255, 196, 0), #FF8000 , #FF8000, #FF8000, #fb3737);;
+    background: linear-gradient(#e6e620, #FF8000, #ff6565);;
     color: rgb(0, 0, 0);
   }
 
