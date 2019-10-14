@@ -282,7 +282,7 @@ li.liDesp {
     .liDesp:hover .contDesp {
         display: block;
     }
-    
+
     .liDesp:hover {
         border-radius: 0;
         background: #000000;
@@ -455,17 +455,17 @@ article #form {
 }
 
 #noticias h1 {
-    font-size: 5.5vw;
+    font-size: 5.8vm;
 }
 
 #noticias h2 {
-    font-size: 2vw;
+    font-size: 24px;
     margin-top: 5px;
     float: left;
 }
 
 #noticias h6 {
-    font: 1.1vw cursive;
+    font: 15px cursive;
     margin-right: 10px;
     color: #ffffff;
     text-align: end;
@@ -475,7 +475,7 @@ article #form {
     color: #000000;
     clear: both;
     margin-top: 2vw;
-    font-size: 1.2vw;
+    font-size: 15px;
 }
 
 #noticias p a {
