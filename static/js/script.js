@@ -20,6 +20,7 @@ $(document).ready(function(){
       $("#despComu").css("background","#e9e9e9");
       $("#despComu a").css("color","#000000");
     }}
+  });
     $("#despCont").click(function(){
       if($(window).width()<1100) {
       $("#liCont3").toggleClass("show");
@@ -29,7 +30,7 @@ $(document).ready(function(){
       }else{
         $("#despCont").css("background","#e9e9e9");
         $("#despCont a").css("color","#000000");
-      }}
+    }}
   });
 });
 
@@ -38,9 +39,9 @@ function mostrar(){
 }
 
 function menuDesp(mostrar, cambiarEst){
-  $(mostrar).toggleClass("show")
-  $(cambiarEst).css("background","#000000")
-  $(cambiarEst+' a').css("color","#ffffff")
+  $(mostrar).toggleClass("show");
+  $(cambiarEst).css("background","#000000");
+  $(cambiarEst+' a').css("color","#ffffff");
 }
 
 function changeBg(elemento){
