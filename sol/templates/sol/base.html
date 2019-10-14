@@ -30,7 +30,7 @@
           </a>
         </div>
         <div>
-          <button id="dpMenu" onclick="mostrarMenu('nav')">
+          <button id="dpMenu" onclick="mostrar()">
             <img src="{% static 'Images/Menu.png' %}" alt="Menu" id="imgMenu">
             <span id="btxtMenu">Menu</span>
           </button>
@@ -39,17 +39,17 @@
           <ul>
             <li><a href="{% url 'index' %}">Inicio</a></li>
             <li><a href="{% url 'historia' %}">Historia</a></li>
-            <li class="liDesp"><a class="btnDesp" href="#">Informacion</a>
+            <li class="liDesp" id="despInfo"><a class="btnDesp">Informacion</a>
               <div class="contDesp" id="liCont1">
                 <a href="{% url 'tarifas' %}">Pasajes</a>
                 <a href="#">Recorridos</a>
                 <a href="#">Equipaje</a>
               </div>
             </li>
-            <li class="liDesp"><a class="btnDesp" href="#">Comunicados</a>
+            <li class="liDesp" id="despComu"><a class="btnDesp">Comunicados</a>
               <div class="contDesp" id="liCont2">
                 <a href="#">TNE</a>
-                <a href="#">Practicas</a>
+                <a href="#">Prácticas</a>
                 <a href="#">Reclamos</a>
               </div>
             </li>

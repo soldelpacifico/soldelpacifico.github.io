@@ -261,25 +261,36 @@ li.liDesp {
         justify-content: center;
     }
     #liCont1 {
-        width: 99%;
+        width: 100%;
         margin-top: 43px;
-        border-top: #f99600 solid 1px;
     }
     #liCont2 {
-        width: 99%;
+        width: 100%;
         margin-top: 43px;
-        border-top: #f99600 solid 1px;
     }
 }
 
 @media (min-width: 1100px) {
     #liCont1 {
         min-width: 175px;
-      }
+    }
 
-      #liCont2 {
+    #liCont2 {
         min-width: 184px;
-      }
+    }
+
+    .liDesp:hover .contDesp {
+        display: block;
+    }
+    
+    .liDesp:hover {
+        border-radius: 0;
+        background: #000000;
+    }
+
+    .liDesp:hover a {
+        color: #ffffff;
+    }
 }
 
   .contDesp {
@@ -288,6 +299,7 @@ li.liDesp {
     background-color: #000000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-top: #f99600 solid 1px;
   }
 
   .contDescontDespplegable a {
@@ -303,15 +315,6 @@ li.liDesp {
       border-radius: 0;
       transition: 0.3s;
     }
-
-  .liDesp:hover .contDesp {
-    display: block;
-  }
-
-  .liDesp:hover {
-      border-radius: 0;
-  }
-
 
 /* =======================================
 ----------------Slider--------------------
