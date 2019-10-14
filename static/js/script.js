@@ -20,6 +20,16 @@ $(document).ready(function(){
       $("#despComu").css("background","#e9e9e9");
       $("#despComu a").css("color","#000000");
     }}
+    $("#despCont").click(function(){
+      if($(window).width()<1100) {
+      $("#liCont3").toggleClass("show");
+      if ($("#liCont3").hasClass("show")) {
+        $("#despCont").css("background","#000000");
+        $("#despCont a").css("color","#ffffff");
+      }else{
+        $("#despCont").css("background","#e9e9e9");
+        $("#despCont a").css("color","#000000");
+      }}
   });
 });
 
