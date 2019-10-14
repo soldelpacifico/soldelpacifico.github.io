@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $("#despInfo").click(function(){
+    if($(window).width()<1100) {
     $("#liCont1").toggleClass("show");
     if ($("#liCont1").hasClass("show")) {
       $("#despInfo").css("background","#000000");
@@ -7,9 +8,10 @@ $(document).ready(function(){
     }else{
       $("#despInfo").css("background","#e9e9e9");
       $("#despInfo a").css("color","#000000");
-    }
+    }}
   });
   $("#despComu").click(function(){
+    if($(window).width()<1100) {
     $("#liCont2").toggleClass("show");
     if ($("#liCont2").hasClass("show")) {
       $("#despComu").css("background","#000000");
@@ -17,7 +19,7 @@ $(document).ready(function(){
     }else{
       $("#despComu").css("background","#e9e9e9");
       $("#despComu a").css("color","#000000");
-    }
+    }}
   });
 });
 
