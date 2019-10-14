@@ -210,13 +210,13 @@ button {
     }
 }
 
-nav li:hover {
+nav li{
     background-color: #000000;
     color: #ffffff;
-    
+
 }
 
-nav li:hover a {
+nav .contDesp a {
     color: #ffffff;
 }
 
@@ -254,7 +254,7 @@ nav a {
 li.liDesp {
     display: inline-block;
   }
-  
+
 @media (max-width: 1100px) {
     li.liDesp {
         display: flex;
@@ -262,9 +262,13 @@ li.liDesp {
     }
     #liCont1 {
         width: 99%;
+        margin-top: 43px;
+        border-top: #f99600 solid 1px;
     }
     #liCont2 {
         width: 99%;
+        margin-top: 43px;
+        border-top: #f99600 solid 1px;
     }
 }
 
@@ -272,7 +276,7 @@ li.liDesp {
     #liCont1 {
         min-width: 175px;
       }
-    
+
       #liCont2 {
         min-width: 184px;
       }
@@ -285,7 +289,7 @@ li.liDesp {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+
   .contDescontDespplegable a {
     color: black;
     padding: 12px 16px;
@@ -293,13 +297,13 @@ li.liDesp {
     display: block;
     text-align: left;
   }
-  
+
   .contDesp a:hover {
       background-color: #919191;
       border-radius: 0;
       transition: 0.3s;
     }
-  
+
   .liDesp:hover .contDesp {
     display: block;
   }
@@ -456,7 +460,7 @@ article #form {
     margin-top: 5px;
     float: left;
 }
- 
+
 #noticias h6 {
     font: 1.1vw cursive;
     margin-right: 10px;
@@ -486,16 +490,16 @@ table {
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
     margin-top: 8px;
   }
-  
+
   table td, table th {
     border: 1.2px solid rgb(0, 0, 0);
     padding: 8px;
   }
-  
+
   table tr:nth-child(even){background-color: #ffffff;}
-  
+
   table tr:hover {background: rgb(226, 226, 226);}
-  
+
   table th {
     padding-top: 12px;
     padding-bottom: 12px;

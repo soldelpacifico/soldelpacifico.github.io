@@ -1,5 +1,5 @@
-function mostrar(){
-    $("nav").toggleClass("show")
+function mostrarMenu(element){
+    $(element).toggleClass("show")
 }
 
 function changeBg(elemento){
