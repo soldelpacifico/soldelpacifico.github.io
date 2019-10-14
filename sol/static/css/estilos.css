@@ -84,7 +84,7 @@ nav {
     font-family: "Coneria Script";
     text-decoration: none;
     color: #000000;
-    margin: 2% 5%;
+    margin: 5px 12px;
     display: flex;
     justify-content: center;
 }
@@ -147,7 +147,7 @@ button {
 }
 
 .spnSol {
-    margin-right: 1.5%;
+    margin-right: 5px;
 }
 
 .bgLogo {
@@ -156,14 +156,14 @@ button {
     width: 50.08px;
     min-width: 50px;
     margin: 0 0;
-    padding: 2% 2% 0% 0%;
+    padding: 10px 10px 0 0;
 }
 
 .spnDel {
     font-size: 30px;
     text-align: center;
-    margin-bottom: 10%;
-    margin-top: 7.5%;
+    margin-bottom: 5px;
+    margin-top: 3.7px;
 }
 
 .spnPacifico {
