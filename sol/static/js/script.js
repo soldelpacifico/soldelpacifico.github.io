@@ -1,23 +1,33 @@
 $(document).ready(function(){
   $("#despInfo").click(function(){
-    $("#liCont1").toggleClass("show");
-    if ($("#liCont1").hasClass("show")) {
-      $("#despInfo").css("background","#000000");
-      $("#despInfo a").css("color","#ffffff");
-    }else{
-      $("#despInfo").css("background","#e9e9e9");
-      $("#despInfo a").css("color","#000000");
+    if($(window).width()<1100) {
+      $("#liCont1").toggleClass("show");
+      $("#despInfo").toggleClass("clicked");
     }
   });
   $("#despComu").click(function(){
-    $("#liCont2").toggleClass("show");
-    if ($("#liCont2").hasClass("show")) {
-      $("#despComu").css("background","#000000");
-      $("#despComu a").css("color","#ffffff");
-    }else{
-      $("#despComu").css("background","#e9e9e9");
-      $("#despComu a").css("color","#000000");
+    if($(window).width()<1100) {
+      $("#liCont2").toggleClass("show");
+      $("#despComu").toggleClass("clicked");
     }
+  });
+  $("#despCont").click(function(){
+    if($(window).width()<1100) {
+      $("#liCont3").toggleClass("show");
+      $("#despCont").toggleClass("clicked");
+    }
+  });
+  $("#btnCalera").click(function() {
+    $(".calera").css("display","block");
+    $(".concon").css("display","none");
+    $("#btnCalera a").css("background","#f99600");
+    $("#btnConcon a").css("background","#ffffff")
+  });
+  $("#btnConcon").click(function() {
+    $(".calera").css("display","none");
+    $(".concon").css("display","block");
+    $("#btnCalera a").css("background","#ffffff");
+    $("#btnConcon a").css("background","#f99600")
   });
 });
 
@@ -26,9 +36,9 @@ function mostrar(){
 }
 
 function menuDesp(mostrar, cambiarEst){
-  $(mostrar).toggleClass("show")
-  $(cambiarEst).css("background","#000000")
-  $(cambiarEst+' a').css("color","#ffffff")
+  $(mostrar).toggleClass("show");
+  $(cambiarEst).css("background","#000000");
+  $(cambiarEst+' a').css("color","#ffffff");
 }
 
 function changeBg(elemento){

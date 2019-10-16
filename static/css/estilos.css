@@ -506,8 +506,40 @@ article #form {
 }
 
 /* =======================================
-----------------Tablas---------------------
+----------------Tarifas-------------------
 ==========================================*/
+
+.btnSector{
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
+.btnSector a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    border-radius: 20px;
+    padding: 0.75rem 2rem;
+    text-align: center;
+}
+
+.calera{
+    transition: 0.5s;
+}
+
+.concon {
+    display: none;
+    transition: 0.5s;
+}
+
+#btnCalera a {
+    background: #f99600;
+    transition: 0.5s;
+}
+
+#btnConcon a {
+    transition: 0.5s;
+}
 
 table {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

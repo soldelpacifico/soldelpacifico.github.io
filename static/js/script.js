@@ -20,10 +20,14 @@ $(document).ready(function(){
   $("#btnCalera").click(function() {
     $(".calera").css("display","block");
     $(".concon").css("display","none");
+    $("#btnCalera a").css("background","#f99600");
+    $("#btnConcon a").css("background","#ffffff")
   });
   $("#btnConcon").click(function() {
     $(".calera").css("display","none");
     $(".concon").css("display","block");
+    $("#btnCalera a").css("background","#ffffff");
+    $("#btnConcon a").css("background","#f99600")
   });
 });
 
