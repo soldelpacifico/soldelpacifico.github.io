@@ -1,21 +1,29 @@
 $(document).ready(function(){
   $("#despInfo").click(function(){
     if($(window).width()<1100) {
-    $("#liCont1").toggleClass("show");
-    $("#despInfo").toggleClass("clicked");
+      $("#liCont1").toggleClass("show");
+      $("#despInfo").toggleClass("clicked");
     }
   });
   $("#despComu").click(function(){
     if($(window).width()<1100) {
-    $("#liCont2").toggleClass("show");
-    $("#despComu").toggleClass("clicked");
+      $("#liCont2").toggleClass("show");
+      $("#despComu").toggleClass("clicked");
     }
   });
-    $("#despCont").click(function(){
-      if($(window).width()<1100) {
+  $("#despCont").click(function(){
+    if($(window).width()<1100) {
       $("#liCont3").toggleClass("show");
       $("#despCont").toggleClass("clicked");
     }
+  });
+  $("#btnCalera").click(function() {
+    $(".calera").css("display","block");
+    $(".concon").css("display","none");
+  });
+  $("#btnConcon").click(function() {
+    $(".calera").css("display","none");
+    $(".concon").css("display","block");
   });
 });
 
