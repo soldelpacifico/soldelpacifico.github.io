@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Noticia
+from .models import Noticia, Pregunta
 from django.utils import timezone
 
 def index(request):
@@ -15,3 +15,7 @@ def pertenencias(request):
 
 def historia(request):
     return render(request, 'sol/historia.html', {})
+
+def preguntas(request):
+    Preguntas = Pregunta.objects.filter(respondida=True)
+    return render(request, 'sol/preguntas.html', {"Preguntas":Preguntas})

@@ -17,6 +17,12 @@ $(document).ready(function(){
       $("#despCont").toggleClass("clicked");
     }
   });
+
+  $(".login").click(function(){
+      $("#Login").toggleClass("show");
+  });
+
+
   $("#btnCalera").click(function() {
     $(".calera").css("display","block");
     $(".concon").css("display","none");

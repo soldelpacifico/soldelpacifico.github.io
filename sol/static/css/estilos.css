@@ -331,6 +331,29 @@ li.liDesp {
         color: #ffffff;
     }
 
+#Login {
+    padding: 10px;
+    margin-top: 5px;
+    border-top: #f99600 solid 1px;
+    width: 300px;
+}
+
+#Login label {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+}
+
+#Login input {
+    padding: 5px 0;
+}
+
+#Login span {
+    color: #ffffff;
+    margin: 3px 3px 0 0;
+}
+
 /* =======================================
 ----------------Slider--------------------
 ==========================================*/
