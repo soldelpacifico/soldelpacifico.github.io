@@ -4,29 +4,71 @@
 {% block content %}
 <article class="preguntasFrec">
 
-<h1>Preguntas frecuentes</h1>
+  <h1>Preguntas frecuentes</h1>
 
-<h2>¿A que hora pasa el ultimo bus a calera?</h2>
-<p>Puedes revisar todos los horarios al final de la seccion de <a href="{% url 'tarifas' %}"></a>.</p>
+  <h2>¿A que hora pasa el ultimo bus a calera?</h2>
+  <p>Puedes revisar todos los horarios al final de la seccion de <a href="{% url 'tarifas' %}"></a>.</p>
 
 </article>
 
 <article class="preguntasUser">
-<h1>Preguntas de los usuarios</h1>
+  <h1>Preguntas de los usuarios</h1>
 
-{% if user.is_authenticated %}
-<a href="respPreguntas">Ir a responder preguntas</a>
-<a href="{% url 'logout' %}">Desloguearme</a>
-{% else %}
-<a href="{% url 'login' %}">Loguearme para responder preguntas...</a>
-{% endif %}
+  {% if user.is_authenticated %}
+  <a href="respPreguntas">Ir a responder preguntas</a>
+  <a href="{% url 'logout' %}">Desloguearme</a>
+  {% else %}
+  <a href="{% url 'login' %}">Loguearme para responder preguntas...</a>
+  {% endif %}
 
-{% for Pregunta in Preguntas %} 
-<div class="`pregimta col-xs-11">
+  <div>
+    <img src="{% static 'Images/account.png' %}" class="login" alt="">
+    {% if user.is_authenticated %}
+
+    <div class="contDesp container" id="Login">
+      <div class="row">
+        <div>
+        </div class="col-xs-12">
+        <span>Iniciado como: </span><label for="user"> {{request.user.username}}</label>
+      </div>
+      <div class="row">
+        <input class="col-xs-12" type="button" value="Salir">
+      </div>
+
+    </div>
+
+    {% else %}
+    <div class="contDesp container" id="Login">
+      {% csrf_token %}
+      <form action="" method="POST">
+        <div class="row">
+          <label class="col-xs-12" for="id_username">Usuario</label>
+        </div>
+        <div class="row">
+          <input class="col-xs-12" type="text" name="username" id="id_username" placeholder="Usuario">
+        </div>
+        <div class="row">
+          <label class="col-xs-12" for="id_password">Clave</label>
+        </div>
+        <div class="row">
+          <input class="col-xs-12" type="password" name="password" id="id_password" placeholder="Clave">
+        </div>
+        <div class="row">
+          <input class="col-xs-12" type="submit" value="Ingresar">
+          <input type="hidden" name="next" value="{{ request.get_full_path }}" />
+        </div>
+      </form>
+    </div>
+    {% endif %}
+  </div>
+
+
+  {% for Pregunta in Preguntas %}
+  <div class="`pregimta col-xs-11">
     <p>Nombre: {{Pregunta.nombre}}</p>
-  <h2>{{Pregunta.pregunta}}</h2>
-  <p>{{Pregunta.respuesta|urlize}}</p>
-</div>
-{% endfor %}
+    <h2>{{Pregunta.pregunta}}</h2>
+    <p>{{Pregunta.respuesta|urlize}}</p>
+  </div>
+  {% endfor %}
 </article>
 {% endblock %}
