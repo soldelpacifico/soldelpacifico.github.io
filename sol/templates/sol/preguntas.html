@@ -7,7 +7,7 @@
   <h1>Preguntas frecuentes</h1>
 
   <h2>¿A que hora pasa el ultimo bus a calera?</h2>
-  <p>Puedes revisar todos los horarios al final de la seccion de <a href="{% url 'tarifas' %}"></a>.</p>
+  <p>Puedes revisar todos los horarios al final de la seccion de <a href="{% url 'tarifas' %}#horarios">Horarios.</a>.</p>
 
 </article>
 
@@ -21,6 +21,7 @@
   <a href="{% url 'login' %}">Loguearme para responder preguntas...</a>
   {% endif %}
 
+  <!--
   <div>
     <img src="{% static 'Images/account.png' %}" class="login" alt="">
     {% if user.is_authenticated %}
@@ -61,6 +62,7 @@
     </div>
     {% endif %}
   </div>
+-->
 
 
   {% for Pregunta in Preguntas %}

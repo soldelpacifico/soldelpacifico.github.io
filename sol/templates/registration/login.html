@@ -2,18 +2,18 @@
 
 {% block content %}
     {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
+        <p>Usuario o clave incorrectos, porfavor intente nuevamente.</p>
     {% endif %}
-
+    <h1>Iniciar Sesion como administrador.</h1>
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
         <table>
         <tr>
-            <td>{{ form.username.label_tag }}</td>
+            <td>Usuario Administrador</td>
             <td>{{ form.username }}</td>
         </tr>
         <tr>
-            <td>{{ form.password.label_tag }}</td>
+            <td>Contraseña</td>
             <td>{{ form.password }}</td>
         </tr>
         </table>
