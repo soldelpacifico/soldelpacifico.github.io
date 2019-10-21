@@ -16,6 +16,9 @@
 
 {% if user.is_authenticated %}
 <a href="respPreguntas">Ir a responder preguntas</a>
+<a href="{% url 'logout' %}">Desloguearme</a>
+{% else %}
+<a href="{% url 'login' %}">Loguearme para responder preguntas...</a>
 {% endif %}
 
 {% for Pregunta in Preguntas %} 

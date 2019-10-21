@@ -7,5 +7,6 @@ urlpatterns = [
     path('tarifas', views.tarifas, name="tarifas"),
     path('pertenencias', views.pertenencias, name="pertenencias"),
     path('historia', views.historia, name="historia"),
-    path('preguntas', views.preguntas, name="preguntas")
+    path('preguntas', views.preguntas, name="preguntas"),
+    path('accounts/profile/', views.preguntas),
 ]
