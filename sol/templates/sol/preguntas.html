@@ -11,14 +11,28 @@
 
 </article>
 
-<article class="preguntasUser">
+<article class="preguntasUser container">
   <h1>Preguntas de los usuarios</h1>
-
   {% if user.is_authenticated %}
-  <a href="respPreguntas">Ir a responder preguntas</a>
-  <a href="{% url 'logout' %}">Desloguearme</a>
+  <div class="row">
+    <div class="col-xs-8">
+      <a href="{% url 'respPreguntas' %}">Ir a responder preguntas</a>
+    </div>
+    <div class="col-xs-4">
+      <span>Ingresado como {{ user.get_username }}</span>
+      <a href="{% url 'logout' %}"><i class="material-icons">person_outline</i>Desloguearme</a>
+    </div>
+  </div>
   {% else %}
-  <a href="{% url 'login' %}">Loguearme para responder preguntas...</a>
+  <div class="row">
+    <div class="col-xs-8">
+      <a href="{% url 'pregunta_new' %}"><i class="material-icons">add</i>Crear nueva pregunta</a>
+    </div>
+    <div class="col-xs-4">
+      <a href="{% url 'login' %}"><i class="material-icons">person</i>Iniciar sesion</a>
+    </div>
+  </div>
+  
   {% endif %}
 
   <!--

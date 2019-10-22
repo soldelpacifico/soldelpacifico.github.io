@@ -1,0 +1,13 @@
+{% extends 'sol/base.html' %}
+
+{% block content %}
+    {% for pregunta in Preguntas %}
+        {% if pregunta.respondida == False %}    
+            <div class="pregunta">
+                <div class="date">
+                <h2><a href="{% url 'pregunta_responder' pk=pregunta.pk %}">{{ pregunta.pregunta }}</a></h2>
+                <p>Preguntada por: {{ pregunta.email}}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'sol/base.html' %}
+
+{% block content %}
+    <div class="pregunta">
+        <h2>{{ pregunta.pregunta }}</h2>
+        <p>{{ pregunta.email}}</p>
+        <form method="POST">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
+{% endblock %}

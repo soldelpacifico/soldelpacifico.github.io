@@ -9,4 +9,7 @@ urlpatterns = [
     path('historia', views.historia, name="historia"),
     path('preguntas', views.preguntas, name="preguntas"),
     path('accounts/profile/', views.preguntas),
+    path('preguntas/nueva', views.pregunta_new, name='pregunta_new'),
+    path('preguntas/responder', views.resp_preguntas, name="respPreguntas"),
+    path('preguntas/<int:pk>/', views.pregunta_responder, name='pregunta_responder'),
 ]

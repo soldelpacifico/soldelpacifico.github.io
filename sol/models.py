@@ -17,8 +17,8 @@ class Pregunta(models.Model):
     nombre=models.CharField(max_length=30)
     email=models.CharField(max_length=30)
     pregunta=models.TextField()
-    respuesta=models.TextField(blank=True, null=True)
-    respondida=models.BooleanField()
+    respuesta=models.TextField(blank=True,null=True)
+    respondida=models.BooleanField(blank=True,null=True)
 
     def publish(self):
         self.respondida = True
