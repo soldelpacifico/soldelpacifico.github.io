@@ -46,7 +46,7 @@ def pregunta_responder(request, pk):
             pregunta = form.save(commit=False)
             pregunta.respondida = True
             pregunta.save()
-            return redirect('pregunta_responder', pk=pregunta.pk)
+            return redirect('respPreguntas')
     else:
         form = RespuestaForm(instance=pregunta)
     return render(request, 'sol/pregunta_responder.html', {'form':form,'pregunta':pregunta})
