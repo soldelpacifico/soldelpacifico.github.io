@@ -7,7 +7,7 @@
   <h1>Preguntas frecuentes</h1>
 
   <h2>¿A que hora pasa el ultimo bus a calera?</h2>
-  <p>Puedes revisar todos los horarios al final de la seccion de <a href="{% url 'tarifas' %}#horarios">Horarios.</a>.</p>
+  <p>Puedes revisar todos los horarios en Tarifas/<a href="{% url 'tarifas' %}#horarios">Horarios.</a>.</p>
 
 </article>
 
@@ -26,10 +26,10 @@
   {% else %}
   <div class="row">
     <div class="col-xs-8">
-      <a href="{% url 'pregunta_new' %}"><i class="material-icons">add</i>Crear nueva pregunta</a>
+      <a href="{% url 'pregunta_new' %}"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
     </div>
     <div class="col-xs-4">
-      <a href="{% url 'login' %}"><i class="material-icons">person</i>Iniciar sesion</a>
+      <a href="{% url 'login' %}"><i class="material-icons md-16">person</i>Iniciar sesion</a>
     </div>
   </div>
   
@@ -82,8 +82,8 @@
   {% for Pregunta in Preguntas %}
   <div class="`pregimta col-xs-11">
     <p>Nombre: {{Pregunta.nombre}}</p>
-    <h2>{{Pregunta.pregunta}}</h2>
-    <p>{{Pregunta.respuesta|urlize}}</p>
+    <h2><i class="material-icons md-16">textsms</i>{{Pregunta.pregunta}}</h2>
+    <p><i class="material-icons md-16">insert_comment</i>{{Pregunta.respuesta|urlize}}</p>
   </div>
   {% endfor %}
 </article>
