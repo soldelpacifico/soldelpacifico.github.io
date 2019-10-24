@@ -1,9 +1,15 @@
 {% extends 'sol/base.html' %}
 
 {% block content %}
-    <h2>Nueva Pregunta</h2>
-    <form method="POST" class="pregunta-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Enviar</button>
-    </form>
+<article class="nuevaPregunta">
+    <h1>Nueva Pregunta</h1>
+    <div class="newPregunta">
+        <form method="POST" class="formLogin">{% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Enviar" class="save btn btn-default"/>
+        </form>
+    </div>
+
+</article>
+
 {% endblock %}

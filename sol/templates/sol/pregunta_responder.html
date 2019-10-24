@@ -1,12 +1,26 @@
 {% extends 'sol/base.html' %}
 
 {% block content %}
-    <div class="pregunta">
-        <h2>{{ pregunta.pregunta }}</h2>
-        <p>{{ pregunta.email}}</p>
-        <form method="POST">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Save</button>
-        </form>
-    </div>
+<div class="pregunta">
+    <h2>{{ pregunta.pregunta }}</h2>
+    <p>{{ pregunta.email}}</p>
+
+    <form method="POST" class="fornLogin">{% csrf_token %}
+        <div class="container fullWidth">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Correcciones ortograficas</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.pregunta }}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Respuesta</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.respuesta }}</div>
+            </div>
+        </div>
+            <input type="submit" value="RESPONDER" />
+    </form>
+</div>
 {% endblock %}

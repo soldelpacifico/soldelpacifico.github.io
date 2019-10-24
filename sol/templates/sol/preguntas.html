@@ -5,22 +5,31 @@
 <article class="preguntasFrec">
 
   <h1>Preguntas frecuentes</h1>
-
-  <h2>¿A que hora pasa el ultimo bus a calera?</h2>
-  <p>Puedes revisar todos los horarios en Tarifas/<a href="{% url 'tarifas' %}#horarios">Horarios.</a>.</p>
+  <div class="pregunta container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2><i class="material-icons md-30">textsms</i> ¿A que hora pasa el ultimo bus a Calera?</h2>
+      </div>
+      <div class="col-xs-12 textPregunta">
+        <p><i class="material-icons md-16">insert_comment</i> Puedes revisar todos los horarios en Tarifas/<a
+            href="{% url 'tarifas' %}#horarios">Horarios</a>.</p>
+      </div>
+    </div>
+  </div>
 
 </article>
 
 <article class="preguntasUser container">
   <h1>Preguntas de los usuarios</h1>
+  <hr />
   {% if user.is_authenticated %}
   <div class="row">
     <div class="col-xs-8">
-      <a href="{% url 'respPreguntas' %}">Ir a responder preguntas</a>
+      <a href="{% url 'respPreguntas' %}"><i class="material-icons md-16">create</i> Ir a responder preguntas</a>
     </div>
-    <div class="col-xs-4">
-      <span>Ingresado como {{ user.get_username }}</span>
-      <a href="{% url 'logout' %}"><i class="material-icons">person_outline</i>Desloguearme</a>
+    <div class="col-xs-4 linkLogin">
+      <span class="linkLogin">Ingresado como: {{ user.get_username }}</span>
+      <a href="{% url 'logout' %}"><i class="material-icons md-16">account_box</i>Desloguearme</a>
     </div>
   </div>
   {% else %}
@@ -28,14 +37,30 @@
     <div class="col-xs-8">
       <a href="{% url 'pregunta_new' %}"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
     </div>
-    <div class="col-xs-4">
+    <div class="col-xs-4 linkLogin">
       <a href="{% url 'login' %}"><i class="material-icons md-16">person</i>Iniciar sesion</a>
     </div>
   </div>
-  
   {% endif %}
+  <hr />
+  {% for Pregunta in Preguntas %}
+  <div class="pregunta col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2><i class="material-icons md-30">textsms</i> {{Pregunta.pregunta}}</h2><span class="nombreEnd">Nombre: {{Pregunta.nombre}}</span>
+      </div>
+    </div>
+    <div class="row textPregunta">
+      <div class="col-xs-12">
+        <p><i class="material-icons md-16">insert_comment</i>{{Pregunta.respuesta|urlize}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</article>
+{% endblock %}
 
-  <!--
+<!--
   <div>
     <img src="{% static 'Images/account.png' %}" class="login" alt="">
     {% if user.is_authenticated %}
@@ -77,14 +102,3 @@
     {% endif %}
   </div>
 -->
-
-
-  {% for Pregunta in Preguntas %}
-  <div class="`pregimta col-xs-11">
-    <p>Nombre: {{Pregunta.nombre}}</p>
-    <h2><i class="material-icons md-16">textsms</i>{{Pregunta.pregunta}}</h2>
-    <p><i class="material-icons md-16">insert_comment</i>{{Pregunta.respuesta|urlize}}</p>
-  </div>
-  {% endfor %}
-</article>
-{% endblock %}

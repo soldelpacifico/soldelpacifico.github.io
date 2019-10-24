@@ -1,24 +1,27 @@
 {% extends "sol/base.html" %}
 
 {% block content %}
-    {% if form.errors %}
-        <p>Usuario o clave incorrectos, porfavor intente nuevamente.</p>
-    {% endif %}
-    <h1>Iniciar Sesion como administrador.</h1>
-    <form method="post" action="{% url 'login' %}">
+<h1 class="center">Iniciar Sesion como administrador.</h1>
+<form method="post" class="formLogin" action="{% url 'login' %}">
     {% csrf_token %}
-        <table>
-        <tr>
-            <td>Usuario Administrador</td>
-            <td>{{ form.username }}</td>
-        </tr>
-        <tr>
-            <td>Contraseña</td>
-            <td>{{ form.password }}</td>
-        </tr>
-        </table>
-
-        <input type="submit" value="login" />
-        <input type="hidden" name="next" value="{{ next }}" />
-    </form>
+    <div class="container fullWidth">
+        <div class="row">
+            <div class="col-xs-12 col-md-3"><p class="lblLogin">Usuario Administrador</p></div>
+            <div class="col-xs-12 col-md-9">{{ form.username }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-3"><p class="lblLogin">Contraseña</p></div>
+            <div class="col-xs-12 col-md-9">{{ form.password }}</div>
+        </div>
+        {% if form.errors %}
+        <p class="error">Usuario o clave incorrectos, porfavor intente nuevamente.</p>
+        {% endif %}
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="submit" value="INGRESAR" />
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </div>
+    </div>
+</form>
 {% endblock %}

@@ -1,13 +1,25 @@
 {% extends 'sol/base.html' %}
 
 {% block content %}
+{% if Preguntas %}
+<article class="preguntasUser container">
     {% for pregunta in Preguntas %}
-        {% if pregunta.respondida == False %}    
-            <div class="pregunta">
-                <div class="date">
+    <div class="pregunta">
+        <div class="row">
+            <div class="col-xs-12">
                 <h2><a href="{% url 'pregunta_responder' pk=pregunta.pk %}">{{ pregunta.pregunta }}</a></h2>
+            </div>
+            <div class="col-xs-12">
                 <p>Preguntada por: {{ pregunta.email}}</p>
             </div>
-        {% endif %}
+        </div>
+    </div>
     {% endfor %}
+</article>
+{% else %}
+<article>
+    <h1>No hay preguntas sin responder</h1>
+    <p class="error"><a href="{% url 'preguntas' %}">Volver</a></p>
+</article>
+{% endif %}
 {% endblock %}

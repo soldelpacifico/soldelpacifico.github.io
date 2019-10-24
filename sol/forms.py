@@ -12,4 +12,4 @@ class RespuestaForm(forms.ModelForm):
 
     class Meta:
         model = Pregunta
-        fields = ('respuesta',)
+        fields = ('pregunta','respuesta',)

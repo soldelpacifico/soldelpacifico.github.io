@@ -19,8 +19,8 @@ input[type=number] {
 }
 
 .material-icons.md-16 { font-size: 16px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-20 { font-size: 20px; }
+.material-icons.md-30 { font-size: 30px; }
 .material-icons.md-48 { font-size: 48px; }
 
 .link {
@@ -453,32 +453,6 @@ article .linea {
     justify-content: space-between;
 }
 
-article form {
-    background-color: #c9c9c95e;
-    border-radius: 5%;
-    padding: 30px;
-}
-
-article form label {
-    margin: 0 10px;
-}
-
-article form input,
-article form textarea {
-    width: 180px;
-    min-width: 180px;
-    max-width: 180px;
-}
-
-article form textarea {
-    min-height: 100px;
-}
-
-article #form {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
 #btnSubmit {
     background: #383838;
@@ -532,6 +506,109 @@ article #form {
 #noticias p a {
     color: #ffffff;
 }
+
+/* =======================================
+----------------Preguntas-----------------
+==========================================*/
+.preguntasUser {
+    width: 100%;
+}
+
+.pregunta {
+    background: #FE9900;
+    margin: 20px 2%;
+    border-radius: 2%;
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+    width: 96%;
+}
+
+.pregunta h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.pregunta .textPregunta p {
+    font-size: 18px;
+    margin-top: -16px;
+} 
+
+.pregunta a {
+    color: aqua;
+}
+
+.nombreEnd{
+    text-align: end;
+    color: #ffffff;
+}
+
+.nuevaPregunta h1{
+    background: #ffffff;
+}
+
+.newPregunta {
+    width: 96%;
+    margin: 0 2%;
+}
+
+.newPregunta textarea{
+    width: 100%;
+    resize: none;
+    height: 100px;
+}
+
+/* =======================================
+----------------Login---------------------
+==========================================*/
+.error {
+    text-align: center;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.linkLogin {
+    text-align: end;
+}
+
+.formLogin, .center {
+    text-align: center;
+    font-weight: bold;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+.lblLogin {
+    margin-top: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: initial;
+  }
+
+input[type=button], input[type=submit] {
+    background-color: #ff6565;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+input[type=submit]:hover {
+    background-color: #ac4545;
+  }
 
 /* =======================================
 ----------------Sectores------------------
