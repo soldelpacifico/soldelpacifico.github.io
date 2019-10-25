@@ -190,15 +190,16 @@ button {
         font-family: 'Open Sans', sans-serif;
     }
 
-    #main-menu li {
+    #main-menu a {
         display: flex;
         height: 100%;
         width: 100%;
         justify-content: center;
         align-items: center;
+        color: #fff;
     }
 
-    #main-menu li:hover {
+    #main-menu a:hover {
         background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
         border-bottom: #ff9000 solid 5px;
     }
@@ -208,9 +209,6 @@ button {
         border-bottom: #b36500 solid 5px;
     }
 
-    #main-menu li a {
-        color: #fff;
-    }
     #btnMenu {
         display: none;
     }
@@ -245,11 +243,11 @@ button {
     #main-menu {
         margin: 10px 0;
     }
-    #main-menu li {
+    #main-menu a {
         padding: 10px 5px;
         border-bottom: solid 1px #365374;
     }
-    #main-menu li a{
+    #main-menu a li{
         padding-left: 10px;
         font-size: 16px;
         color: #fff;
@@ -266,7 +264,7 @@ button {
         background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
         border-bottom: #b36500 solid 5px;
     }
-    #main-menu li:hover {
+    #main-menu a:hover {
         background: #ff8d23;
     }
     
