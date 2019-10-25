@@ -232,12 +232,12 @@ button {
     .menuHam {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     #btnMenu {
         width: 44px;
         height: 44px;
         background: rgb(255, 166, 0);
-        margin-top: 17px;
     }
     #btnMenu i {
         font-size: 28px;
