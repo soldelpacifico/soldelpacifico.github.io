@@ -41,9 +41,26 @@
                     <ul id="main-menu" class="sm sm-blue">
                         <li><a href="{% url 'index' %}">Inicio</a></li>
                         <li><a href="{% url 'historia' %}">Rutas</a></li>
-                        <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
-                        <li><a href="{% url 'tarifas' %}">Beneficios</a></li>
-                        <li><a href="{% url 'preguntas' %}">Contacto</a></li>
+                        <li><a>Informacion</a>
+                            <ul>
+                                <li><a href="{% url 'tarifas' %}">Pasajes</a></li>
+                                <li><a href="#">Recorridos</a></li>
+                                <li><a href="{% url 'pertenencias' %}">Equipaje</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Comunicados</a>
+                            <ul>
+                                <li><a href="#">TNE</a></li>
+                                <li><a href="#">Prácticas</a></li>
+                                <li><a href="#">Reclamos</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Contacto</a>
+                            <ul>
+                                <li><a href="{% url 'preguntas' %}">Preguntas</a></li>
+                                <li><a href="#">Terminales</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>

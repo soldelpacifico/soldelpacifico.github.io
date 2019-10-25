@@ -4,6 +4,14 @@
 {% block content %}
 <div class="row">
   <div class="col-xs-12 col-md-5">
+    <div class="imgHistoria row">
+      <div class="col-xs-12">
+        <img src="{% static 'Images/logoOK.jpg' %}" alt="Logo">
+      </div>
+      <div class="col-xs-12">
+        <a id="btnHistoria" href="{% url 'historia' %}">HISTORIA</a>
+      </div>
+    </div>
     <div class="slider border">
       <ul>
         <li><img src="{% static 'Images/Inicio/bus1.jpeg' %}" alt="bus1" /></li>
@@ -14,7 +22,7 @@
     </div>
   </div>
 
-  <article class="col-xs-12 col-md-7">
+  <article id="quienesSomos" class="col-xs-12 col-md-7">
     <h1>¿Quiénes Somos?</h1>
     <p>Sol del Pacífico es la Empresa de Transporte Rural de Pasajeros, considerada como la mas representativa y la de
       mayor trayectoria de la Quinta Región. Durante 60 años, cumplimos servicios de Mar a Cordillera, practicamente a
@@ -36,7 +44,7 @@
 </div>
 <article id="noticias" class="row">
   <h1>Últimos comunicados</h1>
-  {% for noticia in Noticias %} 
+  {% for noticia in Noticias %}
   <div class="noticia col-xs-11">
     <h2><i class="material-icons md-16">event_note</i>{{noticia.titulo}}</h2>
     <h6><i class="material-icons md-16">date_range</i>{{noticia.fecha_Publicacion}}</h6>
