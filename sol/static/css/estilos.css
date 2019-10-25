@@ -32,12 +32,6 @@ input[type=number] {
 .material-icons.md-30 { font-size: 30px; }
 .material-icons.md-48 { font-size: 48px; }
 
-.link {
-    text-decoration: none;
-    font-weight: bold;
-    color: #1100ffef;
-}
-
 a {
     text-decoration: none;
     font-weight: bold;
@@ -116,10 +110,6 @@ button {
     margin-left: 10px;
 }
 
-.mostrarMenu {
-    display: block;
-    visibility: visible;
-}
 
 .spnSol {
     margin-right: 5px;
@@ -221,7 +211,7 @@ button {
     .header {
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
-        min-height: 69px;    
+        min-height: 69px;
     }
     .header .row {
         display: flex;
@@ -338,9 +328,10 @@ button {
     border: solid 1px #ff9000;
 }
 
-#quienesSomos {
+.fondoBlanco {
     background: #fff;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+    margin-right: 8px;
 }
 
 .border {
@@ -352,6 +343,11 @@ article h1 {
     text-align: center;
     margin: 20px 0;
     font-size: 50px;
+    color: #ff9000;
+}
+
+article h2 {
+    color: #fff;
 }
 
 article h3 {
@@ -379,6 +375,7 @@ article p {
 table {
     border-spacing: 0px;
     border-collapse: collapse;
+    background: #fff4e9;
 }
 
 table td {
@@ -650,7 +647,7 @@ table {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     border-radius: 20px;
-    background: #00000024;
+    background: #fffceb;
 }
 
 #pases h2{
