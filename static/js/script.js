@@ -35,10 +35,22 @@ $(document).ready(function(){
     $("#btnCalera a").css("background","#ffffff");
     $("#btnConcon a").css("background","#f99600")
   });
+  $(function() {
+		$('#main-menu').smartmenus({
+			subMenusSubOffsetX: 1,
+			subMenusSubOffsetY: -8
+		});
+  });
+    var pathname = window.location.pathname;
+    $('#main-menu > li > a[href="'+pathname+'"]').parent().addClass('active');
 });
 
 function mostrar(){
     $("nav").toggleClass("show")
+}
+
+function toggleMenu(){
+  $("nav").toggleClass("mostrarMenu")
 }
 
 function menuDesp(mostrar, cambiarEst){

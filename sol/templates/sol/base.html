@@ -25,7 +25,7 @@
             alt="top"></button>
     <header class="header container">
         <div class="row noMarginTopBot" id="contHeader">
-            <div class="col-xs-12 col-sm-4 noMarginTopBot">
+            <div class="col-xs-12 col-sm-4 noMarginTopBot menuHam">
                 <div class="Logo">
                     <a class="txtLogo" href="{% url 'index' %}">
                         <div class="spnSol">Sol</div>
@@ -34,6 +34,9 @@
                         </div>
                         <div class="spnPacifico">Pacífico</div>
                     </a>
+                </div>
+                <div id="btnMenu" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-8 noMarginTopBot" id="contNav">

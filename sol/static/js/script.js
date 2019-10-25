@@ -49,6 +49,10 @@ function mostrar(){
     $("nav").toggleClass("show")
 }
 
+function toggleMenu(){
+  $("nav").toggleClass("mostrarMenu")
+}
+
 function menuDesp(mostrar, cambiarEst){
   $(mostrar).toggleClass("show");
   $(cambiarEst).css("background","#000000");

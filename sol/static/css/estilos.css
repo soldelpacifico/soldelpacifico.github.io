@@ -51,7 +51,7 @@ a {
 }
 
 .header .Logo .txtLogo {
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Coneria Script";
     text-decoration: none;
     font-weight: normal;
@@ -168,7 +168,7 @@ button {
     .header {
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
-        height: 88px;
+        height: 78px;
     }
 
     #contNav {
@@ -203,16 +203,74 @@ button {
 
     .active {
         background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
-        border-bottom: #ff9000 solid 5px;
+        border-bottom: #b36500 solid 5px;
     }
 
     #main-menu li a {
         color: #fff;
     }
+    #btnMenu {
+        display: none;
+    }
 }
 /* Mobile */
 @media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .header {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        min-height: 78px;    
+    }
+    .header .row {
+        display: flex;
+    }
     
+    .menuHam {
+        display: flex;
+        justify-content: space-between;
+    }
+    #btnMenu {
+        width: 44px;
+        height: 44px;
+        background: rgb(255, 166, 0);
+        margin-top: 17px;
+    }
+    #btnMenu i {
+        font-size: 28px;
+    }
+    #main-menu {
+        margin: 10px 0;
+    }
+    #main-menu li {
+        padding: 10px 5px;
+        border-bottom: solid 1px #365374;
+    }
+    #main-menu li a{
+        padding-left: 10px;
+        font-size: 16px;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        display: block;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background: none;
+        border-bottom: none;
+    }
+    .active {
+        background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
+        border-bottom: #b36500 solid 5px;
+    }
+    #main-menu li:hover {
+        background: #ff8d23;
+    }
+    
+}
+.mostrarMenu {
+    display: block !important;
 }
 
 /* =======================================
