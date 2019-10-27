@@ -42,7 +42,7 @@ $(document).ready(function(){
 		});
   });
     var pathname = window.location.pathname;
-    $('#main-menu > li > a[href="'+pathname+'"]').parent().addClass('active');
+    $('#main-menu > a[href="'+pathname+'"]').addClass('active');
 });
 
 function mostrar(){
