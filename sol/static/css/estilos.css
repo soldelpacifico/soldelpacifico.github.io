@@ -300,6 +300,12 @@ button {
 ----------------Content-------------------
 ==========================================*/
 
+@media (min-width: 768px) {
+    #contHistSlid {
+        margin-top: 122px;
+    }
+}
+
 .imgHistoria div {
     display: flex;
     justify-content: center;
@@ -328,15 +334,25 @@ button {
     border: solid 1px #ff9000;
 }
 
+.bordeAzul {
+    border: solid 2.5px #305174;
+}
+
 .fondoBlanco {
     background: #fff;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
     margin-right: 8px;
+    margin-left: 8px;
+    padding: 7px;
 }
 
 .border {
     border: 1px solid #000000;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
+.historia p {
+    color: #fff;
 }
 
 article h1 {
