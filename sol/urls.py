@@ -14,4 +14,5 @@ urlpatterns = [
     path('preguntas/nueva', views.pregunta_new, name='pregunta_new'),
     path('preguntas/responder', views.resp_preguntas, name="respPreguntas"),
     path('preguntas/<int:pk>/', views.pregunta_responder, name='pregunta_responder'),
+    path('preguntas/eliminar/<int:pk>/', views.pregunta_eliminar, name='pregunta_eliminar'),
 ]

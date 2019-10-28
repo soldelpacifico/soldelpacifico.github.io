@@ -58,3 +58,10 @@ def pregunta_responder(request, pk):
     else:
         form = RespuestaForm(instance=pregunta)
     return render(request, 'sol/pregunta_responder.html', {'form':form,'pregunta':pregunta})
+
+def pregunta_eliminar(request, pk):
+    pregunta = get_object_or_404(Pregunta, pk=pk)
+    pregunta.delete()
+    messages.success(request,'¡Pregunta eliminada exitosamente!')
+    return redirect('respPreguntas')
+    

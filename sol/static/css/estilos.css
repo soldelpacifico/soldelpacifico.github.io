@@ -509,6 +509,7 @@ article .linea {
     width: 100%;
     resize: none;
     height: 100px;
+    padding: 10px;
 }
 .mensajes {
     padding: 12px;
@@ -545,6 +546,12 @@ article .linea {
 .lblLogin {
     margin-top: 24px;
     color: #fff;
+    font-size: 24px;
+}
+
+.lblResp {
+    margin-top: 24px;
+    color: rgb(0, 0, 0);
     font-size: 24px;
 }
 
@@ -819,3 +826,90 @@ input[type=submit]:hover {
 #horarios .row {
     justify-content: center;
 }
+
+/* =======================================
+----------------Cards---------------------
+==========================================*/
+
+@media (max-width: 716px) {
+    .contPases{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .flip-card {
+        width: 100%;
+    }
+}
+
+.contPases{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.flip-card {
+    margin: 10px 0;
+    background-color: transparent;
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .paseRojo {
+      background: #ff0000;
+  }
+
+  .paseAzul {
+      background: rgb(0, 0, 138);
+  }
+  
+  .paseAmarillo {
+      background: #ffff00;
+      color: #000;
+  }
+
+  .paseVerde {
+      background: rgb(0, 255, 0);
+      color: #000;
+  }
+
+  .negrita{
+      font-weight: bolder;
+  }

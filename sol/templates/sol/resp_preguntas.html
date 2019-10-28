@@ -1,6 +1,16 @@
 {% extends 'sol/base.html' %}
 
 {% block content %}
+{% if messages %}
+  <ul class="mensajes">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}{% endif %}
+          {{ message }}
+      </li>
+      {% endfor %}
+  </ul>
+  {% endif %}
 {% if Preguntas %}
 <article class="preguntasUser container">
     {% for pregunta in Preguntas %}
@@ -11,6 +21,9 @@
             </div>
             <div class="col-xs-12">
                 <p>Preguntada por: {{ pregunta.email}}</p>
+            </div>
+            <div class="col-xs-12">
+                <a href="{% url 'pregunta_eliminar' pk=pregunta.pk %}"><i class="material-icons md-16">delete</i> Eliminar pregunta</a>
             </div>
         </div>
     </div>
