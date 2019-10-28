@@ -204,7 +204,7 @@ button {
     }
 }
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     nav {
         display: none;
     }
@@ -303,6 +303,7 @@ button {
 @media (min-width: 768px) {
     #contHistSlid {
         margin-top: 122px;
+        padding-right: 0px;
     }
 }
 
@@ -313,7 +314,7 @@ button {
     margin: 10px 0;
 }
 
-#btnHistoria {
+.btnA {
     padding: 11px 16px;
     font-size: 14px;
     color: #fff;
@@ -328,7 +329,7 @@ button {
     margin: 5px 0;
 }
 
-#btnHistoria:hover {
+.btnA:hover {
     background: #ff9000;
     color: #fff;
     border: solid 1px #ff9000;
@@ -467,7 +468,7 @@ article .linea {
 }
 
 .pregunta {
-    background: #FE9900;
+    background: #fff;
     margin: 20px 2%;
     border-radius: 2%;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
@@ -475,7 +476,7 @@ article .linea {
 }
 
 .pregunta h2 {
-    color: #ffffff;
+    color: #305174;
     font-size: 30px;
     margin-top: 5px;
 }
@@ -486,16 +487,17 @@ article .linea {
 } 
 
 .pregunta a {
-    color: aqua;
+    color: #ff9000;
 }
 
 .nombreEnd{
     text-align: end;
-    color: #ffffff;
+    color: #ff9000;
 }
 
-.nuevaPregunta h1{
-    background: #ffffff;
+.newPregunta label {
+    color: #fff;
+    font-size: 24px;
 }
 
 .newPregunta {
@@ -508,7 +510,15 @@ article .linea {
     resize: none;
     height: 100px;
 }
-
+.mensajes {
+    padding: 12px;
+    background: #00ff1f;
+    border: solid 4px #0c6c00;
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
+    box-sizing: border-box;
+}
 /* =======================================
 ----------------Login---------------------
 ==========================================*/
@@ -527,12 +537,15 @@ article .linea {
     font-weight: bold;
 }
 
+
 .fullWidth{
     width: 100%;
 }
 
 .lblLogin {
     margin-top: 24px;
+    color: #fff;
+    font-size: 24px;
 }
 
 input {
@@ -604,6 +617,7 @@ input[type=submit]:hover {
 
 #btnConcon a {
     transition: 0.5s;
+    background: #fff;
 }
 
 table {

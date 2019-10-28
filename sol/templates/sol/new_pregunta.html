@@ -3,10 +3,20 @@
 {% block content %}
 <article class="nuevaPregunta">
     <h1>Nueva Pregunta</h1>
+    {% if messages %}
+    <ul class="mensajes">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+            {{ message }}
+            </li>
+            {% endfor %}
+    </ul>
+    {% endif %}
     <div class="newPregunta">
         <form method="POST" class="formLogin">{% csrf_token %}
             {{ form }}
-            <input type="submit" value="Enviar" class="save btn btn-default"/>
+            <input type="submit" value="Enviar" class="save btn btn-default" />
         </form>
     </div>
 

@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Noticia, Pregunta
 from django.utils import timezone
@@ -7,9 +8,15 @@ def index(request):
     Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')[:3]
     return render(request, 'sol/index.html', {"Noticias":Noticias})
 
+def rutas(request):
+    return render(request, 'sol/rutas.html', {})
+
 def tarifas(request):
 
     return render(request, 'sol/tarifas.html', {})
+
+def beneficios(request):
+    return render(request, 'sol/beneficios.html', {})
 
 def pertenencias(request):
     return render(request, 'sol/pertenencias.html', {})
@@ -33,6 +40,7 @@ def pregunta_new(request):
             Pregunta.respuesta=""
             Pregunta.respondida = False
             Pregunta.save()
+            messages.success(request,'¡Pregunta enviada exitosamente!')
             return redirect('preguntas')
     else:
         form = PreguntaForm()

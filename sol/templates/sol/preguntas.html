@@ -21,28 +21,35 @@
 
 <article class="preguntasUser container">
   <h1>Preguntas de los usuarios</h1>
-  <hr />
   {% if user.is_authenticated %}
-  <div class="row">
-    <div class="col-xs-8">
-      <a href="{% url 'respPreguntas' %}"><i class="material-icons md-16">create</i> Ir a responder preguntas</a>
+  <div class="row rowLogin">
+    <div class="col-xs-5">
+      <a href="{% url 'respPreguntas' %}" class="btnA"><i class="material-icons md-16">create</i> Ir a responder preguntas</a>
     </div>
-    <div class="col-xs-4 linkLogin">
-      <span class="linkLogin">Ingresado como: {{ user.get_username }}</span>
-      <a href="{% url 'logout' %}"><i class="material-icons md-16">account_box</i>Desloguearme</a>
+    <div class="col-xs-7 linkLogin">
+      <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesion {{ user.get_username }}</a>
     </div>
   </div>
   {% else %}
-  <div class="row">
-    <div class="col-xs-8">
-      <a href="{% url 'pregunta_new' %}"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
+  <div class="row rowLogin">
+    <div class="col-xs-5">
+      <a href="{% url 'pregunta_new' %}" class="btnA"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
     </div>
-    <div class="col-xs-4 linkLogin">
-      <a href="{% url 'login' %}"><i class="material-icons md-16">person</i>Iniciar sesion</a>
+    <div class="col-xs-7 linkLogin">
+      <a href="{% url 'login' %}" class="btnA"><i class="material-icons md-16">person</i>Iniciar sesion</a>
     </div>
   </div>
   {% endif %}
-  <hr />
+  {% if messages %}
+  <ul class="mensajes">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}{% endif %}
+          {{ message }}
+      </li>
+      {% endfor %}
+  </ul>
+  {% endif %}
   {% for Pregunta in Preguntas %}
   <div class="pregunta col-xs-12">
     <div class="row">
@@ -52,7 +59,7 @@
     </div>
     <div class="row textPregunta">
       <div class="col-xs-12">
-        <p><i class="material-icons md-16">insert_comment</i>{{Pregunta.respuesta|urlize}}</p>
+        <p><i class="material-icons md-16">insert_comment</i> {{Pregunta.respuesta|urlize}}</p>
       </div>
     </div>
   </div>
