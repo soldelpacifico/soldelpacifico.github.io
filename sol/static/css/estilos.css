@@ -4,10 +4,11 @@
 }
 
 body {
-    min-width: 340px;
+    min-width: 320px;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     background: url(../Images/Banner-bg.jpg) top center;
     background-attachment: fixed;
+    width: 100%;
 }
 
 input::-webkit-outer-spin-button,
@@ -35,7 +36,7 @@ input[type=number] {
 a {
     text-decoration: none;
     font-weight: bold;
-    color: #ff0000;
+    color: #ff9000;
 }
 
 @font-face {
@@ -354,6 +355,10 @@ button {
 
 .historia p {
     color: #fff;
+}
+
+article {
+    width: 100%;
 }
 
 article h1 {
@@ -842,6 +847,63 @@ input[type=submit]:hover {
     }
 }
 
+@media (min-width: 320px) {
+    .contPases .flip-card {
+        width: 300px;
+        height: 167.8125px;
+    }
+    .flip-card-inner .flip-card-front img {
+        width: 300px;
+        height: 167.8125px;
+    }
+    .paseRojo p{
+        font-size: 15px;
+      }
+    
+      .paseAzul p{
+        font-size: 13px;
+      }
+      
+      .paseAmarillo p{
+        font-size: 12px;
+      }
+    
+      .paseVerde p{
+        font-size: 15px;
+      }
+}
+
+@media (min-width: 917px) {
+    .contPases .flip-card {
+          width: 440px;
+          height: 246.125px;
+          margin: 30px 0;
+      }
+      .flip-card-inner .flip-card-front img {
+          width: 440px;
+          height: 246.125px;
+      }
+      .paseRojo p{
+        font-size: 24px;
+      }
+    
+      .paseAzul p{
+        font-size: 21px;
+      }
+      
+      .paseAmarillo p{
+        font-size: 18px;
+      }
+    
+      .paseVerde p{
+        font-size: 23px;
+      }
+      .flip-card-back p {
+        text-align: start;
+        margin-left: 15px;
+      }
+  }
+
 .contPases{
     display: flex;
     flex-direction: row;
@@ -850,11 +912,18 @@ input[type=submit]:hover {
 }
 
 .flip-card {
-    margin: 10px 0;
+    margin: 15px 0;
     background-color: transparent;
     width: 350px;
     height: 200px;
     perspective: 1000px;
+    border-radius: 10px;
+  }
+  
+  .flip-card-front img {
+      width: 350px;
+      height: 200px;
+      border-radius: 10px;
   }
   
   .flip-card-inner {
@@ -878,6 +947,8 @@ input[type=submit]:hover {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.38);
+    border-radius: 10px;
   }
   
   /* Style the front side (fallback if image is missing) */
@@ -890,24 +961,22 @@ input[type=submit]:hover {
   .flip-card-back {
     color: white;
     transform: rotateY(180deg);
-  }
-  
-  .paseRojo {
-      background: #ff0000;
-  }
-
-  .paseAzul {
-      background: rgb(0, 0, 138);
-  }
-  
-  .paseAmarillo {
-      background: #ffff00;
-      color: #000;
+    border-radius: 10px;
+    background: #000;
+    background: url(../Images/Pases/PaseOscuro.jpg) !important;
+    background-size:     cover !important;
+    background-repeat:   no-repeat;
+    background-position: center center;
   }
 
-  .paseVerde {
-      background: rgb(0, 255, 0);
-      color: #000;
+  .flip-card-back p {
+    text-align: start;
+    margin-left: 5px;
+    font-weight: 50;
+  }
+
+  .flip-card-back p span {
+    font-weight: bolder;
   }
 
   .negrita{
