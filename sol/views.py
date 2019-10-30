@@ -1,12 +1,18 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Noticia, Pregunta
+from .models import Noticia, Pregunta, Aviso
 from django.utils import timezone
 from .forms import PreguntaForm, RespuestaForm
+from datetime import date
+
+today = date.today()
 
 def index(request):
     Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')[:3]
-    return render(request, 'sol/index.html', {"Noticias":Noticias})
+    Avisos = Aviso.objects.filter(dia__year=today.year,
+                                       dia__month=today.month,
+                                       dia__day=today.day)
+    return render(request, 'sol/index.html', {"Noticias":Noticias,"Avisos":Avisos})
 
 def rutas(request):
     return render(request, 'sol/rutas.html', {})

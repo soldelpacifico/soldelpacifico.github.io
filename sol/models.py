@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from datetime import date
 
 class Noticia(models.Model):
     fecha_Publicacion = models.DateTimeField(blank=True, null=True)
@@ -18,7 +19,7 @@ class Pregunta(models.Model):
     email=models.CharField(max_length=30)
     pregunta=models.TextField()
     respuesta=models.TextField(blank=True,null=True)
-    respondida=models.BooleanField(blank=True,null=True)
+    respondida=models.BooleanField()
 
     def publish(self):
         self.respondida = True
@@ -26,3 +27,15 @@ class Pregunta(models.Model):
     
     def __str__(self):
         return self.pregunta
+
+class Aviso(models.Model):
+    dia=models.DateTimeField()
+    titulo=models.CharField(max_length=30)
+    mensaje=models.TextField()
+
+    def publish(self):
+        self.dia = date.today
+        self.save()
+
+    def __str__(self):
+        return self.mensaje

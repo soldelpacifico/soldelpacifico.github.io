@@ -31,7 +31,7 @@ input[type=number] {
 .material-icons.md-16 { font-size: 16px; }
 .material-icons.md-20 { font-size: 20px; }
 .material-icons.md-30 { font-size: 30px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-48 { font-size: 55px; }
 
 a {
     text-decoration: none;
@@ -263,6 +263,28 @@ button {
 .mostrarMenu {
     display: block !important;
 }
+/* =======================================
+----------------Aviso---------------------
+==========================================*/
+
+.aviso{
+    background: rgba(82, 0, 0, 0.623);
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: rgb(58, 0, 0) 10px solid;
+    color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
+.contSigno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aviso h2 {
+    color: #ff8d23;
+}
 
 /* =======================================
 ----------------Slider--------------------
@@ -296,6 +318,56 @@ button {
     max-width: 1350px;
 }
 
+.sliderIndex {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    height: auto;
+    max-height: 750px;
+}
+
+.sliderIndex ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slideIndex 15s infinite;
+}
+
+.sliderIndex li {
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+
+.sliderIndex img {
+    width: 100%;
+    height: auto;
+    max-width: 1350px;
+}
+
+.sliderIndex a {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.541);
+}
+
+.subSlide {
+    color: #ffffff;
+    font-weight: bold;
+    background: #00000066;
+    padding: 15px;
+    margin-top: -4px;
+    transition: all 0.3s ease;
+}
+
+.sliderIndex img:hover + .subSlide {
+    color: #ff9000;
+    cursor: pointer;
+}
+
+.subSlide:hover {
+    color: #ff9000;
+    cursor: pointer;
+}
 
 /* =======================================
 ----------------Content-------------------
@@ -430,9 +502,15 @@ article .linea {
     margin-bottom: 20px;
 }
 
+@media (max-width: 991px) {
+    .noticia h6 {
+        text-align: start !important;
+    }
+}
+
 .noticia {
     background: #ff8d23;
-    padding: 10px 20px;
+    padding: 10px 0;
     border-radius: 2%;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
@@ -444,7 +522,6 @@ article .linea {
 #noticias h2 {
     font-size: 23px;
     margin-top: 5px;
-    float: left;
 }
 
 #noticias h6 {
@@ -456,8 +533,6 @@ article .linea {
 
 #noticias p {
     color: #000000;
-    clear: both;
-    margin-top: 2vw;
     font-size: 18px;
 }
 
@@ -821,6 +896,27 @@ footer a {
     }
     95% {
         margin-left: -300%;
+    }
+}
+
+@keyframes slideIndex {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: 0;
+    }
+    33.333% {
+        margin-left: -100%;
+    }
+    58.333% {
+        margin-left: -100%;
+    }
+    66.666% {
+        margin-left: -200%;
+    }
+    91.666% {
+        margin-left: -200%;
     }
 }
 

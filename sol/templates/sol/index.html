@@ -2,9 +2,26 @@
 {% load static %}
 
 {% block content %}
+
+{% for aviso in Avisos %}
+<div class="aviso">
+  <div class="row">
+    <div class="col-xs-3 contSigno">
+      <i class="material-icons md-48">error</i>
+    </div>
+    <div class="col-xs-9">
+      <h1>Aviso del dia {{aviso.dia.date}}</h1>
+      <h2>{{aviso.titulo}}</h2>
+      <p>{{aviso.mensaje}}</p>
+    </div>
+  </div>
+</div>
+{% empty %}
+{% endfor %}
+
 <div class="row">
-  <div class="row col-xs-12 col-sm-6" id="contHistSlid">
-    <div class="col-xs-12 col-sm-4 noMarginTopBot">
+  <div class="row col-xs-12 col-sm-3" id="contHistSlid">
+    <div class="col-xs-12 noMarginTopBot">
       <div class="imgHistoria row">
         <div class="col-xs-12 noMarginTopBot">
           <img src="{% static 'Images/logoOK.jpg' %}" alt="Logo">
@@ -12,44 +29,44 @@
         <div class="col-xs-12 noMarginTopBot">
           <a class="btnA" href="{% url 'historia' %}">HISTORIA</a>
         </div>
+        <div class="col-xs-12 noMarginTopBot">
+          <a class="btnA popup" href="{% static 'Images/quienessomos.png' %}">QUIENES SOMOS</a>
+        </div>
       </div>
     </div>
   </div>
-  <article id="quienesSomos" class="col-xs-12 col-sm-6 noMarginTopBot">
-    <h1>¿Quiénes Somos?</h1>
-    <div class="fondoBlanco">
-      <div class="bordeAzul">
-        <p>Sol del Pacífico es la Empresa de Transporte Rural de Pasajeros, considerada como la mas representativa y la
-          de
-          mayor trayectoria de la Quinta Región. Durante 60 años, cumplimos servicios de Mar a Cordillera, practicamente
-          a
-          todas las provincias regionales.</p>
-        <p>Los Servicios a Quillota, La Calera, San Felipe, Los Andes, mas los que se realizan a Quintero, Horcón,
-          Ventanas,
-          Puchuncaví, Maitencillo, Papudo, Zapallar, La Ligua, Cabildo, Petorca, Chincolco, casi en los límites
-          cordilleranos, dan prueba de la labor que se cumple.</p>
-        <p>Desde 1955 nuestra función no ha sido solo transportar, sino de unir personas, ayudando a cumplir sus sueños,
-          y
-          contribuir al progreso personal e intercomunal.</p>
-        <!-- <p>Por ello, y en concordancia a las necesidades y avances de nuestros tiempos, nos hemos ido innovando, y
-          adaptando
-          a las necesidades de nuestros clientes. Es así como nos hemos constituído en la primera empresa de Transportes
-          Rurales de la Región, en implementar el Servicio de Localización y Administración de Flota a través del
-          Sistema
-          GPS Online.</p>
-        <p>Sin embargo, sabemos que alcanzar la calidad es un proceso constante, por ello estamos diseñando y ejecutando
-          acciones que nos permitan mejorar y diversificar nuestro servicio.</p> -->
-      </div>
+  <div class="col-xs-12 col-sm-9">
+    <div class="sliderIndex">
+      <ul>
+        <li><a href="#">
+            <img src="{% static 'Images/Slider/Slider-img1.jpg' %}" alt="bus1" />
+            <p class="subSlide">Terminales</p>
+          </a></li>
+        <li><a href="{% url 'preguntas' %}">
+            <img src="{% static 'Images/Slider/Slider-img2.jpg' %}" alt="bus2" />
+            <p class="subSlide">Preguntas frecuentes</p>
+          </a></li>
+        <li><a href="#">
+            <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
+            <p class="subSlide">Itinerarios</p>
+          </a></li>
+      </ul>
     </div>
-  </article>
+  </div>
 </div>
 <article id="noticias" class="row">
   <h1>Últimos comunicados</h1>
   {% for noticia in Noticias %}
   <div class="noticia col-xs-11">
-    <h2><i class="material-icons md-16">event_note</i>{{noticia.titulo}}</h2>
-    <h6><i class="material-icons md-16">date_range</i>{{noticia.fecha_Publicacion}}</h6>
-    <p>{{noticia.texto|urlize}}</p>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <h2><i class="material-icons md-16">event_note</i>{{noticia.titulo}}</h2>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <h6><i class="material-icons md-16">date_range</i>{{noticia.fecha_Publicacion.date}}</h6>
+      </div>
+    </div>
+    <p>{{noticia.texto|urlizetrunc:30}}</p>
   </div>
   {% endfor %}
 </article>
