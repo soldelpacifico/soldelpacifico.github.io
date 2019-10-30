@@ -1078,3 +1078,10 @@ input[type=submit]:hover {
   .negrita{
       font-weight: bolder;
   }
+
+  .closeAviso {
+    position: absolute;
+    right: 19px;
+    cursor: pointer;
+    font-size: 30px;
+  }

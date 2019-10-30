@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $(".closeAviso").click(function() {
+    $(".aviso").css("display","none")
+  });
+
   $("#despInfo").click(function(){
     if($(window).width()<1100) {
       $("#liCont1").toggleClass("show");
