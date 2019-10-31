@@ -5,9 +5,8 @@ from django.utils import timezone
 from .forms import PreguntaForm, RespuestaForm
 from datetime import date
 
-today = date.today()
-
 def index(request):
+    today = date.today()
     Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')[:3]
     Avisos = Aviso.objects.filter(dia__year=today.year,
                                        dia__month=today.month,
@@ -70,4 +69,3 @@ def pregunta_eliminar(request, pk):
     pregunta.delete()
     messages.success(request,'¡Pregunta eliminada exitosamente!')
     return redirect('respPreguntas')
-    
