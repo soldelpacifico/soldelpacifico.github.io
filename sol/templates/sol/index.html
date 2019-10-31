@@ -4,9 +4,16 @@
 {% block content %}
 
 {% for aviso in Avisos %}
-<div class="aviso">
+<div class="alertaAviso">
   <div class="row">
-      <i class="material-icons closeAviso">close</i>
+    <div class="col-xs-12">
+      <a href="#avisoPopup" class="open-popup-link"><p>Hay un aviso para el dia de hoy, clickeame para verlo.</p></a>
+    </div>
+  </div>
+</div>
+
+<div class="aviso white-popup mfp-hide" id="avisoPopup">
+  <div class="row">
     <div class="col-xs-3 contSigno">
       <i class="material-icons md-48">error</i>
     </div>

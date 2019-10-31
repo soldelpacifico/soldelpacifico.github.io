@@ -286,6 +286,25 @@ button {
     color: #ff8d23;
 }
 
+.closeAviso {
+    position: absolute;
+    right: 19px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+.alertaAviso {
+    cursor: pointer;
+    text-align: center;
+    background: -webkit-radial-gradient(circle, #790000, rgb(32, 0, 0));
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.507);
+    margin: 5px 0;
+}
+.alertaAviso p {
+    color: #fff;
+}
+
 /* =======================================
 ----------------Slider--------------------
 ==========================================*/
@@ -1077,11 +1096,4 @@ input[type=submit]:hover {
 
   .negrita{
       font-weight: bolder;
-  }
-
-  .closeAviso {
-    position: absolute;
-    right: 19px;
-    cursor: pointer;
-    font-size: 30px;
   }
