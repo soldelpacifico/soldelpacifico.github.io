@@ -7,7 +7,7 @@ $(document).ready(function(){
     type:'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
-
+  
   $("#btnCalera").click(function() {
     $(".calera").css("display","block");
     $(".concon").css("display","none");
@@ -31,6 +31,10 @@ $(document).ready(function(){
 
     $('.popup').magnificPopup({type:'image'});
 });
+
+function toggleMenu(){
+  $("nav").toggleClass("mostrarMenu")
+}
 
 function changeBg(elemento){
     $(elemento).fadeOut(0);
