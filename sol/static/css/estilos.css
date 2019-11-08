@@ -510,7 +510,7 @@ table {
 
 table td {
     border: 1px solid #000000;
-    padding: 0.5em;
+    padding: 0.4em;
     margin: 0;
 }
 
@@ -744,7 +744,6 @@ input[type=submit]:hover {
 }
 
 table {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
@@ -753,7 +752,6 @@ table {
 
   table td, table th {
     border: 1.2px solid rgb(0, 0, 0);
-    padding: 8px;
   }
 
   table tr:nth-child(even){background-color: #ffffff;}
@@ -761,9 +759,8 @@ table {
   table tr:hover {background: rgb(226, 226, 226);}
 
   table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+    padding: 12px 2px;
+    text-align: center;
     background: linear-gradient(#e6e620, #FF8000, #ff6565);;
     color: rgb(0, 0, 0);
   }
@@ -880,6 +877,7 @@ footer a {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    padding: 7px;
 }
 
 .fa-facebook {
@@ -1067,12 +1065,10 @@ input[type=submit]:hover {
   }
   
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -1082,13 +1078,11 @@ input[type=submit]:hover {
     border-radius: 10px;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: #bbb;
     color: black;
   }
   
-  /* Style the back side */
   .flip-card-back {
     color: white;
     transform: rotateY(180deg);
@@ -1113,3 +1107,42 @@ input[type=submit]:hover {
   .negrita{
       font-weight: bolder;
   }
+
+  .btnSector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            display: none;
+}
+.zCalera{
+    background-image: url(../Images/Tarifas/calera.png);
+}
+.zCosta{background-image:url(../Images/Tarifas/costa.png);}
+
+.btnSector input:active +.radioZona{opacity: .9;}
+.btnSector input:checked +.radioZona{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.radioZona img{width: 100%;border-radius: 100%;}
+.radioZona{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:flex;
+    width:100%;
+    border-radius: 4%;
+    box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.38);
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.radioZona:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}

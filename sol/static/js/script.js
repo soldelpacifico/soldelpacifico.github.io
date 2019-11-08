@@ -7,18 +7,26 @@ $(document).ready(function(){
     type:'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
+  $('input[type=radio][name=zona]').change(function() {
+    if (this.value == 'calera') {
+      $(".calera").css("display","block");
+      $(".concon").css("display","none");
+      $("#btnCalera a").css("background","#f99600");
+      $("#btnConcon a").css("background","#ffffff");
+    }
+    else {
+      $(".calera").css("display","none");
+      $(".concon").css("display","block");
+      $("#btnCalera a").css("background","#ffffff");
+      $("#btnConcon a").css("background","#f99600");
+    }
+});
   
   $("#btnCalera").click(function() {
-    $(".calera").css("display","block");
-    $(".concon").css("display","none");
-    $("#btnCalera a").css("background","#f99600");
-    $("#btnConcon a").css("background","#ffffff")
+    
   });
   $("#btnConcon").click(function() {
-    $(".calera").css("display","none");
-    $(".concon").css("display","block");
-    $("#btnCalera a").css("background","#ffffff");
-    $("#btnConcon a").css("background","#f99600")
+
   });
   $(function() {
 		$('#main-menu').smartmenus({
