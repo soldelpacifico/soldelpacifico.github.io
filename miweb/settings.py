@@ -122,6 +122,14 @@ LOGIN_REDIRECT_URL='preguntas'
 LOGOUT_REDIRECT_URL='login'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
+# Password Recovery Email
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' # servicio de correo smtp
+EMAIL_HOST_USER = 'soldelpacifico.bot@gmail.com' # id de correo electrónico
+EMAIL_HOST_PASSWORD = '123456sol' #password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

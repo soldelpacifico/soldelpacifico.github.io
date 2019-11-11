@@ -1,9 +1,12 @@
+from django.conf import settings
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Noticia, Pregunta, Aviso
 from django.utils import timezone
 from .forms import PreguntaForm, RespuestaForm
 from datetime import date
+
+#Pass Recover
 
 def index(request):
     today = date.today()
@@ -34,6 +37,8 @@ def preguntas(request):
     return render(request, 'sol/preguntas.html', {"Preguntas":Preguntas})
 
 def resp_preguntas(request):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     Preguntas = Pregunta.objects.filter(respondida=False)
     return render(request, 'sol/resp_preguntas.html', {"Preguntas":Preguntas})
 
@@ -52,6 +57,8 @@ def pregunta_new(request):
     return render(request, 'sol/new_pregunta.html', {'form':form})
 
 def pregunta_responder(request, pk):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     pregunta = get_object_or_404(Pregunta, pk=pk)
     if request.method == "POST":
         form = RespuestaForm(request.POST, instance=pregunta)
@@ -65,7 +72,12 @@ def pregunta_responder(request, pk):
     return render(request, 'sol/pregunta_responder.html', {'form':form,'pregunta':pregunta})
 
 def pregunta_eliminar(request, pk):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     pregunta = get_object_or_404(Pregunta, pk=pk)
     pregunta.delete()
     messages.success(request,'¡Pregunta eliminada exitosamente!')
     return redirect('respPreguntas')
+
+
+#Pass recover

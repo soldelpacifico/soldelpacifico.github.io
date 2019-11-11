@@ -622,7 +622,7 @@ article .linea {
 }
 
 .newPregunta textarea{
-    width: 100%;
+    width: 99%;
     resize: none;
     height: 100px;
     padding: 10px;
@@ -688,7 +688,7 @@ input[type=button], input[type=submit] {
     color: white;
     padding: 16px 32px;
     text-decoration: none;
-    margin: 4px 2px;
+    margin: 4px 0;
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
