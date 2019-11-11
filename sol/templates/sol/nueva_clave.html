@@ -1,18 +1,29 @@
 {% extends "sol/base.html" %}
 
 {% block content %}
-<article  class="mantenedorUsuario">
-<h1 class="center">Recuperar Contraseña</h1>
-<p>Igrese la nueva contraseña en ambos campos para cambiar la anterior.</p>
-<form method="POST" class="formLogin">
-    {% csrf_token %}
-    <div class="row">
-        <div class="col-xs-12 col-md-2">
-            <p class="lblLogin">Contraseña</p>
+<article class="mantenedorUsuario">
+    <h1 class="center">Recuperar Contraseña</h1>
+    <p>Igrese la nueva contraseña en ambos campos para cambiar la anterior.</p>
+    <form method="POST" class="formLogin">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="recomendaciones">
+                    {{ form.new_password1.help_text}}
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <p class="lblLogin">Contraseña</p>
+            </div>
+            <div class="col-xs-12 col-md-10">{{ form.new_password1 }}</div>
         </div>
-        <div class="col-xs-12 col-md-10">{{ form }}</div>
-    </div>
-    <input type="submit" value="Enviar correo">
-  </form>
+        <div class="row">
+            <div class="col-xs-12 col-md-2">
+                <p class="lblLogin">Repetir Contraseña</p>
+            </div>
+            <div class="col-xs-12 col-md-10">{{ form.new_password2 }}</div>
+        </div>
+        <input type="submit" value="Enviar correo">
+    </form>
 </article>
 {% endblock %}
