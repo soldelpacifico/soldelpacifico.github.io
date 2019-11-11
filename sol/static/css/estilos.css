@@ -545,9 +545,9 @@ article .linea {
 }
 
 .noticia {
-    background: #ff8d23;
+    background: #fff;
     padding: 10px 0;
-    border-radius: 2%;
+    border-radius: 10px;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
 
@@ -558,12 +558,13 @@ article .linea {
 #noticias h2 {
     font-size: 23px;
     margin-top: 5px;
+    color: #ff9000;
 }
 
 #noticias h6 {
     font: 15px cursive;
     margin-right: 10px;
-    color: #ffffff;
+    color: #365374;
     text-align: end;
 }
 
@@ -572,9 +573,6 @@ article .linea {
     font-size: 18px;
 }
 
-#noticias p a {
-    color: #ffffff;
-}
 
 /* =======================================
 ----------------Preguntas-----------------
@@ -585,10 +583,10 @@ article .linea {
 
 .pregunta {
     background: #fff;
-    margin: 20px 2%;
-    border-radius: 2%;
+    margin: 20px 0;
+    border-radius: 10px;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
-    width: 96%;
+    width: 100%;
 }
 
 .pregunta h2 {
@@ -683,7 +681,7 @@ input {
   }
 
 input[type=button], input[type=submit] {
-    background-color: #ff6565;
+    background-color: #131f2d;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -692,12 +690,28 @@ input[type=button], input[type=submit] {
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
+    width: 96%;
   }
 
 input[type=submit]:hover {
-    background-color: #ac4545;
-  }
+    background-image: linear-gradient(#ff9000, #ff6000);
+}
 
+.mantenedorUsuario {
+    margin-bottom: 20px;
+}
+
+.mantenedorUsuario h1 {
+    text-align: center;
+}
+
+.mantenedorUsuario a {
+    color: #fff;
+}
+
+.mantenedorUsuario p {
+    color: #fff;
+}
 /* =======================================
 ----------------Sectores------------------
 ==========================================*/
@@ -1145,4 +1159,8 @@ input[type=submit]:hover {
     -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
        -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
             filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.rutas img {
+    width: 100%;
 }
