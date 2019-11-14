@@ -573,6 +573,10 @@ article .linea {
     font-size: 18px;
 }
 
+.imgNoticia img{
+    width: 100%;
+}
+
 
 /* =======================================
 ----------------Preguntas-----------------

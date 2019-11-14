@@ -6,6 +6,7 @@ class Noticia(models.Model):
     fecha_Publicacion = models.DateTimeField(blank=True, null=True)
     titulo = models.CharField(max_length=200)
     texto = models.TextField()
+    imagen = models.ImageField(upload_to='sol/noticias',blank=True,null=True)
 
     def publish(self):
         self.fecha_Publicacion = timezone.now()

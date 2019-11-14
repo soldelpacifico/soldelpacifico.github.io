@@ -76,6 +76,11 @@
             </div>
           </div>
           <p>{{noticia.texto|urlizetrunc:30}}</p>
+          {% if noticia.imagen %}
+            <div class="col-xs-12 imgNoticia">
+              <img src="{{ noticia.imagen.url }}" alt="noticia" >
+            </div>
+          {% endif %}
         </div>
   </div>
   {% endfor %}
