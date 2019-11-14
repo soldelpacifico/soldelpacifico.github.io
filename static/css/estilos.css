@@ -44,8 +44,19 @@ a {
     src: URL("Fonts/Demo_ConeriaScript.ttf");
 }
 
+.header {
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .header .Logo {
     text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .header .Logo .txtLogo {
@@ -213,9 +224,11 @@ button {
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
         min-height: 69px;
+        display: flex;
     }
     .header .row {
         display: flex;
+        width: 100%;
     }
     
     .menuHam {
@@ -227,9 +240,13 @@ button {
         width: 44px;
         height: 44px;
         background: rgb(255, 166, 0);
+        cursor: pointer;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     #btnMenu i {
-        font-size: 28px;
+        font-size: 25px;
     }
     #main-menu {
         margin: 10px 0;
@@ -493,7 +510,7 @@ table {
 
 table td {
     border: 1px solid #000000;
-    padding: 0.5em;
+    padding: 0.4em;
     margin: 0;
 }
 
@@ -528,9 +545,9 @@ article .linea {
 }
 
 .noticia {
-    background: #ff8d23;
+    background: #fff;
     padding: 10px 0;
-    border-radius: 2%;
+    border-radius: 10px;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
 
@@ -541,12 +558,13 @@ article .linea {
 #noticias h2 {
     font-size: 23px;
     margin-top: 5px;
+    color: #ff9000;
 }
 
 #noticias h6 {
     font: 15px cursive;
     margin-right: 10px;
-    color: #ffffff;
+    color: #365374;
     text-align: end;
 }
 
@@ -555,9 +573,10 @@ article .linea {
     font-size: 18px;
 }
 
-#noticias p a {
-    color: #ffffff;
+.imgNoticia img{
+    width: 100%;
 }
+
 
 /* =======================================
 ----------------Preguntas-----------------
@@ -568,10 +587,10 @@ article .linea {
 
 .pregunta {
     background: #fff;
-    margin: 20px 2%;
-    border-radius: 2%;
+    margin: 20px 0;
+    border-radius: 10px;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
-    width: 96%;
+    width: 100%;
 }
 
 .pregunta h2 {
@@ -605,7 +624,7 @@ article .linea {
 }
 
 .newPregunta textarea{
-    width: 100%;
+    width: 99%;
     resize: none;
     height: 100px;
     padding: 10px;
@@ -643,7 +662,6 @@ article .linea {
 }
 
 .lblLogin {
-    margin-top: 24px;
     color: #fff;
     font-size: 24px;
 }
@@ -666,21 +684,37 @@ input {
   }
 
 input[type=button], input[type=submit] {
-    background-color: #ff6565;
+    background-color: #131f2d;
     border: none;
     color: white;
     padding: 16px 32px;
     text-decoration: none;
-    margin: 4px 2px;
+    margin: 4px 0;
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
+    width: 96%;
   }
 
 input[type=submit]:hover {
-    background-color: #ac4545;
-  }
+    background-image: linear-gradient(#ff9000, #ff6000);
+}
 
+.mantenedorUsuario {
+    margin-bottom: 20px;
+}
+
+.mantenedorUsuario h1 {
+    text-align: center;
+}
+
+.mantenedorUsuario a {
+    color: #fff;
+}
+
+.mantenedorUsuario p {
+    color: #fff;
+}
 /* =======================================
 ----------------Sectores------------------
 ==========================================*/
@@ -727,7 +761,6 @@ input[type=submit]:hover {
 }
 
 table {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
@@ -736,7 +769,6 @@ table {
 
   table td, table th {
     border: 1.2px solid rgb(0, 0, 0);
-    padding: 8px;
   }
 
   table tr:nth-child(even){background-color: #ffffff;}
@@ -744,9 +776,8 @@ table {
   table tr:hover {background: rgb(226, 226, 226);}
 
   table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+    padding: 12px 2px;
+    text-align: center;
     background: linear-gradient(#e6e620, #FF8000, #ff6565);;
     color: rgb(0, 0, 0);
   }
@@ -858,12 +889,12 @@ footer a {
 }
 
 .fa {
-    padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
     width: 20px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    padding: 7px;
 }
 
 .fa-facebook {
@@ -1051,12 +1082,10 @@ input[type=submit]:hover {
   }
   
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -1066,13 +1095,11 @@ input[type=submit]:hover {
     border-radius: 10px;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: #bbb;
     color: black;
   }
   
-  /* Style the back side */
   .flip-card-back {
     color: white;
     transform: rotateY(180deg);
@@ -1097,3 +1124,58 @@ input[type=submit]:hover {
   .negrita{
       font-weight: bolder;
   }
+
+  .btnSector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            display: none;
+}
+.zCalera{
+    background-image: url(../Images/Tarifas/calera.png);
+}
+.zCosta{background-image:url(../Images/Tarifas/costa.png);}
+
+.btnSector input:active +.radioZona{opacity: .9;}
+.btnSector input:checked +.radioZona{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.radioZona img{width: 100%;border-radius: 100%;}
+.radioZona{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:flex;
+    width:100%;
+    border-radius: 4%;
+    box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.38);
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.radioZona:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.rutas img {
+    width: 100%;
+}
+/* =======================================
+----------------Recuperar Clave-----------
+==========================================*/
+
+.recomendaciones ul {
+    margin-left: 20px;
+}
+
+.recomendaciones ul li {
+    text-align: start;
+    color: #fff;
+}
