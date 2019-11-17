@@ -1,6 +1,5 @@
 from django.db import models
-from django.utils import timezone
-from datetime import date
+from datetime import datetime
 
 class Noticia(models.Model):
     fecha_Publicacion = models.DateTimeField(blank=True, null=True)
@@ -9,7 +8,7 @@ class Noticia(models.Model):
     imagen = models.ImageField(upload_to='sol/noticias',blank=True,null=True)
 
     def publish(self):
-        self.fecha_Publicacion = timezone.now()
+        self.fecha_Publicacion = datetime.today
         self.save()
 
     def __str__(self):
@@ -21,10 +20,6 @@ class Pregunta(models.Model):
     pregunta=models.TextField()
     respuesta=models.TextField(blank=True,null=True)
     respondida=models.BooleanField()
-
-    def publish(self):
-        self.respondida = True
-        self.save()
     
     def __str__(self):
         return self.pregunta
@@ -35,7 +30,7 @@ class Aviso(models.Model):
     mensaje=models.TextField()
 
     def publish(self):
-        self.dia = date.today
+        self.dia = datetime.today
         self.save()
 
     def __str__(self):
