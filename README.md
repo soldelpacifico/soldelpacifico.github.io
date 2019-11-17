@@ -1,6 +1,6 @@
 # Sol Del Pacifico
 
-Sitio web en desarrollo, actualmente esta siendo desarrollado con el fin de 
+Sitio web en desarrollo, actualmente esta siendo desarrollado con el fin de satisfacer las necesidades de la empresa Sol del Pacifico y a la vez lograr los requerimientos exigidos en DWY4101, Profesora Yaravi Villegas.
 
 # Pruebas unitarias
 
