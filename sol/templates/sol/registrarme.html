@@ -1,0 +1,54 @@
+{% extends "sol/base.html" %}
+{% load static %}
+
+{% block content %}
+<article class="mantenedorUsuario">
+    <h1 class="center">Registrarme</h1>
+    <form method="post" class="formLogin" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="container fullWidth">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Usuario</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.username }}</div>
+                <div class="col-xs-12">
+                    <ul>
+                        <li>{{form.username.help_text}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Contraseña</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.password1 }}</div>
+            </div>
+            <div class="col-xs-12">
+                <p>{{form.password1.help_text}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <p class="lblLogin">Confirmar contraseña</p>
+            </div>
+            <div class="col-xs-12 col-md-9">{{ form.password2 }}</div>
+        </div>
+        {% if form.errors %}
+        <p class="error">Usuario o clave incorrectos, porfavor intente nuevamente.</p>
+        {% endif %}
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="submit" value="REGISTRARME" />
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </div>
+        </div>
+    </form>
+    <div class="col-xs-12 center">
+        <a class="btnA" href="{% url 'login' %}">Si ya tienes un usuario clickea aqui para entrar</a>
+    </div>
+
+    {{form.email}}
+</article>
+{% endblock %}

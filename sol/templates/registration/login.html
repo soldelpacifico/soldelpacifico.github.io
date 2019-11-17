@@ -2,13 +2,13 @@
 
 {% block content %}
 <article class="mantenedorUsuario">
-    <h1 class="center">Iniciar Sesion como Administrador</h1>
+    <h1 class="center">Iniciar Sesion</h1>
     <form method="post" class="formLogin" action="{% url 'login' %}">
         {% csrf_token %}
         <div class="container fullWidth">
             <div class="row">
                 <div class="col-xs-12 col-md-3">
-                    <p class="lblLogin">Usuario Administrador</p>
+                    <p class="lblLogin">Usuario</p>
                 </div>
                 <div class="col-xs-12 col-md-9">{{ form.username }}</div>
             </div>
@@ -17,9 +17,6 @@
                     <p class="lblLogin">Contraseña</p>
                 </div>
                 <div class="col-xs-12 col-md-9">{{ form.password }}</div>
-                <div class="col-xs-12">
-                    <a href="{% url 'password_reset' %}">¿Has olvidado tu contraseña?</a>
-                </div>
             </div>
             {% if form.errors %}
             <p class="error">Usuario o clave incorrectos, porfavor intente nuevamente.</p>
@@ -28,6 +25,12 @@
                 <div class="col-xs-12">
                     <input type="submit" value="INGRESAR" />
                     <input type="hidden" name="next" value="{{ next }}" />
+                </div>
+                <div class="col-xs-12">
+                    <a class="btnA" href="{% url 'password_reset' %}">¿Has olvidado tu contraseña?</a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="btnA" href="{% url 'registrarme' %}">Registrarme</a>
                 </div>
             </div>
         </div>

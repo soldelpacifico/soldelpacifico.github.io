@@ -16,8 +16,8 @@ class Noticia(models.Model):
         return self.titulo
 
 class Pregunta(models.Model):
-    nombre=models.CharField(max_length=30)
-    email=models.CharField(max_length=30)
+    nombre=models.CharField(max_length=50)
+    email=models.EmailField(max_length=50)
     pregunta=models.TextField()
     respuesta=models.TextField(blank=True,null=True)
     respondida=models.BooleanField()

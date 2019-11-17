@@ -24,7 +24,7 @@
 
 <article class="preguntasUser container">
   <h1>Preguntas de los usuarios</h1>
-  {% if user.is_authenticated %}
+  {% if user.is_superuser %}
   <div class="row rowLogin">
     <div class="col-xs-5">
       <a href="{% url 'respPreguntas' %}" class="btnA"><i class="material-icons md-16">create</i> Ir a responder
@@ -36,6 +36,21 @@
     </div>
   </div>
   {% else %}
+  {% if user.is_authenticated %}
+  <div class="row rowLogin">
+    <div class="col-xs-4">
+      <a href="{% url 'pregunta_new' %}" class="btnA"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
+    </div>
+    <div class="col-xs-4 linkLogin">
+        <a href="{% url 'mis_preguntas' %}" class="btnA"><i class="material-icons md-16">assignment_turned_in</i>Mis
+          preguntas respondidas</a>
+      </div>
+    <div class="col-xs-4 linkLogin">
+        <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesion
+          {{ user.get_username }}</a>
+    </div>
+  </div>
+  {% else %}
   <div class="row rowLogin">
     <div class="col-xs-5">
       <a href="{% url 'pregunta_new' %}" class="btnA"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
@@ -44,6 +59,7 @@
       <a href="{% url 'login' %}" class="btnA"><i class="material-icons md-16">person</i>Iniciar sesion</a>
     </div>
   </div>
+  {% endif %}
   {% endif %}
   {% if messages %}
   <ul class="mensajes">

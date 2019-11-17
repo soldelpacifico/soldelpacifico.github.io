@@ -678,6 +678,40 @@ article .linea {
     text-align: center;
     font-weight: bold;
 }
+@media(max-width: 992px) {
+    .formLogin li {
+        margin-left: 20px;
+        text-align: start;
+    }
+    .helper {
+        margin-left: 20px;
+    }
+
+}
+@media(min-width: 992px) {
+    .formLogin li {
+        margin-left: 30%;
+        text-align: start;
+    }
+    .helper {
+        margin-left: 30%;
+    }
+
+}
+.formLogin li {
+    color: #fff;
+}
+
+.formLogin span {
+    display: block;
+    color: #fff;
+}
+
+.formLogin label {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+}
 
 
 .fullWidth{
@@ -695,7 +729,7 @@ article .linea {
     font-size: 24px;
 }
 
-input {
+input, textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -716,7 +750,7 @@ input[type=button], input[type=submit] {
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
-    width: 96%;
+    width: 100%;
   }
 
 input[type=submit]:hover {
