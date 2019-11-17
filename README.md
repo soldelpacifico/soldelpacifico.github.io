@@ -1,12 +1,12 @@
-#Sol Del Pacifico
+# Sol Del Pacifico
 
 Sitio web en desarrollo, actualmente esta siendo desarrollado con el fin de 
 
-#Pruebas unitarias
+# Pruebas unitarias
 
-##Ubicacion sol/tests/test_model.py
+## Ubicacion sol/tests/test_model.py
 
-###Resultados
+### Resultados
 
 PS C:\soldelpacifico.github.io> python manage.py test
 Creating test database for alias 'default'...
