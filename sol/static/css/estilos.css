@@ -36,11 +36,11 @@ input[type=number] {
 a {
     text-decoration: none;
     font-weight: bold;
-    color: #ff9000;
+    color: #b66700;
 }
 
-.btnA:hover {
-    color: #ffa631;
+a:hover {
+    color: #ff9a15;
 }
 
 @font-face {
