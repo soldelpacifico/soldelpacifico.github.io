@@ -39,6 +39,10 @@ a {
     color: #ff9000;
 }
 
+.btnA:hover {
+    color: #ffa631;
+}
+
 @font-face {
     font-family: "Coneria Script";
     src: URL("Fonts/Demo_ConeriaScript.ttf");
@@ -786,10 +790,6 @@ input[type=submit]:hover {
 
 #tarifas h2 {
     margin-top: 10px;
-}
-
-.btnSector{
-    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
 
 .btnSector a {
