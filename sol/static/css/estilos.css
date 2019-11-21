@@ -784,6 +784,10 @@ input[type=submit]:hover {
 ----------------Tarifas-------------------
 ==========================================*/
 
+#tarifas h2 {
+    margin-top: 10px;
+}
+
 .btnSector{
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
 }
@@ -883,6 +887,10 @@ table {
 ==========================================*/
 
 #horarios h2{
+    text-align: center;
+}
+
+.tdCenter {
     text-align: center;
 }
 
@@ -1203,7 +1211,7 @@ input[type=submit]:hover {
        -moz-filter: none;
             filter: none;
 }
-.radioZona img{width: 100%;border-radius: 100%;}
+.radioZona img{width: 100%;border-radius: 4%;}
 .radioZona{
     cursor:pointer;
     background-size:contain;
