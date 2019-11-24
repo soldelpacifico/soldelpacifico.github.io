@@ -785,6 +785,34 @@ input[type=submit]:hover {
 }
 
 /* =======================================
+----------------Rutas---------------------
+==========================================*/
+
+.rutas {
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.rutas h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    color: #ff9000;
+}
+
+.listaRutas {
+    list-style: none;
+    clear: both;
+}
+
+.listaRutas li {
+    float: left;
+    margin: 0 5px;
+    border-bottom: rgb(0, 0, 255) 1px solid;
+}
+
+/* =======================================
 ----------------Tarifas-------------------
 ==========================================*/
 
