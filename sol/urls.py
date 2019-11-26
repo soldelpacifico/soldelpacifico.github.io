@@ -10,7 +10,7 @@ urlpatterns = [
     path('tarifas', views.tarifas, name="tarifas"),
     path('beneficos', views.beneficios, name="beneficios"),
     path('pertenencias', views.pertenencias, name="pertenencias"),
-    path('historia', views.historia, name="historia"),
+    path('conocenos', views.historia, name="historia"),
     path('preguntas', views.preguntas, name="preguntas"),
     path('accounts/profile/', views.preguntas),
     path('preguntas/nueva', views.pregunta_new, name='pregunta_new'),

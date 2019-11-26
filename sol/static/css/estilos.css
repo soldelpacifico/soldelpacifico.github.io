@@ -413,6 +413,11 @@ button {
 ----------------Content-------------------
 ==========================================*/
 
+.quienesSomos p {
+    color: #fff;
+    font-size: 22px;
+}
+
 @media (min-width: 768px) {
     #contHistSlid {
         margin-top: 122px;
@@ -427,10 +432,14 @@ button {
     margin: 10px 0;
 }
 
+.fondoHist {
+    background: linear-gradient(rgba(255, 255, 0, 0.100), rgb(255, 0, 0, 0.050));
+}
+
 .historia {
     width: 96%;
     margin: auto 2%;
-    background: linear-gradient(rgb(179, 146, 0), rgb(202, 131, 0), rgb(231, 139, 0), rgb(153, 56, 0));
+    background: #fff;
     border: solid 1px rgb(0, 0, 0);
 }
 
@@ -467,6 +476,11 @@ button {
     background: rgba(64, 93, 118, 0.8);
     transition: all 0.3s ease;
     margin: 5px 0;
+}
+
+.btnB {
+    background: #191b32;
+    padding: 2px 34.94px;
 }
 
 .btnA:hover {
