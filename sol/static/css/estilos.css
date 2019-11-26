@@ -441,6 +441,7 @@ button {
     margin: auto 2%;
     background: #fff;
     border: solid 1px rgb(0, 0, 0);
+    margin-bottom: 25px;
 }
 
 .historia p {
