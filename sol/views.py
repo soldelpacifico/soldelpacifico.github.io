@@ -1,11 +1,11 @@
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Noticia, Pregunta, Aviso
 from django.utils import timezone
-from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm
+from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm, UserCreateForm
 from datetime import date
 
 #Pass Recover
@@ -100,7 +100,7 @@ def mis_preguntas(request):
 
 def register(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = UserCreateForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -115,7 +115,7 @@ def register(request):
                           template_name = "sol/registrarme.html",
                           context={"form":form})
 
-    form = UserCreationForm
+    form = UserCreateForm
     return render(request = request,
                   template_name = "sol/registrarme.html",
                   context={"form":form})
