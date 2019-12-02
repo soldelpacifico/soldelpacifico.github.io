@@ -10,6 +10,9 @@ from datetime import date
 
 #Pass Recover
 
+def error404(request, exception):
+    return render(request, 'error_404.html', {})
+
 def index(request):
     today = date.today()
     Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')[:3]
@@ -22,7 +25,6 @@ def rutas(request):
     return render(request, 'sol/rutas.html', {})
 
 def tarifas(request):
-
     return render(request, 'sol/tarifas.html', {})
 
 def beneficios(request):

@@ -38,4 +38,3 @@ urlpatterns = [
     path('password_reset/confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='sol/nueva_clave.html'), name='password_reset_confirm'),
     path('password_reset/complete/', auth_views.PasswordResetCompleteView.as_view(template_name='sol/clave_cambiada.html'), name='password_reset_complete'),
 ]
-
