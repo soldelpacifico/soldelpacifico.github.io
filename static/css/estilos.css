@@ -36,7 +36,11 @@ input[type=number] {
 a {
     text-decoration: none;
     font-weight: bold;
-    color: #ff9000;
+    color: #b66700;
+}
+
+a:hover {
+    color: #ff9a15;
 }
 
 @font-face {
@@ -406,8 +410,13 @@ button {
 }
 
 /* =======================================
-----------------Content-------------------
+----------------Content--------------------
 ==========================================*/
+
+.quienesSomos p {
+    color: #fff;
+    font-size: 22px;
+}
 
 @media (min-width: 768px) {
     #contHistSlid {
@@ -423,6 +432,38 @@ button {
     margin: 10px 0;
 }
 
+.fondoHist {
+    background: linear-gradient(rgba(255, 255, 0, 0.100), rgb(255, 0, 0, 0.050));
+}
+
+.historia {
+    width: 96%;
+    margin: auto 2%;
+    background: #fff;
+    border: solid 1px rgb(0, 0, 0);
+    margin-bottom: 25px;
+}
+
+.historia p {
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+}
+
+.historia img {
+    width: 46%;
+    border: solid 1px rgb(202, 131, 0);
+    margin: 10px 2%;
+}
+
+.imgR {
+    float: right;
+}
+
+.imgL {
+    float: left;
+}
+
 .btnA {
     padding: 11px 16px;
     font-size: 14px;
@@ -436,6 +477,11 @@ button {
     background: rgba(64, 93, 118, 0.8);
     transition: all 0.3s ease;
     margin: 5px 0;
+}
+
+.btnB {
+    background: #191b32;
+    padding: 2px 34.94px;
 }
 
 .btnA:hover {
@@ -459,10 +505,6 @@ button {
 .border {
     border: 1px solid #000000;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
-}
-
-.historia p {
-    color: #fff;
 }
 
 article {
@@ -655,6 +697,40 @@ article .linea {
     text-align: center;
     font-weight: bold;
 }
+@media(max-width: 992px) {
+    .formLogin li {
+        margin-left: 20px;
+        text-align: start;
+    }
+    .helper {
+        margin-left: 20px;
+    }
+
+}
+@media(min-width: 992px) {
+    .formLogin li {
+        margin-left: 30%;
+        text-align: start;
+    }
+    .helper {
+        margin-left: 30%;
+    }
+
+}
+.formLogin li {
+    color: #fff;
+}
+
+.formLogin span {
+    display: block;
+    color: #fff;
+}
+
+.formLogin label {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+}
 
 
 .fullWidth{
@@ -672,7 +748,7 @@ article .linea {
     font-size: 24px;
 }
 
-input {
+input, textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -693,7 +769,7 @@ input[type=button], input[type=submit] {
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
-    width: 96%;
+    width: 100%;
   }
 
 input[type=submit]:hover {
@@ -724,11 +800,49 @@ input[type=submit]:hover {
 }
 
 /* =======================================
+----------------Rutas---------------------
+==========================================*/
+
+.rutas {
+    width: 100%;
+    border-radius: 10px;
+    background: #00000047;
+}
+
+.rutas div .col-xs-12 {
+    text-align: center;
+}
+
+.rutas h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    color: #ff9000;
+}
+
+.rutas img {
+    width: 95%;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.listaRutas {
+    list-style: none;
+    clear: both;
+}
+
+.listaRutas li {
+    float: left;
+    margin: 0 5px;
+    border-bottom: rgb(0, 0, 255) 1px solid;
+}
+
+/* =======================================
 ----------------Tarifas-------------------
 ==========================================*/
 
-.btnSector{
-    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
+#tarifas h2 {
+    margin-top: 10px;
 }
 
 .btnSector a {
@@ -829,6 +943,10 @@ table {
     text-align: center;
 }
 
+.tdCenter {
+    text-align: center;
+}
+
 /* =======================================
 ----------------Footer--------------------
 ==========================================*/
@@ -841,7 +959,7 @@ footer ul {
     background-color: #212121;
     text-decoration-color: #ffffff;
     color: #ffffff;
-    padding: 4rem 4rem 1rem;
+    padding: 3rem 3rem 1.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -851,7 +969,7 @@ footer a {
     color: #ffffff;
 }
 
-.contacto {
+footer div {
     margin-bottom: 1.5rem;
 }
 
@@ -885,7 +1003,11 @@ footer a {
 }
 
 .social-media ul {
-    padding: 10px 0;
+    padding-top: 10px;
+}
+
+.social-media ul li {
+    margin: 5px 0;
 }
 
 .fa {
@@ -1142,7 +1264,7 @@ input[type=submit]:hover {
        -moz-filter: none;
             filter: none;
 }
-.radioZona img{width: 100%;border-radius: 100%;}
+.radioZona img{width: 100%;border-radius: 4%;}
 .radioZona{
     cursor:pointer;
     background-size:contain;
@@ -1164,9 +1286,6 @@ input[type=submit]:hover {
             filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
 
-.rutas img {
-    width: 100%;
-}
 /* =======================================
 ----------------Recuperar Clave-----------
 ==========================================*/
