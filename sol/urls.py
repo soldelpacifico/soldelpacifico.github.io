@@ -2,9 +2,23 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from . import views
+from django.conf.urls import url
+from rest_framework import routers
+from sol.quickstart.views import AvisoViewSet, NoticiaViewSet
 
+router = routers.DefaultRouter()
+router.register(r'avisos', AvisoViewSet)
+router.register(r'noticias', NoticiaViewSet)
 
 urlpatterns = [
+
+    ##  API Urls
+
+    url(r'^api/', include(router.urls)),
+    url(r'^api/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+    ##  App paths
+
     path('', views.index, name="index"),
     path('rutas', views.rutas, name="rutas"),
     path('tarifas', views.tarifas, name="tarifas"),
@@ -24,3 +38,4 @@ urlpatterns = [
     path('password_reset/confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='sol/nueva_clave.html'), name='password_reset_confirm'),
     path('password_reset/complete/', auth_views.PasswordResetCompleteView.as_view(template_name='sol/clave_cambiada.html'), name='password_reset_complete'),
 ]
+
