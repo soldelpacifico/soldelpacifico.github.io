@@ -806,7 +806,11 @@ input[type=submit]:hover {
 .rutas {
     width: 100%;
     border-radius: 10px;
-    background: #fff;
+    background: #00000047;
+}
+
+.rutas div .col-xs-12 {
+    text-align: center;
 }
 
 .rutas h2 {
@@ -814,6 +818,12 @@ input[type=submit]:hover {
     margin: 10px 0;
     font-size: 30px;
     color: #ff9000;
+}
+
+.rutas img {
+    width: 95%;
+    border-radius: 10px;
+    margin: 10px auto;
 }
 
 .listaRutas {
@@ -1276,9 +1286,6 @@ input[type=submit]:hover {
             filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
 
-.rutas img {
-    width: 100%;
-}
 /* =======================================
 ----------------Recuperar Clave-----------
 ==========================================*/
