@@ -3,31 +3,80 @@
 
 {% block content %}
 <article id="tarifas">
+    <div class="row">
+        <div id="buscarTarifa">
+            <form method="GET">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <label for="desde">Desde: </label>
+                        <select name="desde" id="desde" onchange="this.form.submit()">
+                            <option value="" selected disabled hidden>Seleccione Inicio</option>
+                            {% for inicio in Inicios  %}
+                            {% if cb1Selected == inicio %}
+                            <option value="{{inicio}}" selected>{{inicio}}</option>
+                            {% else %}
+                            <option value="{{inicio}}">{{inicio}}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <label for="hacia">Hacia: </label>
+                        <select name="hacia" id="hacia" onchange="this.form.submit()">
+                            <option value="" selected disabled hidden>Seleccione Destino</option>
+                            {% if Destinos %}
+                            {% for destino in Destinos  %}
+                            {% if cb2Selected == destino %}
+                            <option value="{{destino}}" selected>{{destino}}</option>
+                            {% else %}
+                            <option value="{{destino}}">{{destino}}</option>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                {% if cb2Selected %}
+                                <p>Valor Normal: ${{ cb2Selected.valor }} </p>
+                                {% endif %}
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                {% if cb2Selected %}
+                                <p>Valor Estudiante: ${{ cb2Selected.estudiante }} </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
     <div class="row btnSector">
         <div class="col-xs-6">
             <input id="btnCalera" type="radio" name="zona" value="calera" checked="checked" />
             <label class="radioZona zCalera" for="btnCalera">
-                <img sizes="(max-width: 1400px) 100vw, 1400px"
-                srcset="
+                <img sizes="(max-width: 1400px) 100vw, 1400px" srcset="
                 {% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_200.png' %} 200w,
                 {% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_700.png' %} 700w,
                 {% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_1013.png' %} 1013w,
                 {% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_1259.png' %} 1259w,
                 {% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_1400.png' %} 1400w"
-                src="{% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_1400.png' %}" alt="Sector Calera">
+                    src="{% static 'Images/Tarifas/calera/calera_tl2acj_c_scale,w_1400.png' %}" alt="Sector Calera">
             </label>
-        </div> 
+        </div>
         <div class="col-xs-6">
             <input id="btnCosta" type="radio" name="zona" value="costa" />
             <label class="radioZona zCosta" for="btnCosta">
-                <img sizes="(max-width: 1280px) 100vw, 1280px"
-                srcset="
+                <img sizes="(max-width: 1280px) 100vw, 1280px" srcset="
                 {% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_200.png' %} 200w,
                 {% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_638.png' %} 638w,
                 {% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_919.png' %} 919w,
                 {% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_1143.png' %} 1143w,
                 {% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_1280.png' %} 1280w"
-                src="{% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_1280.png' %}" alt="Sector Costa">
+                    src="{% static 'Images/Tarifas/costa/costa_jfmuxx_c_scale,w_1280.png' %}" alt="Sector Costa">
             </label>
         </div>
     </div>

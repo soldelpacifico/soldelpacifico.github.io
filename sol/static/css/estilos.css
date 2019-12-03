@@ -841,6 +841,38 @@ input[type=submit]:hover {
 ----------------Tarifas-------------------
 ==========================================*/
 
+#buscarTarifa {
+    background: rgba(0, 0, 0, 0.5);
+    width: 96%;
+    margin: 10px 2%;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff
+}
+
+#buscarTarifa select {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: #000 solid 1px;
+    border-radius: 5px;
+    background: rgb(32, 51, 73);
+    color: #fff;
+    margin: 10px 0;
+}
+
+#buscarTarifa label {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#buscarTarifa p {
+    font-size: 18px;
+    color: #fff;
+    text-align: start;
+}
+
 #tarifas h2 {
     margin-top: 10px;
 }

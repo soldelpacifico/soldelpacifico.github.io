@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Noticia, Pregunta, Aviso
+from .models import Noticia, Pregunta, Aviso, Inicio, Tarifa
 from django.utils import timezone
 from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm, UserCreateForm
 from datetime import date
@@ -25,7 +25,30 @@ def rutas(request):
     return render(request, 'sol/rutas.html', {})
 
 def tarifas(request):
-    return render(request, 'sol/tarifas.html', {})
+    Inicios = Inicio.objects.all()
+    Inicios_get = request.GET.get('desde') 
+    Destinos_get = request.GET.get('hacia') 
+    inicio_resultado = None
+    destino_resultado = None
+    Destinos = None
+    cb1Selected= None
+    cb2Selected= None
+
+    if Inicios_get!='Seleccione' and Inicios_get is not None:
+        inicio_resultado = Inicio.objects.filter(lugar=Inicios_get)[0]
+        cb1Selected = inicio_resultado
+        Destinos = Tarifa.objects.filter(inicio=inicio_resultado)
+    
+    if Destinos_get!='Seleccione' and Destinos_get is not None:
+        destino_resultado = Tarifa.objects.filter(inicio=inicio_resultado)[0]
+        cb2Selected = destino_resultado
+    contexto = {
+        "Inicios":Inicios,
+        "Destinos":Destinos,
+        "cb1Selected":cb1Selected,
+        "cb2Selected":cb2Selected
+    }
+    return render(request, 'sol/tarifas.html', contexto)
 
 def beneficios(request):
     return render(request, 'sol/beneficios.html', {})
