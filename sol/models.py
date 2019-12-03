@@ -46,7 +46,7 @@ class Inicio(models.Model):
 
 class Tarifa(models.Model):
     inicio=models.ForeignKey(Inicio, on_delete=models.CASCADE)
-    destino=models.CharField(max_length=30)
+    destino=models.CharField(max_length=60)
     valor=models.IntegerField()
     estudiante=models.IntegerField(null=True, blank=True)
 
