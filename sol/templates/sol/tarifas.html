@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <label for="desde">Desde: </label>
-                        <select name="desde" id="desde" onchange="this.form.submit()">
+                        <select name="desde" id="desde" onchange="desdeChange()">
                             <option value="" selected disabled hidden>Seleccione Inicio</option>
                             {% for inicio in Inicios  %}
                             {% if cb1Selected == inicio %}
