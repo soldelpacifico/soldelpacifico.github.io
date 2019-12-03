@@ -34,4 +34,22 @@ class Aviso(models.Model):
         self.save()
 
     def __str__(self):
-        return self.mensaje
+        return self.titulo
+
+class Inicio(models.Model):
+    lugar=models.CharField(max_length=30)
+    
+    def __str__(self):
+        return self.lugar
+    
+
+
+class Tarifa(models.Model):
+    inicio=models.ForeignKey(Inicio, on_delete=models.CASCADE)
+    destino=models.CharField(max_length=30)
+    valor=models.IntegerField()
+    estudiante=models.IntegerField()
+
+    def __str__(self):
+        return self.destino
+    
