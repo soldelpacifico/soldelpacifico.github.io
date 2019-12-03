@@ -20,7 +20,7 @@ class Pregunta(models.Model):
     pregunta=models.TextField()
     respuesta=models.TextField(blank=True,null=True)
     respondida=models.BooleanField()
-    
+
     def __str__(self):
         return self.pregunta
 
@@ -38,18 +38,18 @@ class Aviso(models.Model):
 
 class Inicio(models.Model):
     lugar=models.CharField(max_length=30)
-    
+
     def __str__(self):
         return self.lugar
-    
+
 
 
 class Tarifa(models.Model):
     inicio=models.ForeignKey(Inicio, on_delete=models.CASCADE)
     destino=models.CharField(max_length=30)
     valor=models.IntegerField()
-    estudiante=models.IntegerField()
+    estudiante=models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return self.destino
-    
+        return '('+self.inicio.lugar+') ' + self.destino
+

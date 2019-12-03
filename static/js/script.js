@@ -40,6 +40,11 @@ $(document).ready(function(){
     $('.popup').magnificPopup({type:'image'});
 });
 
+function desdeChange(){
+  $("#hacia").val('');
+  $('#buscarTarifa form').submit()
+}
+
 function toggleMenu(){
   $("nav").toggleClass("mostrarMenu")
 }
