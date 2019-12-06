@@ -51,5 +51,5 @@ class Tarifa(models.Model):
     estudiante=models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return '('+self.inicio.lugar+') ' + self.destino
+        return self.destino
 

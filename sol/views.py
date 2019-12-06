@@ -25,9 +25,9 @@ def rutas(request):
     return render(request, 'sol/rutas.html', {})
 
 def tarifas(request):
-    Inicios = Inicio.objects.all()
-    Inicios_get = request.GET.get('desde') 
-    Destinos_get = request.GET.get('hacia') 
+    Inicios = Inicio.objects.all().order_by('lugar')
+    Inicios_get = request.GET.get('desde')
+    Destinos_get = request.GET.get('hacia')
     inicio_resultado = None
     destino_resultado = None
     Destinos = None
@@ -37,10 +37,10 @@ def tarifas(request):
     if Inicios_get!='Seleccione' and Inicios_get is not None:
         inicio_resultado = Inicio.objects.filter(lugar=Inicios_get)[0]
         cb1Selected = inicio_resultado
-        Destinos = Tarifa.objects.filter(inicio=inicio_resultado)
-    
+        Destinos = Tarifa.objects.filter(inicio=inicio_resultado).order_by('destino')
+
     if Destinos_get!='Seleccione' and Destinos_get is not None:
-        destino_resultado = Tarifa.objects.filter(inicio=inicio_resultado)[0]
+        destino_resultado = Tarifa.objects.get(destino=Destinos_get, inicio=inicio_resultado)
         cb2Selected = destino_resultado
     contexto = {
         "Inicios":Inicios,
