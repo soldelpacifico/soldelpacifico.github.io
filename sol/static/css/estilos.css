@@ -604,7 +604,7 @@ article .linea {
 }
 
 #noticias h6 {
-    font: 15px;
+    font-size: 17px;
     margin-right: 10px;
     color: #365374;
     text-align: end;
@@ -1345,12 +1345,12 @@ input[type=submit]:hover {
 }
 
 .transrural h3 {
-    color: #F77737;
+    color: #ff9000;
     margin: 0;
 }
 
 .transrural p {
-    color: rgb(255, 136, 0);
+    color: #ff9000;
     font-weight: bold;
 }
 
