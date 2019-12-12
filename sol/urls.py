@@ -26,6 +26,7 @@ urlpatterns = [
     path('pertenencias', views.pertenencias, name="pertenencias"),
     path('conocenos', views.historia, name="historia"),
     path('preguntas', views.preguntas, name="preguntas"),
+    path('transrural', views.transrural, name='transrural'),
     path('accounts/profile/', views.preguntas),
     path('preguntas/nueva', views.pregunta_new, name='pregunta_new'),
     path('preguntas/responder', views.resp_preguntas, name="respPreguntas"),

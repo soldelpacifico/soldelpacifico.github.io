@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Noticia, Pregunta, Aviso, Inicio, Tarifa
+from .models import Noticia, Pregunta, Aviso, Inicio, Tarifa, NoticiaTrans
 from django.utils import timezone
 from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm, UserCreateForm
 from datetime import date
@@ -23,6 +23,10 @@ def index(request):
 
 def rutas(request):
     return render(request, 'sol/rutas.html', {})
+
+def transrural(request):
+    Noticias = NoticiaTrans.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')
+    return render(request, 'sol/transrural.html', {"Noticias":Noticias})
 
 def tarifas(request):
     Inicios = Inicio.objects.all().order_by('lugar')

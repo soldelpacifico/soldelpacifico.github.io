@@ -1330,3 +1330,49 @@ input[type=submit]:hover {
     text-align: start;
     color: #fff;
 }
+
+
+/* =======================================
+----------------Transrural----------------
+==========================================*/
+
+#logoTrans {
+    margin-top: 20px;
+}
+
+.transrural {
+    width: 100%;
+}
+
+.transrural h3 {
+    color: #F77737;
+    margin: 0;
+}
+
+.transrural p {
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+}
+
+.transrural span{
+    font-weight: normal;
+    color: #fff;
+}
+
+.transrural h2 {
+    text-align: center;
+}
+
+.transrural img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.transDownload {
+    text-align: center;
+}
+
+.transDownload a {
+    width: 85%;
+    font-size: 20px;
+}

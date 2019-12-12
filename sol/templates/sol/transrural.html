@@ -1,0 +1,77 @@
+{% extends "sol/base.html" %}
+{% load static %}
+
+{% block content %}
+<article class="transrural">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <img id="logoTrans" src="{% static 'Images/logot.jpg' %}" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <h1>Transporte Rural de la V Región</h1>
+            <h2>Perímetro Valparaíso-Quintero-Puchuncaví</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="transDownload">
+                <a href="{% static 'pdf/itinerarios.pdf' %}" class="btnA">Itinerarios <i
+                        class="material-icons md-20">cloud_download</i></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="transDownload">
+                <a href="{% static 'pdf/tarifas.pdf' %}" class="btnA">Tarifas <i
+                        class="material-icons md-20">cloud_download</i></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="transDownload">
+                <a href="{% static 'pdf/rutas.pdf' %}" class="btnA">Rutas <i class="material-icons md-20">cloud_download</i></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="transDownload">
+                <a href="{% static 'pdf/exogenos.pdf' %}" class="btnA">Comunicados <i
+                        class="material-icons md-20">cloud_download</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <p>De Valparaíso a Horcón: <span> Primera Salida 05:24 horas. Última salida 22:00 horas.</span></p>
+            <p>De Horcón a Valparaíso: <span> Primera Salida 05:24 horas. Última salida 22:00 horas.</span></p>
+            <p>Frecuencia promedia: <span> Todo el dia 8 minutos.</span></p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <h3>Servicio nocturno</h3>
+            <p class="center"><span>23:05 horas parte último bus de Valparaíso, destino Quintero.</span></p>
+        </div>
+    </div>
+</article>
+
+<article id="noticias" class="row">
+    <h1>Novedades</h1>
+    {% for noticia in Noticias %}
+    <div class="col-xs-12">
+        <div class="noticia">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h2><i class="material-icons md-16">event_note</i>{{noticia.titulo}}</h2>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h6><i class="material-icons md-16">date_range</i>{{noticia.fecha_Publicacion.date}}</h6>
+                </div>
+            </div>
+            <p>{{noticia.texto|urlizetrunc:30}}</p>
+            {% if noticia.imagen %}
+            <div class="col-xs-12 imgNoticia">
+                <img src="{{ noticia.imagen.url }}" alt="noticia">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</article>
+{% endblock %}

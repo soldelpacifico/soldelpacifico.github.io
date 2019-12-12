@@ -1,6 +1,18 @@
 from django.db import models
 from datetime import datetime
 
+class NoticiaTrans(models.Model):
+    fecha_Publicacion = models.DateTimeField(blank=True, null=True)
+    titulo = models.CharField(max_length=200)
+    texto = models.TextField()
+    imagen = models.ImageField(upload_to='sol/noticiastrans',blank=True,null=True)
+
+    def publish(self):
+        self.fecha_Publicacion = datetime.today
+        self.save()
+
+    def __str__(self):
+        return self.titulo
 class Noticia(models.Model):
     fecha_Publicacion = models.DateTimeField(blank=True, null=True)
     titulo = models.CharField(max_length=200)
