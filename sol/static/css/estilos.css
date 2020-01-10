@@ -425,11 +425,48 @@ button {
     }
 }
 
+.contHist {
+    display: flex;
+    justify-content: center;
+}
+
+.imgHistoria {
+    max-width: 200px;
+}
+
 .imgHistoria div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px 0;
+    background: #191b32;
+}
+
+.imgHistoria p {
+    font-size: 17px;
+    margin-top: 5px;
+    color: #a3a5ad;
+}
+
+.imgHistoria h1 {
+    font-family: 'Aguafina Script', cursive;
+    font-size: 156px;
+    margin-left: -10px;
+}
+
+.imgHistoria .n1 {
+    color: #fff;
+    margin-left: -20px;
+}
+
+.imgHistoria .n2 {
+    color: #df992a;
+}
+
+.imgHistoria h2 {
+    font-weight: bold;
+    color: #fff;
+    margin-top: -63px;
 }
 
 .fondoHist {
@@ -481,7 +518,11 @@ button {
 
 .btnB {
     background: #191b32;
-    padding: 2px 34.94px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -30px;
 }
 
 .btnA:hover {
@@ -547,7 +588,6 @@ article p {
 table {
     border-spacing: 0px;
     border-collapse: collapse;
-    background: #fff4e9;
 }
 
 table td {
@@ -875,6 +915,7 @@ input[type=submit]:hover {
 
 #tarifas h2 {
     margin-top: 10px;
+    color: #ff9000;
 }
 
 .btnSector a {
@@ -918,16 +959,20 @@ table {
   }
 
   table tr:nth-child(even){background-color: #ffffff;}
+  table tr:nth-child(odd){background-color: #ffffffea;}
 
-  table tr:hover {background: rgb(226, 226, 226);}
+
+  table tr:hover {background: rgb(255, 233, 185);}
 
   table th {
     padding: 12px 2px;
     text-align: center;
-    background: linear-gradient(#e6e620, #FF8000, #ff6565);;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 
+  table thead tr {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+  }
 /* =======================================
 ----------------Pases---------------------
 ==========================================*/
@@ -1287,6 +1332,7 @@ input[type=submit]:hover {
 }
 .zCalera{
     background-image: url(../Images/Tarifas/calera.png);
+    filter: saturate(200%);
 }
 .zCosta{background-image:url(../Images/Tarifas/costa.png);}
 
@@ -1308,14 +1354,14 @@ input[type=submit]:hover {
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
-    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.3);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.3);
+            filter: brightness(1.8) grayscale(1) opacity(.3);
 }
 .radioZona:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+            filter: brightness(1.2) grayscale(.5) opacity(1);
 }
 
 /* =======================================

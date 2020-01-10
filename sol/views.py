@@ -24,6 +24,9 @@ def index(request):
 def rutas(request):
     return render(request, 'sol/rutas.html', {})
 
+def terminales(request):
+    return render(request, 'sol/terminales.html', {})
+
 def transrural(request):
     Noticias = NoticiaTrans.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')
     return render(request, 'sol/transrural.html', {"Noticias":Noticias})

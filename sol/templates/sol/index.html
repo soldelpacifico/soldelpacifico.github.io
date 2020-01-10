@@ -7,7 +7,9 @@
 <div class="alertaAviso">
   <div class="row">
     <div class="col-xs-12">
-      <a href="#avisoPopup" class="open-popup-link"><p>Hay un aviso para el dia de hoy, clickeame para verlo.</p></a>
+      <a href="#avisoPopup" class="open-popup-link">
+        <p>Hay un aviso para el dia de hoy, clickeame para verlo.</p>
+      </a>
     </div>
   </div>
 </div>
@@ -30,12 +32,21 @@
 <div class="row">
   <div class="row col-xs-12 col-sm-3" id="contHistSlid">
     <div class="col-xs-12 noMarginTopBot">
-      <div class="imgHistoria row">
-        <div class="col-xs-12 noMarginTopBot">
-          <img src="{% static 'Images/logoOK.jpg' %}" alt="Logo">
-        </div>
-        <div class="col-xs-12 noMarginTopBot">
-          <a class="btnB" href="{% url 'historia' %}">Conócenos</a>
+      <div class="contHist">
+        <div class="imgHistoria row">
+          <div class="col-xs-12 noMarginTopBot">
+            <p>1955 - 2020</p>
+          </div>
+          <div class="col-xs-12 noMarginTopBot">
+            <h1 class="n1">6</h1>
+            <h1 class="n2">5</h1>
+          </div>
+          <div class="col-xs-12 noMarginTopBot">
+            <h2>AÑOS</h2>
+          </div>
+          <div class="col-xs-12 noMarginTopBot">
+            <a class="btnB" href="{% url 'historia' %}">Conócenos</a>
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +54,7 @@
   <div class="col-xs-12 col-sm-9">
     <div class="sliderIndex">
       <ul>
-        <li><a href="#">
+        <li><a href="{% url 'terminales' %}">
             <img src="{% static 'Images/Slider/Slider-img1.jpg' %}" alt="bus1" />
             <p class="subSlide">Terminales</p>
           </a></li>
@@ -51,7 +62,7 @@
             <img src="{% static 'Images/Slider/Slider-img2.jpg' %}" alt="bus2" />
             <p class="subSlide">Preguntas frecuentes</p>
           </a></li>
-        <li><a href="#">
+        <li><a href="{% url 'rutas' %}">
             <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
             <p class="subSlide">Itinerarios</p>
           </a></li>
@@ -63,22 +74,22 @@
   <h1>Últimos comunicados</h1>
   {% for noticia in Noticias %}
   <div class="col-xs-12">
-      <div class="noticia">
-          <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <h2><i class="material-icons md-16">event_note</i>{{noticia.titulo}}</h2>
-            </div>
-            <div class="col-xs-12 col-md-6">
-              <h6><i class="material-icons md-16">date_range</i>{{noticia.fecha_Publicacion.date}}</h6>
-            </div>
-          </div>
-          <p>{{noticia.texto|urlizetrunc:30}}</p>
-          {% if noticia.imagen %}
-            <div class="col-xs-12 imgNoticia">
-              <img src="{{ noticia.imagen.url }}" alt="noticia" >
-            </div>
-          {% endif %}
+    <div class="noticia">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h2><i class="material-icons md-16">event_note</i>{{noticia.titulo}}</h2>
         </div>
+        <div class="col-xs-12 col-md-6">
+          <h6><i class="material-icons md-16">date_range</i>{{noticia.fecha_Publicacion.date}}</h6>
+        </div>
+      </div>
+      <p>{{noticia.texto|urlizetrunc:30}}</p>
+      {% if noticia.imagen %}
+      <div class="col-xs-12 imgNoticia">
+        <img src="{{ noticia.imagen.url }}" alt="noticia">
+      </div>
+      {% endif %}
+    </div>
   </div>
   {% endfor %}
 </article>

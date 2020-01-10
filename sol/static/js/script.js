@@ -13,12 +13,18 @@ $(document).ready(function(){
       $(".concon").css("display","none");
       $("#btnCalera a").css("background","#f99600");
       $("#btnConcon a").css("background","#ffffff");
+      $('html, body').animate({
+        scrollTop: ($('#Calera').offset().top)
+    },500);
     }
     else {
       $(".calera").css("display","none");
       $(".concon").css("display","block");
       $("#btnCalera a").css("background","#ffffff");
       $("#btnConcon a").css("background","#f99600");
+      $('html, body').animate({
+        scrollTop: ($('#Costa').offset().top)
+    },500);
     }
 });
   
