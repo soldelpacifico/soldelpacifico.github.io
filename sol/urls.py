@@ -20,6 +20,7 @@ urlpatterns = [
     ##  App paths
 
     path('', views.index, name="index"),
+    path('noticias', views.todasnoticias, name="noticias"),
     path('itinerarios', views.rutas, name="rutas"),
     path('tarifas', views.tarifas, name="tarifas"),
     path('beneficios', views.beneficios, name="beneficios"),

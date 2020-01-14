@@ -21,6 +21,11 @@ def index(request):
                                        dia__day=today.day)
     return render(request, 'sol/index.html', {"Noticias":Noticias,"Avisos":Avisos})
 
+def todasnoticias(request):
+    Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')
+    return render(request, 'sol/noticias.html', {"Noticias":Noticias})
+
+
 def rutas(request):
     return render(request, 'sol/rutas.html', {})
 
