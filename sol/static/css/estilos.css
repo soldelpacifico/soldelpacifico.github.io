@@ -1438,3 +1438,17 @@ input[type=submit]:hover {
     text-align: center;
     margin: 20px 0;
 }
+
+.quienesSomos img {
+    width: 45%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .quienesSomos img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
