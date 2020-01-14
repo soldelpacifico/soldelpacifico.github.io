@@ -1011,6 +1011,11 @@ table {
     font-family: "Coneria Script";
 }
 
+#pases h3 {
+    color: #fff;
+    font-size: 15px;
+}
+
 #pases p {
     font-size: 18px;
     color: #000000;
