@@ -3,7 +3,7 @@
 
 {% block content %}
 
-{% for aviso in Avisos %}
+{% if Avisos %}
 <div class="alertaAviso">
   <div class="row">
     <div class="col-xs-12">
@@ -13,9 +13,9 @@
     </div>
   </div>
 </div>
-
 <div class="aviso white-popup mfp-hide" id="avisoPopup">
   <div class="row">
+    {% for aviso in Avisos %}
     <div class="col-xs-3 contSigno">
       <i class="material-icons md-48">error</i>
     </div>
@@ -24,10 +24,10 @@
       <h2>{{aviso.titulo}}</h2>
       <p>{{aviso.mensaje}}</p>
     </div>
+    {% endfor %}
   </div>
 </div>
-{% empty %}
-{% endfor %}
+{% endif %}
 
 <div class="row">
   <div class="row col-xs-12 col-sm-3" id="contHistSlid">
