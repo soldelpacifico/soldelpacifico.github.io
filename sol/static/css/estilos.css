@@ -861,7 +861,7 @@ input[type=submit]:hover {
 }
 
 .rutas img {
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
     margin: 10px auto;
 }
@@ -935,6 +935,16 @@ input[type=submit]:hover {
 .concon {
     display: none;
     transition: 0.5s;
+}
+
+.horario {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    padding: 5px 5px 30px 5px;
+}
+
+.horario table {
+    width: 100%;
 }
 
 #btnCalera a {
