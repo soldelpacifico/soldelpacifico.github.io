@@ -657,6 +657,17 @@ article .linea {
 
 .imgNoticia img{
     width: 100%;
+    
+}
+
+.imgNoticia {
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .imgNoticia img {
+        width: 50%;
+    }
 }
 
 
