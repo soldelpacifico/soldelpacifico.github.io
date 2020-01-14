@@ -676,11 +676,12 @@ article .linea {
 ==========================================*/
 .preguntasUser {
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .pregunta {
     background: #fff;
-    margin: 20px 0;
+    margin: 5px 0;
     border-radius: 10px;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
     width: 100%;
@@ -1451,10 +1452,8 @@ input[type=submit]:hover {
 }
 
 .quienesSomos img {
-    width: 45%;
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
+    width: 26%;
+    margin: 10px 2%;
 }
 
 @media (max-width: 768px) {

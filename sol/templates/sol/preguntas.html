@@ -13,12 +13,46 @@
             <h2><i class="material-icons md-30">textsms</i> ¿A que hora pasa el ultimo bus a Calera?</h2>
           </div>
           <div class="col-xs-12 textPregunta">
-            <p><i class="material-icons md-16">insert_comment</i> Puedes revisar todos los horarios en Tarifas/<a
-                href="{% url 'tarifas' %}#horarios">Horarios</a>.</p>
+            <p><i class="material-icons md-16">insert_comment</i> Puedes revisar todos los horarios en <a
+                href="{% url 'rutas' %}">Itinerarios</a>.</p>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="col-xs-12">
+      <div class="pregunta container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2><i class="material-icons md-30">textsms</i> ¿Como se consiguen los pases?</h2>
+          </div>
+          <div class="col-xs-12 textPregunta">
+            <p><i class="material-icons md-16">insert_comment</i> Para conseguir un pase solo necesitas acercarte a la 
+              <a class="link" href="https://www.google.cl/maps/place/Galvarino+110,+Valpara%C3%ADso,+Regi%C3%B3n+de+Valpara%C3%ADso/@-33.0265012,-71.6461921,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e6b80ed13925:0x1fa79fdd955b5ebe!8m2!3d-33.0265057!4d-71.6440034">Oficina Sol del Pacífico (Click para ver en el mapa)</a> 
+              dentro del horario de 10:30 AM hasta las 13:30 PM. En caso de requerir documentacion se debe presentar en el mismo instante. Las rebajas se redondean hacia abajo, si una tarifa queda por ejemplo en $1.360, la tarifa sera de $1.300. Puedes consultar los requisitos y las rebajas de cada pase en 
+              <a href="{% url 'beneficios' %}">Beneficios</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12">
+      <div class="pregunta container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2><i class="material-icons md-30">textsms</i> ¿Cómo puedo estar informado sobre situaciones que ocurran en el momento?</h2>
+          </div>
+          <div class="col-xs-12 textPregunta">
+            <p><i class="material-icons md-16">insert_comment</i> En la seccion de 
+              <a href="{% url 'index' %}">Inicio</a> contamos con un sistema de avisos el cual en caso de presentarse alguna situacion fuera de lo normal, se despliegara un rectangulo rojo dando aviso de la situacion y como será abordada. Te dejamos una imagen que muestra el cuadro de aviso.</p>
+          </div>
+          <div class="col-xs-12 imgNoticia">
+            <img src="{% static 'Images/aviso.png' %}" alt="aviso">
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </article>
 
@@ -42,12 +76,12 @@
       <a href="{% url 'pregunta_new' %}" class="btnA"><i class="material-icons md-16">add</i>Crear nueva pregunta</a>
     </div>
     <div class="col-xs-4 linkLogin">
-        <a href="{% url 'mis_preguntas' %}" class="btnA"><i class="material-icons md-16">assignment_turned_in</i>Mis
-          preguntas respondidas</a>
-      </div>
+      <a href="{% url 'mis_preguntas' %}" class="btnA"><i class="material-icons md-16">assignment_turned_in</i>Mis
+        preguntas respondidas</a>
+    </div>
     <div class="col-xs-4 linkLogin">
-        <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesion
-          {{ user.get_username }}</a>
+      <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesion
+        {{ user.get_username }}</a>
     </div>
   </div>
   {% else %}
