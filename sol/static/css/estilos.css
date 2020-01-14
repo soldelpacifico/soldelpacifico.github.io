@@ -1433,3 +1433,8 @@ input[type=submit]:hover {
     width: 85%;
     font-size: 20px;
 }
+
+.noPreguntas {
+    text-align: center;
+    margin: 20px 0;
+}

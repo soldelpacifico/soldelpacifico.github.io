@@ -20,7 +20,8 @@
                 <h2><a href="{% url 'pregunta_responder' pk=pregunta.pk %}">{{ pregunta.pregunta }}</a></h2>
             </div>
             <div class="col-xs-12">
-                <p>Preguntada por: {{ pregunta.email}}</p>
+                <p>Nombre: {{pregunta.nombre}}</p>
+                <p>Email: {{ pregunta.email}}</p>
             </div>
             <div class="col-xs-12">
                 <a href="{% url 'pregunta_eliminar' pk=pregunta.pk %}"><i class="material-icons md-16">delete</i> Eliminar pregunta</a>
