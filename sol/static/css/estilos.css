@@ -8,6 +8,7 @@ body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     background: url(../Images/Banner-bg.jpg) top center;
     background-attachment: fixed;
+    background-size: cover;
     width: 100%;
 }
 
