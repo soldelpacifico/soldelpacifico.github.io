@@ -254,7 +254,8 @@ button {
 
     #main-menu a i {
         top: 39px;
-        left: 42%;
+        left: 0;
+        right: 0;
     }
 }
 /* Mobile */
