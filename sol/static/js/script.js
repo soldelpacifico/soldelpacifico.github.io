@@ -41,7 +41,7 @@ $(document).ready(function(){
 		});
   });
     var pathname = window.location.pathname;
-    $('#main-menu > a[href="'+pathname+'"]').addClass('active');
+    $('#main-menu > li a[href="'+pathname+'"]').addClass('active');
 
     $('.popup').magnificPopup({type:'image'});
 });

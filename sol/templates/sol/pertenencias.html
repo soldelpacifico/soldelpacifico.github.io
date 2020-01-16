@@ -3,35 +3,53 @@
 
 {% block content %}
 
-  <article>
-    <h3>¿Se te perdió algo dentro de un bus?</h3>
-    <p>Comunícate con nosotros para ver si te podemos ayudar...</p>
-    <div id="form">
-      <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
+<article class="pertenencias">
+    <h1>¿Se te perdió algo dentro de un bus?</h1>
+    <p>Rellena este formulario para ver si te podemos ayudar...</p>
+    <form action="https://formspree.io/joshuaortizz@hotmail.com" method="POST">
         <h4>Informacion Personal</h4>
-        <div class="linea"><label for="NombreCompleto">Nombre Completo </label><input type="text"
-            id="NombreCompleto" placeholder="Javier Robles Cepeda" required="required"></div><br>
-        <div class="linea"><label for="Correo">Correo </label><input type="email" id="Correo"
-            placeholder="JavierRoblesC@hotmail.com" required="required"></div><br>
-        <div class="linea"><label for="Rut">Rut </label><input type="text" id="Rut" placeholder="12345678-9"
-            required="required" pattern="\d{3,8}-[\d|kK]{1}"></div><br>
-        <div class="linea"><label for="Telefono">Teléfono </label><input type="tel" id="Telefono"
-            placeholder="569 12345678" required="required" minlength="8"></div><br>
-        <div class="linea"><label for="NroBoleto">Número de Boleto </label><input type="number" id="NroBoleto"
-            placeholder="05715764"></div><br>
-        <div class="linea"><label for="ValorBoleto">Valor Boleto $</label><input type="number" id="ValorBoleto"
-            placeholder="1700"></div><br>
+        <div class="contFlex">
+            <label for="NombreCompleto">Nombre Completo </label>
+            <input type="text" id="NombreCompleto" placeholder="Javier Robles Cepeda" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="Correo">Correo </label>
+            <input type="email" id="Correo" placeholder="JavierRoblesC@hotmail.com" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="Rut">Rut </label>
+            <input type="text" id="Rut" placeholder="12345678-9" required="required" pattern="\d{3,8}-[\d|kK]{1}">
+        </div>
+        <div class="contFlex">
+            <label for="Telefono">Teléfono </label>
+            <input type="tel" id="Telefono" placeholder="569 12345678" required="required" minlength="8">
+        </div>
+        <div class="contFlex">
+            <label for="NroBoleto">Número de Boleto </label>
+            <input type="number" id="NroBoleto" placeholder="05715764">
+        </div>
+        <div class="contFlex">
+            <label for="ValorBoleto">Valor Boleto $</label>
+            <input type="number" id="ValorBoleto" placeholder="1700">
+        </div>
         <h4>Detalles del extravío</h4>
-        <div class="linea"><label for="LugarAbordo">Lugar de Abordaje </label><input type="text"
-            id="LugarAbordo" placeholder="Lugar donde abordo el bus"></div><br>
-        <div class="linea"><label for="FechaHora">Fecha del Abordaje </label><input type="datetime-local"
-            id="FechaHora" required="required"></div><br>
-        <div class="linea"><label for="LugarBus">Lugar en el bus </label><input type="text" id="LugarBus"
-            placeholder="Lugar en el bus donde extravio algo"></div><br>
-        <div class="linea"><label for="DetallesObjeto">Detalles objeto </label><textarea
-            id="DetallesObjeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea></div><br>
-        <input type="submit" value="ENVIAR" id="btnSubmit">
-      </form>
-    </div>
-  </article>
+        <div class="contFlex">
+            <label for="LugarAbordo">Lugar de Abordaje </label>
+            <input type="text" id="LugarAbordo" placeholder="Lugar donde abordo el bus">
+        </div>
+        <div class="contFlex">
+            <label for="FechaHora">Fecha del Abordaje </label>
+            <input type="datetime-local" id="FechaHora" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="LugarBus">Lugar en el bus </label>
+            <input type="text" id="LugarBus" placeholder="Lugar en el bus donde extravio algo">
+        </div>
+        <div class="contFlex">
+            <label for="DetallesObjeto">Detalles objeto </label>
+            <textarea id="DetallesObjeto" placeholder="Descripcion y contenido de lo extraviado..."></textarea>
+        </div>
+            <input type="submit" value="ENVIAR" id="btnPertenencias">
+    </form>
+</article>
 {% endblock %}

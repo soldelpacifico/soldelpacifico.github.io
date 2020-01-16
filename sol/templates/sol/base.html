@@ -60,12 +60,19 @@
             <div class="col-xs-12 col-sm-8 noMarginTopBot" id="contNav">
                 <nav class="navegacion">
                     <ul id="main-menu" class="sm sm-blue">
-                        <a href="{% url 'index' %}"><li>Inicio</li></a>
-                        <a href="{% url 'rutas' %}"><li>Itinerarios</li></a>
-                        <a href="{% url 'tarifas' %}"><li>Tarifas</li></a>
-                        <a href="{% url 'beneficios' %}"><li>Beneficios</li></a>
-                        <a href="{% url 'transrural' %}"><li>TransRural</li></a>
-                        <a href="{% url 'preguntas' %}"><li>Preguntas</li></a>
+                        <li><a href="{% url 'index' %}">Inicio</a></li>
+                        <li><a href="{% url 'rutas' %}">Itinerarios</a></li>
+                        <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
+                        <li><a href="{% url 'beneficios' %}">Beneficios</a></li>
+                        <li><a href="{% url 'transrural' %}">TransRural</a></li>
+                        <li><a href="{% url 'preguntas' %}">Preguntas</a></li>
+                        <li><a class="submenu">Contacto&zwnj;&zwnj;<i class="material-icons md-20">keyboard_arrow_down</i></a>
+                            <ul>
+                                <li><a href="{% url 'pertenencias' %}">Perdidas</a></li>
+                                <li><a href="">Reclamos</a></li>
+                                <li><a href="">Empleos</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
