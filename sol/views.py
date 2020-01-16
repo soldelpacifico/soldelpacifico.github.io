@@ -68,6 +68,15 @@ def beneficios(request):
 def pertenencias(request):
     return render(request, 'sol/pertenencias.html', {})
 
+def reclamo(request):
+    return render(request, 'sol/reclamo.html', {})
+
+def empleo(request):
+    return render(request, 'sol/empleo.html', {})
+
+def otro(request):
+    return render(request, 'sol/otro.html', {})
+
 def historia(request):
     return render(request, 'sol/historia.html', {})
 

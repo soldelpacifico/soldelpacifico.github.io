@@ -216,6 +216,10 @@ button {
         background-color: #191b32;
         border: solid 1px #365374;
     }
+
+    #main-menu li ul li {
+        box-shadow: 0px 24px 3px -24px #365374;
+    }
     
     .subarrow {
         top: auto;
@@ -245,6 +249,11 @@ button {
 
     #btnMenu {
         display: none;
+    }
+
+    #main-menu a i {
+        top: 39px;
+        left: 42%;
     }
 }
 /* Mobile */
@@ -326,7 +335,10 @@ button {
     #main-menu a:hover {
         background: #ff8d23;
     }
-    
+    #main-menu a i {
+        top: 11px;
+        right: 0px;
+    }
 }
 
 #main-menu a i {
@@ -518,7 +530,7 @@ button {
 .imgHistoria h2 {
     font-weight: bold;
     color: #fff;
-    margin-top: -63px;
+    margin-top: -51px;
 }
 
 .fondoHist {
@@ -569,12 +581,16 @@ button {
 }
 
 .btnB {
-    background: #191b32;
+    background: #20244d;
     display: block;
     width: 100%;
     text-align: center;
     font-size: 20px;
     margin-top: -30px;
+}
+
+.btnB:hover {
+    border: solid 1px #b0bdc8;
 }
 
 .btnA:hover {
@@ -1583,4 +1599,13 @@ input[type=submit]:hover {
     #btnPertenencias {
         margin-left: 10.9rem;
     }
+}
+
+#NoMarginLogo {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.centrar {
+    text-align: center;
 }

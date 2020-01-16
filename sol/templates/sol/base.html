@@ -61,16 +61,22 @@
                 <nav class="navegacion">
                     <ul id="main-menu" class="sm sm-blue">
                         <li><a href="{% url 'index' %}">Inicio</a></li>
-                        <li><a href="{% url 'rutas' %}">Itinerarios</a></li>
-                        <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
+                        <li><a href="#">Viajes<i class="material-icons md-20">keyboard_arrow_down</i></a>
+                            <ul>
+                                <li><a href="{% url 'rutas' %}">Itinerarios</a></li>
+                                <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
+                                <li><a href="#">Viajes Especiales</a></li>
+                            </ul>
+                        </li>
                         <li><a href="{% url 'beneficios' %}">Beneficios</a></li>
                         <li><a href="{% url 'transrural' %}">TransRural</a></li>
                         <li><a href="{% url 'preguntas' %}">Preguntas</a></li>
-                        <li><a class="submenu">Contacto&zwnj;&zwnj;<i class="material-icons md-20">keyboard_arrow_down</i></a>
+                        <li><a class="submenu">Contáctanos<i class="material-icons md-20">keyboard_arrow_down</i></a>
                             <ul>
-                                <li><a href="{% url 'pertenencias' %}">Perdidas</a></li>
-                                <li><a href="">Reclamos</a></li>
-                                <li><a href="">Empleos</a></li>
+                                <li><a href="{% url 'pertenencias' %}">Pérdidas</a></li>
+                                <li><a href="{% url 'reclamo' %}">Reclamos</a></li>
+                                <li><a href="{% url 'empleo' %}">Empleo</a></li>
+                                <li><a href="{% url 'otro' %}">Otro Motivo</a></li>
                             </ul>
                         </li>
                     </ul>

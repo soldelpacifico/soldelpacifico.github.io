@@ -1,0 +1,47 @@
+{% extends "sol/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<article class="pertenencias">
+    <h1>Trabaja con nosotros.</h1>
+    <p>¿Estás interesado en algun puesto de trabajo? Dejanos tus datos para contactarte.</p>
+    <form action="https://formspree.io/secretaria@soldelpacifico.cl" method="POST">
+        <h4>Informacion personal</h4>
+        <div class="contFlex">
+            <label for="NombreCompleto">Nombre Completo </label>
+            <input type="text" id="NombreCompleto" placeholder="Javier Robles Cepeda" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="Correo">Correo </label>
+            <input type="email" id="Correo" placeholder="JavierRoblesC@hotmail.com" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="Telefono">Teléfono </label>
+            <input type="tel" id="Telefono" placeholder="569 12345678" required="required" minlength="8">
+        </div>
+        <div class="contFlex">
+            <label for="FechaNacimiento">Fecha de Nacimiento </label>
+            <input type="date" id="FechaNacimiento" required="required">
+        </div>
+        <h4>Informacion de interés</h4>
+        <div class="contFlex">
+            <label for="Cargo">Cargo a postular </label>
+            <input type="text" id="Cargo" placeholder="Cargo" required="required" >
+        </div>
+        <div class="contFlex">
+            <label for="Titulo">Titulo o certificacion </label>
+            <input type="text" id="Titulo" placeholder="¿Tiénes algun titulo o estas certificado en algo?" required="required" >
+        </div>
+        <div class="contFlex">
+            <label for="Experiencia">Experiencia laboral </label>
+            <textarea id="Experiencia" placeholder="¿Dónde has trabajado? ¿Pór cuanto tiempo? ¿Qué cargo ejerciste?"></textarea>
+        </div>
+        <div class="contFlex">
+            <label for="DescripcionPropia">Descripción propia </label>
+            <textarea id="DescripcionPropia" placeholder="Como te describes..."></textarea>
+        </div>
+            <input type="submit" value="ENVIAR" id="btnPertenencias">
+    </form>
+</article>
+{% endblock %}

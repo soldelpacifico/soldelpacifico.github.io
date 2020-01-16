@@ -1,0 +1,31 @@
+{% extends "sol/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<article class="pertenencias">
+    <h1>Contactanos.</h1>
+    <p>¿Tiénes algun otro motivo para contactarnos? Cuéntanos cuales son tus razones.</p>
+    <form action="https://formspree.io/secretaria@soldelpacifico.cl" method="POST">
+        <h4>Informacion personal</h4>
+        <div class="contFlex">
+            <label for="NombreCompleto">Nombre Completo </label>
+            <input type="text" id="NombreCompleto" placeholder="Javier Robles Cepeda" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="Correo">Correo </label>
+            <input type="email" id="Correo" placeholder="JavierRoblesC@hotmail.com" required="required">
+        </div>
+        <div class="contFlex">
+            <label for="Telefono">Teléfono </label>
+            <input type="tel" id="Telefono" placeholder="569 12345678" required="required" minlength="8">
+        </div>
+        <h4>Mensaje</h4>
+        <div class="contFlex">
+            <label for="Mensaje">Motivo </label>
+            <textarea id="Mensaje" placeholder="Cuéntanos..."></textarea>
+        </div>
+            <input type="submit" value="ENVIAR" id="btnPertenencias">
+    </form>
+</article>
+{% endblock %}
