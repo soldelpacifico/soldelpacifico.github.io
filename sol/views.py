@@ -77,6 +77,9 @@ def empleo(request):
 def otro(request):
     return render(request, 'sol/otro.html', {})
 
+def viajes(request):
+    return render(request, 'sol/viajes.html', {})
+
 def historia(request):
     return render(request, 'sol/historia.html', {})
 

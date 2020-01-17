@@ -28,6 +28,7 @@ urlpatterns = [
     path('reclamo', views.reclamo, name="reclamo"),
     path('empleo', views.empleo, name="empleo"),
     path('otro', views.otro, name="otro"),
+    path('viajes', views.viajes, name="viajes"),
     path('conocenos', views.historia, name="historia"),
     path('preguntas', views.preguntas, name="preguntas"),
     path('transrural', views.transrural, name='transrural'),

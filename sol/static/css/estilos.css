@@ -1636,3 +1636,19 @@ input[type=submit]:hover {
 .centrar {
     text-align: center;
 }
+
+.imgViaje {
+    text-align: center;
+}
+
+.imgViaje img {
+    width: 70%;
+}
+
+.txtViajes p {
+    margin-top: 15px;
+    color: #fff;
+    font-style: oblique;
+    font-size: 24px;
+    font-weight: normal;
+}
