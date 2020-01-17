@@ -263,6 +263,11 @@ button {
         border-bottom: #ff9000 solid 5px;
     }
 
+    #main-menu li ul a:hover {
+        border-bottom: none;
+        background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
+    }
+
     .active {
         background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
         border-bottom: #b36500 solid 5px;
