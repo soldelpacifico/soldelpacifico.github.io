@@ -99,6 +99,26 @@ button {
 #btnSubir {
     display: none;
     position: fixed;
+    bottom: 67px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40px;
+    font-size: 26px;
+}
+
+#btnSubir:hover {
+    background-color: #555555;
+}
+
+#btnHome {
+    display: block;
+    position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
@@ -112,7 +132,7 @@ button {
     font-size: 23px;
 }
 
-#btnSubir:hover {
+#btnHome:hover {
     background-color: #555555;
 }
 

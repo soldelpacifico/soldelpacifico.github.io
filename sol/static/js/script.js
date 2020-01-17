@@ -74,3 +74,7 @@ function subir() {
   document.body.scrollTop = 0; // Para Safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE and Opera
 }
+
+function home() {
+  window.location = '/';
+}
