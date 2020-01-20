@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+  if ( window.location.pathname == '/' ){
+    $("#btnHome").css("display","none");
+    $("#btnSubir").css("bottom","20px");
+}
+
   $(".closeAviso").click(function() {
     $(".aviso").css("display","none")
   });
