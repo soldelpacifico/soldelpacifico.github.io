@@ -1,0 +1,1 @@
+from miweb.wsgi import application

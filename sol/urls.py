@@ -2,9 +2,11 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from . import views
+from django.conf import settings
 from django.conf.urls import url
 from rest_framework import routers
 from sol.quickstart.views import AvisoViewSet, NoticiaViewSet
+from django.views.static import serve
 
 router = routers.DefaultRouter()
 router.register(r'avisos', AvisoViewSet)
@@ -13,7 +15,8 @@ router.register(r'noticias', NoticiaViewSet)
 urlpatterns = [
 
     ##  API Urls
-
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     url(r'^api/', include(router.urls)),
     url(r'^api/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 

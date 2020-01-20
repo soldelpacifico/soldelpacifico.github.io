@@ -8,6 +8,7 @@ body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     background: url(../Images/Banner-bg.jpg) top center;
     background-attachment: fixed;
+    background-size: cover;
     width: 100%;
 }
 
@@ -98,12 +99,32 @@ button {
 #btnSubir {
     display: none;
     position: fixed;
+    bottom: 67px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ff6000;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40px;
+    font-size: 26px;
+}
+
+#btnSubir:hover {
+    background-color: #305174;
+}
+
+#btnHome {
+    display: block;
+    position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 99;
     border: none;
     outline: none;
-    background-color: red;
+    background-color: #ff6000;
     color: white;
     cursor: pointer;
     border-radius: 10px;
@@ -111,8 +132,8 @@ button {
     font-size: 23px;
 }
 
-#btnSubir:hover {
-    background-color: #555555;
+#btnHome:hover {
+    background-color: #305174;
 }
 
 #btxtMenu {
@@ -197,17 +218,54 @@ button {
     }
 
     #main-menu a {
-        display: flex;
-        height: 100%;
+        display: block;
         width: 100%;
         justify-content: center;
         align-items: center;
         color: #fff;
+        padding: 22.5px 0;
+    }
+
+    #main-menu li {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        height: 69px;
+    }
+
+    #main-menu li ul {
+        background-color: #191b32;
+        border: solid 1px #365374;
+    }
+
+    #main-menu li ul li {
+        box-shadow: 0px 24px 3px -24px #365374;
+    }
+    
+    .subarrow {
+        top: auto;
+        margin-top: 0;
+        bottom: 2px;
+        left: 50%;
+        margin-left: -5px;
+        right: auto;
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid dashed dashed dashed;
+        border-color: #a1d1e8 transparent transparent transparent;
+        background: transparent;
+        border-radius: 0;
     }
 
     #main-menu a:hover {
         background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
         border-bottom: #ff9000 solid 5px;
+    }
+
+    #main-menu li ul a:hover {
+        border-bottom: none;
+        background: linear-gradient(to bottom, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(56,87,122,1) 0%, rgba(44,68,94,1) 100%);
     }
 
     .active {
@@ -217,6 +275,12 @@ button {
 
     #btnMenu {
         display: none;
+    }
+
+    #main-menu a i {
+        top: 39px;
+        left: 0;
+        right: 0;
     }
 }
 /* Mobile */
@@ -255,11 +319,30 @@ button {
     #main-menu {
         margin: 10px 0;
     }
-    #main-menu a {
-        padding: 10px 5px;
+
+    #main-menu li {
         border-bottom: solid 1px #365374;
     }
-    #main-menu a li{
+
+    #main-menu li ul {
+        background-color: #191b32;
+        border-top: solid 1px #365374;
+    }
+
+    #main-menu li ul li a {
+        padding-left: 30px;
+        font-weight: bold;
+    }
+
+    #main-menu li ul li a:hover {
+        background-color: #305174;
+    }
+    
+    #main-menu a {
+        padding: 10px 5px;
+    }
+
+    #main-menu li a{
         padding-left: 10px;
         font-size: 16px;
         color: #fff;
@@ -279,8 +362,16 @@ button {
     #main-menu a:hover {
         background: #ff8d23;
     }
-    
+    #main-menu a i {
+        top: 11px;
+        right: 0px;
+    }
 }
+
+#main-menu a i {
+    position: absolute;
+}
+
 .mostrarMenu {
     display: block !important;
 }
@@ -425,11 +516,48 @@ button {
     }
 }
 
+.contHist {
+    display: flex;
+    justify-content: center;
+}
+
+.imgHistoria {
+    max-width: 200px;
+}
+
 .imgHistoria div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px 0;
+    background: #191b32;
+}
+
+.imgHistoria p {
+    font-size: 17px;
+    margin-top: 5px;
+    color: #a3a5ad;
+}
+
+.imgHistoria h1 {
+    font-family: 'Aguafina Script', cursive;
+    font-size: 156px;
+    margin-left: -10px;
+}
+
+.imgHistoria .n1 {
+    color: #fff;
+    margin-left: -20px;
+}
+
+.imgHistoria .n2 {
+    color: #df992a;
+}
+
+.imgHistoria h2 {
+    font-weight: bold;
+    color: #fff;
+    margin-top: -51px;
 }
 
 .fondoHist {
@@ -480,8 +608,16 @@ button {
 }
 
 .btnB {
-    background: #191b32;
-    padding: 2px 34.94px;
+    background: #20244d;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+.btnB:hover {
+    border: solid 1px #b0bdc8;
 }
 
 .btnA:hover {
@@ -547,7 +683,6 @@ article p {
 table {
     border-spacing: 0px;
     border-collapse: collapse;
-    background: #fff4e9;
 }
 
 table td {
@@ -604,7 +739,7 @@ article .linea {
 }
 
 #noticias h6 {
-    font: 15px cursive;
+    font-size: 17px;
     margin-right: 10px;
     color: #365374;
     text-align: end;
@@ -617,6 +752,17 @@ article .linea {
 
 .imgNoticia img{
     width: 100%;
+    
+}
+
+.imgNoticia {
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .imgNoticia img {
+        width: 40%;
+    }
 }
 
 
@@ -625,11 +771,12 @@ article .linea {
 ==========================================*/
 .preguntasUser {
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .pregunta {
     background: #fff;
-    margin: 20px 0;
+    margin: 5px 0;
     border-radius: 10px;
     box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.507);
     width: 100%;
@@ -758,6 +905,9 @@ input, textarea {
     box-sizing: border-box;
     font: initial;
   }
+textarea {
+    resize: vertical;
+}
 
 input[type=button], input[type=submit] {
     background-color: #131f2d;
@@ -821,7 +971,7 @@ input[type=submit]:hover {
 }
 
 .rutas img {
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
     margin: 10px auto;
 }
@@ -875,6 +1025,7 @@ input[type=submit]:hover {
 
 #tarifas h2 {
     margin-top: 10px;
+    color: #ff9000;
 }
 
 .btnSector a {
@@ -894,6 +1045,16 @@ input[type=submit]:hover {
 .concon {
     display: none;
     transition: 0.5s;
+}
+
+.horario {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    padding: 5px 5px 30px 5px;
+}
+
+.horario table {
+    width: 100%;
 }
 
 #btnCalera a {
@@ -918,16 +1079,20 @@ table {
   }
 
   table tr:nth-child(even){background-color: #ffffff;}
+  table tr:nth-child(odd){background-color: #ffffffea;}
 
-  table tr:hover {background: rgb(226, 226, 226);}
+
+  table tr:hover {background: rgb(255, 233, 185);}
 
   table th {
     padding: 12px 2px;
     text-align: center;
-    background: linear-gradient(#e6e620, #FF8000, #ff6565);;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 
+  table thead tr {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+  }
 /* =======================================
 ----------------Pases---------------------
 ==========================================*/
@@ -942,6 +1107,11 @@ table {
     font-size: 25px;
     margin: 5px 0;
     font-family: "Coneria Script";
+}
+
+#pases h3 {
+    color: #fff;
+    font-size: 15px;
 }
 
 #pases p {
@@ -1287,6 +1457,7 @@ input[type=submit]:hover {
 }
 .zCalera{
     background-image: url(../Images/Tarifas/calera.png);
+    filter: saturate(200%);
 }
 .zCosta{background-image:url(../Images/Tarifas/costa.png);}
 
@@ -1308,14 +1479,14 @@ input[type=submit]:hover {
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
-    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.3);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.3);
+            filter: brightness(1.8) grayscale(1) opacity(.3);
 }
 .radioZona:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+            filter: brightness(1.2) grayscale(.5) opacity(1);
 }
 
 /* =======================================
@@ -1329,4 +1500,155 @@ input[type=submit]:hover {
 .recomendaciones ul li {
     text-align: start;
     color: #fff;
+}
+
+
+/* =======================================
+----------------Transrural----------------
+==========================================*/
+
+#logoTrans {
+    margin-top: 20px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.transrural {
+    width: 100%;
+}
+
+.transrural h3 {
+    color: #ff9000;
+    margin: 0;
+}
+
+.transrural p {
+    color: #ff9000;
+    font-weight: bold;
+}
+
+.transrural span{
+    font-weight: normal;
+    color: #fff;
+}
+
+.transrural h2 {
+    text-align: center;
+}
+
+.transrural img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.transDownload {
+    text-align: center;
+}
+
+.transDownload a {
+    width: 85%;
+    font-size: 20px;
+}
+
+.noPreguntas {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.quienesSomos img {
+    width: 26%;
+    margin: 10px 2%;
+}
+
+@media (max-width: 768px) {
+    .quienesSomos img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.pertenencias p {
+    color: #fff;
+    margin-left: 18px;
+    text-align: center;
+}
+
+.pertenencias form {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 5%;
+    margin-bottom: 20px;
+}
+
+.pertenencias form .contFlex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 4px 0;
+}
+
+.pertenencias form h4 {
+    color: #f99600;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.pertenencias form label {
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+    margin-left: 15px;
+}
+
+#btnPertenencias {
+    margin-top: 10px;
+}
+
+.pertenencias form input,
+.pertenencias form textarea {
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin: 0;
+    width: auto;
+}
+
+@media (min-width: 1000px) {
+    .pertenencias form .contFlex{
+        flex-direction: row;
+    }
+
+    .pertenencias form label {
+        flex-basis: 10rem;
+    }
+
+    #btnPertenencias {
+        margin-left: 10.9rem;
+    }
+}
+
+#NoMarginLogo {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.imgViaje {
+    text-align: center;
+}
+
+.imgViaje img {
+    width: 70%;
+}
+
+.txtViajes p {
+    margin-top: 15px;
+    color: #fff;
+    font-style: oblique;
+    font-size: 24px;
+    font-weight: normal;
 }

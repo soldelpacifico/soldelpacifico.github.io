@@ -25,10 +25,10 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SECRET_KEY = 'r=q=p&2^3^v(rw+q_oup!xqr74@+dvqes9(v%@_*wuh^1z6xtj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*'
+    'soldelpacifico.cl', '138.0.120.16'
 ]
 
 

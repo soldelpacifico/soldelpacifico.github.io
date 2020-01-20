@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+  if ( window.location.pathname == '/' ){
+    $("#btnHome").css("display","none");
+    $("#btnSubir").css("bottom","20px");
+}
+
   $(".closeAviso").click(function() {
     $(".aviso").css("display","none")
   });
@@ -13,12 +19,18 @@ $(document).ready(function(){
       $(".concon").css("display","none");
       $("#btnCalera a").css("background","#f99600");
       $("#btnConcon a").css("background","#ffffff");
+      $('html, body').animate({
+        scrollTop: ($('#Calera').offset().top)
+    },500);
     }
     else {
       $(".calera").css("display","none");
       $(".concon").css("display","block");
       $("#btnCalera a").css("background","#ffffff");
       $("#btnConcon a").css("background","#f99600");
+      $('html, body').animate({
+        scrollTop: ($('#Costa').offset().top)
+    },500);
     }
 });
   
@@ -35,7 +47,7 @@ $(document).ready(function(){
 		});
   });
     var pathname = window.location.pathname;
-    $('#main-menu > a[href="'+pathname+'"]').addClass('active');
+    $('#main-menu > li a[href="'+pathname+'"]').addClass('active');
 
     $('.popup').magnificPopup({type:'image'});
 });
@@ -67,4 +79,8 @@ function arrastrarPagina() {
 function subir() {
   document.body.scrollTop = 0; // Para Safari
   document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE and Opera
+}
+
+function home() {
+  window.location = '/';
 }
