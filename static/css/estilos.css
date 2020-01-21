@@ -523,7 +523,9 @@ button {
 }
 
 .imgHistoria {
-    max-width: 200px;
+    max-width: 180px;
+    max-height: 225px;
+    overflow: hidden;
 }
 
 .imgHistoria div {
@@ -548,17 +550,19 @@ button {
 
 .imgHistoria .n1 {
     color: #fff;
-    margin-left: -20px;
+    margin-left: -29px;
+    margin-top: -14px;
 }
 
 .imgHistoria .n2 {
     color: #df992a;
+    margin-top: -14px;
 }
 
 .imgHistoria h2 {
     font-weight: bold;
     color: #fff;
-    margin-top: -51px;
+    margin-top: -64px;
 }
 
 .fondoHist {
