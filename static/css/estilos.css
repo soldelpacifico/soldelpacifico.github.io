@@ -510,7 +510,7 @@ button {
     font-size: 22px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 991px) {
     #contHistSlid {
         margin-top: 122px;
         padding-right: 0px;
