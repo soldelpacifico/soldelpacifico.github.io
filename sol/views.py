@@ -8,6 +8,8 @@ from django.utils import timezone
 from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm, UserCreateForm
 from datetime import date
 
+from django.core.paginator import Paginator
+
 #Pass Recover
 
 def error404(request, exception):
@@ -85,6 +87,13 @@ def historia(request):
 
 def preguntas(request):
     Preguntas = Pregunta.objects.filter(respondida=True)
+
+    paginator = Paginator(Preguntas, 1)
+
+    page = request.GET.get('page')
+
+    Preguntas = paginator.get_page(page)
+
     return render(request, 'sol/preguntas.html', {"Preguntas":Preguntas})
 
 def resp_preguntas(request):

@@ -1657,3 +1657,12 @@ input[type=submit]:hover {
     font-size: 24px;
     font-weight: normal;
 }
+
+#pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pageActive {
+    background-color: #cf7500;
+}
