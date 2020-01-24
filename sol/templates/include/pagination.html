@@ -1,0 +1,22 @@
+<div id="pagination">
+    {% if Preguntas.has_previous %}
+    <a href="?page={{ Preguntas.previous_page_number }}" class="btnA anterior">Anterior</a>
+    {% endif %}
+    {% if Preguntas.number > 3 %}
+    <a class="btnA" href="?page=1">1</a><span>...</span>
+    {% endif %}
+    {% for num in Preguntas.paginator.page_range %}
+      
+      {% if Preguntas.number == num %}
+      <a href="" class="pageActive btnA">{{num}}</a>
+      {% elif num > Preguntas.number|add:'-3' and num < Preguntas.number|add:'3' %}
+      <a href="?page={{num}}" class="btnA">{{num}}</a>
+      {% endif %}
+    {% endfor %}
+    {% if Preguntas.number < Preguntas.paginator.num_pages|add:'-2' %}
+    <span>...</span><a class="btnA" href="?page={{Preguntas.paginator.num_pages}}">{{Preguntas.paginator.num_pages}}</a>
+    {% endif %}
+    {% if Preguntas.has_next %}
+    <a href="?page={{ Preguntas.next_page_number }}" class="btnA siguiente">Siguiente</a>
+    {% endif %}
+  </div>

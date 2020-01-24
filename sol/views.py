@@ -16,16 +16,52 @@ def error404(request, exception):
     return render(request, 'error_404.html', {})
 
 def index(request):
+    #Contenido index
     today = date.today()
     Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')[:3]
     Avisos = Aviso.objects.filter(dia__year=today.year,
                                        dia__month=today.month,
                                        dia__day=today.day)
-    return render(request, 'sol/index.html', {"Noticias":Noticias,"Avisos":Avisos})
+    #Buscador de tarifas
+    Inicios = Inicio.objects.all().order_by('lugar')
+    Inicios_get = request.GET.get('desde')
+    Destinos_get = request.GET.get('hacia')
+    inicio_resultado = None
+    destino_resultado = None
+    Destinos = None
+    cb1Selected= None
+    cb2Selected= None
+
+    if Inicios_get!='Seleccione' and Inicios_get is not None:
+        inicio_resultado = Inicio.objects.filter(lugar=Inicios_get)[0]
+        cb1Selected = inicio_resultado
+        Destinos = Tarifa.objects.filter(inicio=inicio_resultado).order_by('destino')
+
+    if Destinos_get!='Seleccione' and Destinos_get is not None:
+        destino_resultado = Tarifa.objects.get(destino=Destinos_get, inicio=inicio_resultado)
+        cb2Selected = destino_resultado
+    
+    contexto = {
+        #ContIndex
+        "Noticias":Noticias,
+        "Avisos":Avisos,
+        #BuscadorTarifas
+        "Inicios":Inicios,
+        "Destinos":Destinos,
+        "cb1Selected":cb1Selected,
+        "cb2Selected":cb2Selected
+    }
+    return render(request, 'sol/index.html', contexto)
 
 def todasnoticias(request):
     Noticias = Noticia.objects.filter(fecha_Publicacion__lte=timezone.now()).order_by('-fecha_Publicacion')
-    return render(request, 'sol/noticias.html', {"Noticias":Noticias})
+
+    paginator = Paginator(Noticias, 10)
+
+    page = request.GET.get('page')
+
+    Noticias = paginator.get_page(page)
+    return render(request, 'sol/noticias.html', {"Noticias":Noticias,"Preguntas":Noticias})
 
 
 def rutas(request):

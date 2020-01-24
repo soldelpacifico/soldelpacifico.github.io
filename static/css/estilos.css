@@ -1666,3 +1666,17 @@ input[type=submit]:hover {
 .pageActive {
     background-color: #cf7500;
 }
+
+#pagination span{
+    color: #fff;
+    font-size: 29px;
+    margin: 15px 5px 0px 5px;
+}
+
+#pagination .anterior {
+    margin-right: 5px;
+}
+
+#pagination .siguiente {
+    margin-left: 5px;
+}

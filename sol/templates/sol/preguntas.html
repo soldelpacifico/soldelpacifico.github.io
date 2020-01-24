@@ -128,23 +128,6 @@
     <h2 class="noPreguntas">No hay preguntas. ¿Por qué no te animas a hacer la primera?</h2>
   </div>
   {% endif %}
-  <div id="pagination">
-    {% if Preguntas.has_previous %}
-    <a href="?page={{ Preguntas.previous_page_number }}" class="btnA">Anterior</a>
-    {% endif %}
-
-    {% for num in Preguntas.paginator.page_range %}
-      
-      {% if Preguntas.number == num %}
-      <a href="" class="pageActive btnA">{{num}}</a>
-      {% elif num > Preguntas.number|add:'-3' and num < Preguntas.number|add:'3' %}
-      <a href="?page={{num}}" class="btnA">{{num}}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if Preguntas.has_next %}
-    <a href="?page={{ Preguntas.next_page_number }}" class="btnA">Siguiente</a>
-    {% endif %}
-  </div>
+  {% include 'include/pagination.html' %}
 </article>
 {% endblock %}

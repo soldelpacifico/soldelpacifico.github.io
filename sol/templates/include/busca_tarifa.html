@@ -1,0 +1,51 @@
+<div class="row">
+    <div id="buscarTarifa">
+        <form method="GET">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <label for="desde">Desde: </label>
+                    <select name="desde" id="desde" onchange="desdeChange()">
+                        <option value="" selected disabled hidden>Seleccione Inicio</option>
+                        {% for inicio in Inicios  %}
+                        {% if cb1Selected == inicio %}
+                        <option value="{{inicio}}" selected>{{inicio}}</option>
+                        {% else %}
+                        <option value="{{inicio}}">{{inicio}}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <label for="hacia">Hacia: </label>
+                    <select name="hacia" id="hacia" onchange="this.form.submit()">
+                        <option value="" selected disabled hidden>Seleccione Destino</option>
+                        {% if Destinos %}
+                        {% for destino in Destinos  %}
+                        {% if cb2Selected == destino %}
+                        <option value="{{destino}}" selected>{{destino}}</option>
+                        {% else %}
+                        <option value="{{destino}}">{{destino}}</option>
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            {% if cb2Selected %}
+                            <p>Valor Normal: ${{ cb2Selected.valor }} </p>
+                            {% endif %}
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            {% if cb2Selected.estudiante %}
+                            <p>Valor Estudiante: ${{ cb2Selected.estudiante }} </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
