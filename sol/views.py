@@ -122,7 +122,7 @@ def historia(request):
     return render(request, 'sol/historia.html', {})
 
 def preguntas(request):
-    Preguntas = Pregunta.objects.filter(respondida=True)
+    Preguntas = Pregunta.objects.filter(respondida=True).order_by('-pk')
 
     paginator = Paginator(Preguntas, 10)
 
