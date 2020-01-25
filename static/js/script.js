@@ -1,12 +1,17 @@
 $(document).ready(function(){
+  var busq = window.location.search;
 
   if ( window.location.pathname == '/' ){
     $("#btnHome").css("display","none");
     $("#btnSubir").css("bottom","20px");
 }
+  if(busq.includes('?desde=')){
+    $("#buscarTarifa").get(0).scrollIntoView();
+  }
+
 
   $(".closeAviso").click(function() {
-    $(".aviso").css("display","none")
+    $(".aviso").css("display","none");
   });
 
   $('.open-popup-link').magnificPopup({

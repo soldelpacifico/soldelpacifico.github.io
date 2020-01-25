@@ -124,7 +124,7 @@ def historia(request):
 def preguntas(request):
     Preguntas = Pregunta.objects.filter(respondida=True)
 
-    paginator = Paginator(Preguntas, 1)
+    paginator = Paginator(Preguntas, 10)
 
     page = request.GET.get('page')
 
