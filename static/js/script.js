@@ -6,7 +6,7 @@ $(document).ready(function(){
     $("#btnSubir").css("bottom","20px");
 }
   if(busq.includes('?desde=')){
-    $("#buscarTarifa").get(0).scrollIntoView();
+    $("#scrollTarifa").get(0).scrollIntoView();
   }
 
 
