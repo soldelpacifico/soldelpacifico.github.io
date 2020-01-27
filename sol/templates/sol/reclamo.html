@@ -8,28 +8,28 @@
     <p>ANTE CUALQUIER RECLAMO O DENUNCIA TAMBIÉN PUEDE DIRIGIRSE A:
         SEREMITT REGIÓN DE VALPARAÍSO
         Dirección: Blanco 1131, Piso 4, Valparaíso</p>
-    <form action="https://formspree.io/secretaria@soldelpacifico.cl" method="POST">
+    <form action="https://formspree.io/proxynetax@gmail.com" method="POST">
         <h4>Información del bus</h4>
         <div class="contFlex">
             <label for="Patente">Patente </label>
-            <input type="text" id="Patente" placeholder="AA AA 11" required="required">
+            <input style="text-transform: uppercase;" type="text" name="Patente" placeholder="AA AA 11" required="required">
         </div>
         <div class="contFlex">
             <label for="NumeroBus">Número del bus </label>
-            <input type="email" id="NumeroBus" placeholder="186" required="required">
+            <input type="number" name="NumeroBus" placeholder="186" required="required">
         </div>
         <div class="contFlex">
             <label for="DescripcionBus">Descripción del bus </label>
-            <input type="tel" id="DescripcionBus" placeholder="Bus rojo con un degradado a dorado" required="required" minlength="8">
+            <input type="text" name="DescripcionBus" placeholder="Bus rojo con un degradado a dorado" required="required" minlength="8">
         </div>
         <div class="contFlex">
             <label for="LugarViaje">Viaje realizado </label>
-            <input type="number" id="LugarViaje" placeholder="Viña del mar - Quillota">
+            <input type="text" name="LugarViaje" placeholder="Viña del mar - Quillota">
         </div>
         <h4>Reclamo</h4>
         <div class="contFlex">
             <label for="Reclamo">Reclamo </label>
-            <textarea id="Reclamo" placeholder="Describa el reclamo..."></textarea>
+            <textarea name="Reclamo" placeholder="Describa el reclamo..."></textarea>
         </div>
             <input type="submit" value="ENVIAR" id="btnPertenencias">
     </form>
