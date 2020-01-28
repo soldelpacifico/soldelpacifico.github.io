@@ -28,11 +28,14 @@
     <link href="{% static 'css/sm-core-css.css' %}" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/glide.core.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/glide.theme.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/flexboxgrid.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/popup.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="{% static 'js/popup.js' %}"></script>
     <script src="{% static 'js/jquery.smartmenus.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/script.js' %}"></script>
@@ -117,6 +120,14 @@
             </ul>
         </div>
     </footer>
+    <script>
+        const Config = {
+            type: "carousel",
+            autoplay: 3000,
+            hoverpause: true
+        }
+        new Glide('.glide', Config).mount()
+      </script>
 </body>
 <!-- Sitio web Diseñado por Joshua Ortiz Vega -->
 <!-- https://www.linkedin.com/in/joshua-ortiz-40a79218b -->

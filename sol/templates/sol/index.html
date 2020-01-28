@@ -45,29 +45,40 @@
             <h2>AÑOS</h2>
           </div>
         </div>
-        
+
       </div>
       <div class="centrar">
-      <a class="btnA centrar" href="{% url 'historia' %}">Conócenos</a>
-    </div>
+        <a class="btnA centrar" href="{% url 'historia' %}">Conócenos</a>
+      </div>
     </div>
   </div>
   <div class="col-xs-12 col-md-9">
-    <div class="sliderIndex">
-      <ul>
-        <li><a href="{% url 'terminales' %}">
-            <img src="{% static 'Images/Slider/Slider-img1.jpg' %}" alt="bus1" />
-            <p class="subSlide">Terminales</p>
-          </a></li>
-        <li><a href="{% url 'preguntas' %}">
-            <img src="{% static 'Images/Slider/Slider-img2.jpg' %}" alt="bus2" />
-            <p class="subSlide">Preguntas frecuentes</p>
-          </a></li>
-        <li><a href="{% url 'rutas' %}">
-            <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
-            <p class="subSlide">Itinerarios</p>
-          </a></li>
-      </ul>
+    <div class="contGlide">
+      <div class="cont_contGlide">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><a href="{% url 'terminales' %}">
+                  <img src="{% static 'Images/Slider/Slider-img1.jpg' %}" alt="bus1" />
+                  <p class="subSlide">Terminales</p>
+                </a></li>
+              <li class="glide__slide"><a href="{% url 'preguntas' %}">
+                  <img src="{% static 'Images/Slider/Slider-img2.jpg' %}" alt="bus2" />
+                  <p class="subSlide">Preguntas frecuentes</p>
+                </a></li>
+              <li class="glide__slide"><a href="{% url 'rutas' %}">
+                  <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
+                  <p class="subSlide">Itinerarios</p>
+                </a></li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <</button> <button class="glide__arrow glide__arrow--right" data-glide-dir=">">>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

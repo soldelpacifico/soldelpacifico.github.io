@@ -88,7 +88,6 @@ button {
     border-radius: 0px;
     padding: 0.4rem 0;
     text-align: center;
-    width: 100%;
     display: flex;
     height: 40px;
 }
@@ -456,30 +455,6 @@ button {
     overflow: hidden;
     height: auto;
     max-height: 750px;
-}
-
-.sliderIndex ul {
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation: slideIndex 15s infinite;
-}
-
-.sliderIndex li {
-    width: 100%;
-    list-style: none;
-    justify-content: center;
-    display: flex;
-}
-
-.sliderIndex img {
-    width: 100%;
-    height: auto;
-    max-width: 1350px;
-}
-
-.sliderIndex a {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.541);
 }
 
 .subSlide {
@@ -1679,4 +1654,24 @@ input[type=submit]:hover {
 
 #pagination .siguiente {
     margin-left: 5px;
+}
+
+.glide img {
+    width: 100%;
+}
+.contGlide{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.cont_contGlide {
+    max-width: 950px;
+}
+
+.glide__arrow {
+    background: rgba(64, 93, 118, 0.8);
+}
+
+.glide__arrow:hover {
+    background: #ff9000;
 }
