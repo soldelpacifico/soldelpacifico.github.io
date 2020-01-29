@@ -52,7 +52,8 @@
       </div>
     </div>
   </div>
-  <div class="col-xs-12 col-md-9">
+  <div class="col-lg-1"></div>
+  <div class="col-xs-12 col-md-9 col-lg-7">
     <div class="contGlide">
       <div class="cont_contGlide">
         <div class="glide">
@@ -70,6 +71,14 @@
                   <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
                   <p class="subSlide">Itinerarios</p>
                 </a></li>
+                <li class="glide__slide"><a href="{% url 'tarifas' %}">
+                  <img src="{% static 'Images/Slider/Slider-img4.png' %}" alt="bus3" />
+                  <p class="subSlide">Tarifas</p>
+                </a></li>
+                <li class="glide__slide"><a href="{% url 'pertenencias' %}">
+                  <img src="{% static 'Images/Slider/Slider-img5.png' %}" alt="bus3" />
+                  <p class="subSlide">Pérdidas</p>
+                </a></li>
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
@@ -81,6 +90,7 @@
       </div>
     </div>
   </div>
+  <div class="col-lg-1"></div>
 </div>
 <article id="tarifas">
   <h1 id="scrollTarifa">Consulte su tarifa</h1>
@@ -112,4 +122,12 @@
     <a class="btnA" href="{% url 'noticias' %}">Ver todas las noticias</a>
   </div>
 </article>
+<script>
+  const Config = {
+      type: "carousel",
+      autoplay: 3000,
+      hoverpause: true
+  }
+  new Glide('.glide', Config).mount()
+</script>
 {% endblock %}

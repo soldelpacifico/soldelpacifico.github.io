@@ -236,6 +236,8 @@ button {
     #main-menu li ul {
         background-color: #191b32;
         border: solid 1px #365374;
+        z-index: 5;
+        position: inherit;
     }
 
     #main-menu li ul li {
@@ -1658,10 +1660,10 @@ input[type=submit]:hover {
 
 .glide img {
     width: 100%;
+    z-index: 1;
+    position: relative;
 }
 .contGlide{
-    display: flex;
-    justify-content: center;
     width: 100%;
 }
 .cont_contGlide {
