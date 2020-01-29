@@ -56,7 +56,7 @@
   <div class="col-xs-12 col-md-9 col-lg-7">
     <div class="contGlide">
       <div class="cont_contGlide">
-        <div class="glide">
+        <div class="glide glide_index">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
               <li class="glide__slide"><a href="{% url 'terminales' %}">
@@ -71,11 +71,11 @@
                   <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
                   <p class="subSlide">Itinerarios</p>
                 </a></li>
-                <li class="glide__slide"><a href="{% url 'tarifas' %}">
+              <li class="glide__slide"><a href="{% url 'tarifas' %}">
                   <img src="{% static 'Images/Slider/Slider-img4.png' %}" alt="bus3" />
                   <p class="subSlide">Tarifas</p>
                 </a></li>
-                <li class="glide__slide"><a href="{% url 'pertenencias' %}">
+              <li class="glide__slide"><a href="{% url 'pertenencias' %}">
                   <img src="{% static 'Images/Slider/Slider-img5.png' %}" alt="bus3" />
                   <p class="subSlide">Pérdidas</p>
                 </a></li>
@@ -102,6 +102,44 @@
 <article id="tarifas">
   <h1 id="scrollTarifa">Consulta de Tarifas</h1>
   {% include 'include/busca_tarifa.html' %}
+</article>
+<article>
+  <div class="sliderCities">
+    <h1>Destinos</h1>
+    <div class="glide glide_destinos">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img src="{% static 'Images/Destinos/Destino1.png' %}" alt="slider1" />
+            </a></li>
+          <li class="glide__slide">
+            <img src="{% static 'Images/Destinos/Destino2.png' %}" alt="slider2" />
+          </li>
+          <li class="glide__slide">
+            <img src="{% static 'Images/Destinos/Destino3.png' %}" alt="slider3" />
+          </li>
+          <li class="glide__slide">
+            <img src="{% static 'Images/Destinos/Destino4.png' %}" alt="slider4" />
+          </li>
+          <li class="glide__slide">
+            <img src="{% static 'Images/Destinos/Destino5.png' %}" alt="slider5" />
+          </li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <</button> <button class="glide__arrow glide__arrow--right" data-glide-dir=">">>
+        </button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+      </div>
+    </div>
+  </div>
 </article>
 <article id="noticias" class="row">
   <h1>Últimos comunicados</h1>
@@ -131,10 +169,18 @@
 </article>
 <script>
   const Config = {
-      type: "carousel",
-      autoplay: 3000,
-      hoverpause: true
+    type: "carousel",
+    autoplay: 3000,
+    hoverpause: true
   }
-  new Glide('.glide', Config).mount()
+  new Glide('.glide_index', Config).mount()
+
+  const Config2 = {
+    type: "carousel",
+    autoplay: 1500,
+    hoverpause: true,
+    perView: 3
+  }
+  new Glide('.glide_destinos', Config2).mount()
 </script>
 {% endblock %}
