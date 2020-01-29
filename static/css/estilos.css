@@ -1670,7 +1670,7 @@ input[type=submit]:hover {
     max-width: 950px;
 }
 
-.glide__arrow {
+.glide_index .glide__arrow {
     border: none;
     font-size: 24px;
     filter: opacity(.6);
@@ -1689,7 +1689,7 @@ input[type=submit]:hover {
     filter: opacity(1);
 }
 
-.glide__bullets {
+.glide_index .glide__bullets {
     bottom: 1em;
     left: 86%;
 }
