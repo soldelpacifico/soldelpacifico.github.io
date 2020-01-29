@@ -1673,7 +1673,8 @@ input[type=submit]:hover {
 .glide__arrow {
     border: none;
     font-size: 24px;
-    opacity: 60%;
+    filter: opacity(.6);
+    transition: 0.5s ease-in;
 }
 
 .glide__arrow--right {
@@ -1685,5 +1686,10 @@ input[type=submit]:hover {
 }
 
 .glide__arrow:hover {
-    background: #ff9000;
+    filter: opacity(1);
+}
+
+.glide__bullets {
+    bottom: 1em;
+    left: 86%;
 }
