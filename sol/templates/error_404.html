@@ -2,12 +2,11 @@
 {% load staticfiles %}
 
 {% block content %}
-<article>
+<article class="artError">
     <h1>Pagina no encontrada</h1>
     <p class="lblLogin">¿Ingresaste mal la url? Si vienes de un link de la pagina y se supone que aqui deberia haber algo, puedes mandar un mail a <a href="mailto:joshuaortizz@hotmail.com">Este correo</a> avisando donde esta el error.</p>
     <div class="col-xs-12 center">
         <a class="btnA" href="{% url 'index' %}">VOLVER AL INICIO</a>
     </div>
-
 </article>
 {% endblock %}
