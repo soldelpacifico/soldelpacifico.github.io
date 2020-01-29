@@ -5,12 +5,14 @@ from . import views
 from django.conf import settings
 from django.conf.urls import url
 from rest_framework import routers
-from sol.quickstart.views import AvisoViewSet, NoticiaViewSet
+from sol.quickstart.views import AvisoViewSet, NoticiaViewSet, TarifaViewSet, InicioViewSet
 from django.views.static import serve
 
 router = routers.DefaultRouter()
 router.register(r'avisos', AvisoViewSet)
 router.register(r'noticias', NoticiaViewSet)
+router.register(r'inicio', InicioViewSet)
+router.register(r'tarifas', TarifaViewSet)
 
 urlpatterns = [
 
