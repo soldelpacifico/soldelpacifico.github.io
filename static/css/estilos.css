@@ -1671,7 +1671,17 @@ input[type=submit]:hover {
 }
 
 .glide__arrow {
-    background: rgba(64, 93, 118, 0.8);
+    border: none;
+    font-size: 24px;
+    opacity: 60%;
+}
+
+.glide__arrow--right {
+    right: 0;
+}
+
+.glide__arrow--left {
+    left: 0;
 }
 
 .glide__arrow:hover {
