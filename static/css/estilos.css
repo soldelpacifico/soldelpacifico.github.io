@@ -1700,8 +1700,9 @@ input[type=submit]:hover {
 }
 
 .glide_index .glide__bullets {
-    bottom: 1em;
-    left: 86%;
+    bottom: 19px;
+    left: unset;
+    right: -30px;
 }
 
 .glide_destinos .glide__bullets {
