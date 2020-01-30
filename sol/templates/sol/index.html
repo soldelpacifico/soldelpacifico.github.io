@@ -190,7 +190,21 @@
     type: "carousel",
     autoplay: 1500,
     hoverpause: true,
-    perView: 3
+    perView: 3,
+    breakpoints: {
+      1000: {
+        perView: 1,
+        peek: 200
+      },
+      720: {
+        perView:1,
+        peek: 100
+      },
+      500: {
+        perView:1,
+        peek: 30
+      }
+    }
   }
   new Glide('.glide_destinos', Config2).mount()
 </script>
