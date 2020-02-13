@@ -64,6 +64,9 @@ def todasnoticias(request):
     return render(request, 'sol/noticias.html', {"Noticias":Noticias,"Preguntas":Noticias})
 
 
+def itinerarios(request):
+    return render(request, 'sol/itinerarios.html', {})
+
 def rutas(request):
     return render(request, 'sol/rutas.html', {})
 
@@ -105,6 +108,9 @@ def beneficios(request):
 
 def pertenencias(request):
     return render(request, 'sol/pertenencias.html', {})
+
+def derechos(request):
+    return render(request, 'sol/derechos.html', {})
 
 def reclamo(request):
     return render(request, 'sol/reclamo.html', {})
