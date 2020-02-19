@@ -11,11 +11,11 @@
     {% if user.is_superuser %}
   <div class="row rowLogin">
     <div class="col-xs-5">
-      <a href="{% url 'nueva_idea' %}" class="btnA"><i class="material-icons md-16">create</i> Ir a aprovar
+      <a href="{% url 'administrar_ideas' %}" class="btnA"><i class="material-icons md-16">create</i> Ir a aprobar
         ideas</a>
     </div>
     <div class="col-xs-7 linkLogin">
-      <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesion
+      <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesión
         {{ user.get_username }}</a>
     </div>
   </div>
@@ -26,7 +26,7 @@
       <a href="{% url 'nueva_idea' %}" class="btnA"><i class="material-icons md-16">add</i>Crear nueva idea</a>
     </div>
     <div class="col-xs-4 linkLogin">
-      <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesion
+      <a href="{% url 'logout' %}" class="btnA"><i class="material-icons md-16">person</i>Cerrar Sesión
         {{ user.get_username }}</a>
     </div>
   </div>
@@ -36,7 +36,7 @@
       <a href="{% url 'nueva_idea' %}" class="btnA"><i class="material-icons md-16">add</i>Crear nueva idea</a>
     </div>
     <div class="col-xs-7 linkLogin">
-      <a href="{% url 'login' %}" class="btnA"><i class="material-icons md-16">person</i>Iniciar sesion</a>
+      <a href="{% url 'login' %}" class="btnA"><i class="material-icons md-16">person</i>Iniciar sesión</a>
     </div>
   </div>
   {% endif %}

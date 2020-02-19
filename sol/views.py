@@ -244,3 +244,17 @@ def nueva_idea(request):
     else:
         form = IdeaForm()
     return render(request, 'sol/idea/crear_idea.html', {'form':form})
+
+def administrar_ideas(request):
+    if not request.user.is_superuser:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    Ideas = Idea.objects.filter(publicada=False)
+    return render(request, 'sol/idea/administrar_ideas.html', {"Ideas":Ideas})
+
+def idea_eliminar(request, pk):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    pregunta = get_object_or_404(Pregunta, pk=pk)
+    pregunta.delete()
+    messages.success(request,'¡Pregunta eliminada exitosamente!')
+    return redirect('respPreguntas')
