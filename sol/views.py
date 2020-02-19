@@ -3,9 +3,9 @@ from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Noticia, Pregunta, Aviso, Inicio, Tarifa, NoticiaTrans
+from .models import Noticia, Pregunta, Aviso, Inicio, Tarifa, NoticiaTrans, Idea
 from django.utils import timezone
-from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm, UserCreateForm
+from .forms import PreguntaForm, RespuestaForm, PreguntaLogueadoForm, UserCreateForm, IdeaForm
 from datetime import date
 
 from django.core.paginator import Paginator
@@ -219,3 +219,28 @@ def register(request):
     return render(request = request,
                   template_name = "sol/registrarme.html",
                   context={"form":form})
+
+#Ideas Concurso
+def Ideas(request):
+    Ideas = Idea.objects.filter(publicada=True).order_by('-pk')
+
+    paginator = Paginator(Ideas, 10)
+
+    page = request.GET.get('page')
+
+    Ideas = paginator.get_page(page)
+
+    return render(request, 'sol/idea/ideas.html', {"Preguntas":Ideas})
+
+def nueva_idea(request):
+    if request.method == "POST":
+        form = IdeaForm(request.POST)
+        if form.is_valid():
+            Idea = form.save(commit=False)
+            Idea.publicada=False
+            Idea.save()
+            messages.success(request,'Idea enviada exitosamente!')
+            return redirect('ideas')
+    else:
+        form = IdeaForm()
+    return render(request, 'sol/idea/crear_idea.html', {'form':form})

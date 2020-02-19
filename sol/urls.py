@@ -46,6 +46,8 @@ urlpatterns = [
     path('preguntas/<int:pk>/', views.pregunta_responder, name='pregunta_responder'),
     path('preguntas/eliminar/<int:pk>/', views.pregunta_eliminar, name='pregunta_eliminar'),
     path('preguntas/propias', views.mis_preguntas, name='mis_preguntas'),
+    path('ideas', views.Ideas, name="ideas"),
+    path('ideas/crear', views.nueva_idea, name="nueva_idea"),
     path('registrarme/', views.register, name='registrarme'),
     path('accounts/password-reset/', auth_views.PasswordResetView.as_view(template_name='sol/password_reset_form.html',email_template_name="sol/password_reset_email.html"), name="password_reset"),
     path('accounts/correo-enviado/', auth_views.PasswordResetDoneView.as_view(template_name='sol/password_reset_done.html'), name="password_reset_done"),
