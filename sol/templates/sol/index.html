@@ -4,9 +4,6 @@
 {% block content %}
 
 {% if Avisos %}
-<title> Buses Sol del Pacifico </title>
-
-<meta name="description" content="Empresa de Transporte Rural de la V Regi贸n. Destinos, Tarifas, Beneficios, Terminales, Preguntas, Viajes Especiales"/>
 <div class="alertaAviso">
   <div class="row">
     <div class="col-xs-12">
@@ -70,7 +67,7 @@
                   <img src="{% static 'Images/Slider/Slider-img2.jpg' %}" alt="bus2" />
                   <p class="subSlide">Preguntas frecuentes</p>
                 </a></li>
-              <li class="glide__slide"><a href="{% url 'rutas' %}">
+              <li class="glide__slide"><a href="{% url 'itinerarios' %}">
                   <img src="{% static 'Images/Slider/Slider-img3.jpg' %}" alt="bus3" />
                   <p class="subSlide">Itinerarios</p>
                 </a></li>
@@ -85,9 +82,8 @@
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-              <</button> <button class="glide__arrow glide__arrow--right" data-glide-dir=">">>
-            </button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="material-icons">keyboard_arrow_left</i></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="material-icons">keyboard_arrow_right</i></button>
           </div>
           <div class="glide__bullets" data-glide-el="controls[nav]">
             <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -115,41 +111,42 @@
     <div class="glide glide_destinos">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino1.png' %}" alt="slider1" />
             </a></li>
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino2.png' %}" alt="slider2" />
             </a></li>
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino3.png' %}" alt="slider3" />
             </a></li>
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino4.png' %}" alt="slider4" />
             </a></li>
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino5.png' %}" alt="slider5" />
             </a></li>
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino6.png' %}" alt="slider6" />
             </a></li>
-          <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino7.png' %}" alt="slider7" />
             </a></li>
-            <li class="glide__slide"><a href="{% url 'rutas' %}">
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino8.png' %}" alt="slider8" />
-            </a></li><li class="glide__slide"><a href="{% url 'rutas' %}">
+            </a></li>
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino9.png' %}" alt="slider9" />
-              </a></li><li class="glide__slide"><a href="{% url 'rutas' %}">
+            </a></li>
+          <li class="glide__slide"><a href="{% url 'itinerarios' %}">
               <img src="{% static 'Images/Destinos/Destino10.png' %}" alt="slider7" />
-            
+
             </a></li>
         </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-          <</button> <button class="glide__arrow glide__arrow--right" data-glide-dir=">">>
-        </button>
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="material-icons">keyboard_arrow_left</i></button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="material-icons">keyboard_arrow_right</i></button>
       </div>
       <div class="glide__bullets" data-glide-el="controls[nav]">
         <button class="glide__bullet" data-glide-dir="=0"></button>
@@ -164,22 +161,17 @@
         <button class="glide__bullet" data-glide-dir="=9"></button>
       </div>
     </div>
-    
   </div>
-</article>  
-<article>
-<p>&nbsp;</p>
-
+</article>
+<article class="destacados">
   <h1>Destacados</h1>
   <div class="todasNoticias centrar">
-  <h6> (En Desarrollo)</h6>
-  
+    <a href="http://www.transportescucha.cl"><img src="{% static 'Images/Derechos/1.png' %}" alt="transportescucha"></a>
+    <a href="https://www.conaset.cl/soap"><img src="{% static 'Images/Derechos/3.png' %}" alt="soap"></a>
+    <a href="{% url 'derechos' %}"><img src="{% static 'Images/Derechos/2.png' %}" alt="derechosresponsabilidades"></a>
     
- <a href="/preguntas"><img src="{% static 'Images/Destinos/1.png' %}" alt="slider6"</a>
- <a href="/destacados"><img src="{% static 'Images/Destinos/3.png' %}" alt="slider6"</a>
- <a href="/preguntas"><img src="{% static 'Images/Destinos/2.png' %}" alt="slider6"</a>
-</div>           
-</article>  
+  </div>
+</article>
 <article id="noticias" class="row">
   <h1>Comunicados</h1>
   {% for noticia in Noticias %}
@@ -206,6 +198,10 @@
     <a class="btnA" href="{% url 'noticias' %}">Ver todas las noticias</a>
   </div>
 </article>
+
+<div class="todasNoticias centrar">
+<a href="{% url 'index' %}"><img src="{% static 'Images/Derechos/concurse.png' %}" alt="derechosresponsabilidades"></a>
+</div>
 <script>
   const Config = {
     type: "carousel",
@@ -225,11 +221,11 @@
         peek: 200
       },
       720: {
-        perView:1,
+        perView: 1,
         peek: 100
       },
       500: {
-        perView:1,
+        perView: 1,
         peek: 30
       }
     }
