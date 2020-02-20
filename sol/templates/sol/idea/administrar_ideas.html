@@ -1,0 +1,28 @@
+{% extends "sol/base.html" %}
+
+{% block content %}
+<article class="ideas">
+    <h1 class="center">Aprobación de ideas</h1>
+    <div class="row">
+        {% if Ideas %}
+        {% for idea in Ideas %}
+        <div class="col-xs-12">
+            <div class="idea">
+                <h1><i class="material-icons md-30">emoji_objects</i> {{idea.idea}}</h1>
+                <p><i class="material-icons md-20">person</i> {{idea.nombre}}</p>
+                <p><i class="material-icons md-20">email</i> {{idea.email}}</p>
+                <a href="" class="btnA"><i class="material-icons md-20">done</i> Publicar idea</a><a href="" class="btnA"><i class="material-icons md-20">clear</i> Eliminar idea</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col-xs-12 center">
+            <h2>No hay ideas por aprobar</h2>
+        </div>
+        <div class="col-xs-12 center">
+            <a href="{% url 'ideas' %}" class="btnA center">Volver a ideas</a>
+        </div>
+        {% endif %}
+    </div>
+</article>
+{% endblock %}

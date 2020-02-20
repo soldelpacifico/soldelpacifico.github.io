@@ -12,6 +12,15 @@ body {
     background-size: cover;
     width: 100%;
 }
+/* Clases para desarrollo */
+.letra_grande {
+    font-size: 50px;
+}
+.espacio{
+    height: 300px;
+    width: 100%;
+}
+/*------------------------*/
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1705,7 +1714,7 @@ input[type=submit]:hover {
     right: -30px;
 }
 
-.glide_destinos .glide__bullets {
+.glide_destinos .glide__bullets, .glide_destacados .glide__bullets {
     bottom: -1em;
 }
 
@@ -1715,4 +1724,62 @@ input[type=submit]:hover {
 
 .artError {
     padding: 100px 0;
+}
+
+.artRutas h3 {
+    color: #fff;
+}
+
+.artRutas img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
+.artRutas h2 {
+    text-align: center;
+    color: #ff9000;
+}
+
+.artRutas .ruta {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.artRutas .ruta h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+/* IDEAS PARA CONCURSO */
+.ideas {
+    margin-bottom: 10px;
+}
+
+.ideas p {
+    color: #fff;
+}
+
+.idea {
+    background: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.idea h1 {
+    color: #305174;
+    font-size: 30px;
+    margin-top: 5px;
+    text-align: start;
+}
+
+.idea p {
+    color: #373a41;
+    margin-left: 30px;
+    font-size: 18px;
+    margin-top: -16px;
+    font-weight: 300;
 }

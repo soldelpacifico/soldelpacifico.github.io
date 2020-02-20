@@ -1,0 +1,48 @@
+{% extends "sol/base.html" %}
+
+{% block content %}
+<article class="nuevaPregunta">
+    <h1>Nueva Idea</h1>
+    <h2 class="noPreguntas">Si quieres que sea anónima solo rellena el nombre con "Anónimo".</h2>
+    {% if messages %}
+    <ul class="mensajes">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+            {{ message }}
+            </li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="post" class="formLogin" action="{% url 'nueva_idea' %}">
+        {% csrf_token %}
+        <div class="container fullWidth">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Nombre</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.nombre }}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Email</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.email }}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <p class="lblLogin">Idea</p>
+                </div>
+                <div class="col-xs-12 col-md-9">{{ form.idea }}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input type="submit" value="INGRESAR IDEA" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+</article>
+{% endblock %}

@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Sol del Pacifico 2020 -->
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'favicons/apple-icon-57x57.png' %}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'favicons/apple-icon-60x60.png' %}">
     <link rel="apple-touch-icon" sizes="72x72" href="{% static 'favicons/apple-icon-72x72.png' %}">
@@ -20,10 +21,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{% static 'favicons/ms-icon-144x144.png' %}">
     <meta name="theme-color" content="#ffffff">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sol Del Pacifico</title>
+    <title> Buses Sol del Pacifico </title>
+    <meta name="description" content="Empresa de Transporte Rural de la V Región. Destinos, Tarifas, Beneficios, Terminales, Preguntas, Viajes Especiales"/>
     <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Oswald&display=swap" rel="stylesheet">
     <link href="{% static 'css/sm-core-css.css' %}" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -65,7 +66,8 @@
                         <li><a href="{% url 'index' %}">Inicio</a></li>
                         <li><a href="#">Viajes<i class="material-icons md-20">keyboard_arrow_down</i></a>
                             <ul>
-                                <li><a href="{% url 'rutas' %}">Itinerarios</a></li>
+                                <li><a href="{% url 'itinerarios' %}">Itinerarios</a></li>
+                                <li><a href="#">Rutas(En desarrollo)</a></li>
                                 <li><a href="{% url 'tarifas' %}">Tarifas</a></li>
                                 <li><a href="{% url 'viajes' %}">Viajes Especiales</a></li>
                             </ul>
@@ -96,10 +98,7 @@
             <ul id="info">
                 <li><a href="mailto:secretaria@soldelpacifico.cl"><img src="{% static 'Images/email.png' %}"
                             alt="correo"><span class="negrita">Correo</span>: secretaria@soldelpacifico.cl</a></li>
-                <li><a href="tel:322795700"><img src="{% static 'Images/phone.png' %}" alt="fono"><span
-                            class="negrita">Teléfonos</span>: (32)
-                        279 57
-                        00 / 10</a></li>
+                <li><a href="tel:322795700"><img src="{% static 'Images/phone.png' %}" alt="fono"><span class="negrita">Teléfonos</span>: (32)279 57 00</a><a href="tel:322795710"><span class="negrita">/ 10</span></a></li>
                 <li><a
                         href="https://www.google.cl/maps/place/Galvarino+110,+Valpara%C3%ADso,+Regi%C3%B3n+de+Valpara%C3%ADso/@-33.0265012,-71.6461921,17z/data=!3m1!4b1!4m5!3m4!1s0x9689e6b80ed13925:0x1fa79fdd955b5ebe!8m2!3d-33.0265057!4d-71.6440034"><img
                             src="{% static 'Images/map.png' %}" alt="mapa"><span class="negrita">Dirección</span>:

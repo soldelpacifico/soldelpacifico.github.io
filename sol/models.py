@@ -65,3 +65,11 @@ class Tarifa(models.Model):
     def __str__(self):
         return self.destino
 
+class Idea(models.Model):
+    nombre=models.CharField(max_length=50)
+    email=models.EmailField(max_length=50)
+    idea=models.TextField()
+    publicada=models.BooleanField()
+
+    def __str__(self):
+        return self.idea

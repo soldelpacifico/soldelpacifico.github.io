@@ -2,13 +2,19 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Pregunta
+from .models import Pregunta, Idea
 
 class PreguntaForm(forms.ModelForm):
 
     class Meta:
         model = Pregunta
         fields = ('nombre', 'email','pregunta',)
+
+class IdeaForm(forms.ModelForm):
+
+    class Meta:
+        model = Idea
+        fields = ('nombre', 'email', 'idea',)
 
 class PreguntaLogueadoForm(forms.ModelForm):
 
