@@ -575,6 +575,14 @@ button {
     margin: 10px 2%;
 }
 
+@media (max-width: 768px) {
+    .historia img {
+        width: 100%;
+        border: solid 1px rgb(202, 131, 0);
+        margin: 0 2%;
+    }
+}
+
 .imgR {
     float: right;
 }
@@ -1548,6 +1556,14 @@ input[type=submit]:hover {
 .quienesSomos img {
     width: 26%;
     margin: 10px 2%;
+}
+
+.quienesSomos div.col-xs-12 {
+    overflow: hidden;
+}
+
+.tituloHistoria h4 {
+    color: #fff;
 }
 
 @media (max-width: 768px) {
