@@ -2,13 +2,13 @@
 
 {% block content %}
 <article class="ideas">
-    <h1 class="center">Concurso Sol del Pacifico</h1>
-    <p class="center">Estamos felices de lanzar el sitio web, por ello hemos decidido lanzar un concurso con un buen
-        premio para quien gane, pero aun no decidimos como será el concurso.
-        para ello hemos implementado este sitio, donde usted puede darnos algunas ideas de como podria ser el concurso.
-    </p>
-    <h1 class="center">Ideas</h1>
-    {% if user.is_superuser %}
+  <h1 class="center">Concurso Sol del Pacifico</h1>
+  <p class="center">Tenemos el agrado de informar, que estamos pronto a lanzar oficialmente este sitio web, y lo haremos
+    con un entretenido concurso, donde el ganador recibirá un excelente premio, el cual será debidamente anunciado.
+    Pero, antes, queremos escuchar sus ideas sobre qué podríamos proponer como concurso. Agradecemos sus comentarios.
+  </p>
+  <h1 class="center">Ideas</h1>
+  {% if user.is_superuser %}
   <div class="row rowLogin">
     <div class="col-xs-5">
       <a href="{% url 'administrar_ideas' %}" class="btnA"><i class="material-icons md-16">create</i> Ir a aprobar
@@ -41,25 +41,25 @@
   </div>
   {% endif %}
   {% endif %}
-    <div class="row">
-        {% if Preguntas %}
-        {% for idea in Preguntas %}
-        <div class="col-xs-12">
-            <div class="idea">
-                <h1><i class="material-icons md-30">emoji_objects</i> {{idea.idea}}</h1>
-                <p><i class="material-icons md-20">person</i> {{idea.nombre}}</p>
-            </div>
-        </div>
-        {% endfor %}
-        {% else %}
-        <div class="col-xs-12 center">
-            <h2>Aun no hay ideas, ¿Se anima a crear la primera?</h2>
-        </div>
-        <div class="col-xs-12 center">
-            <a href="{% url 'nueva_idea' %}" class="btnA center">Crea una idea</a>
-        </div>
-        {% endif %}
+  <div class="row">
+    {% if Preguntas %}
+    {% for idea in Preguntas %}
+    <div class="col-xs-12">
+      <div class="idea">
+        <h1><i class="material-icons md-30">emoji_objects</i> {{idea.idea}}</h1>
+        <p><i class="material-icons md-20">person</i> {{idea.nombre}}</p>
+      </div>
     </div>
-    {% include 'include/pagination.html' %}
+    {% endfor %}
+    {% else %}
+    <div class="col-xs-12 center">
+      <h2>Aun no hay ideas, ¿Se anima a crear la primera?</h2>
+    </div>
+    <div class="col-xs-12 center">
+      <a href="{% url 'nueva_idea' %}" class="btnA center">Crea una idea</a>
+    </div>
+    {% endif %}
+  </div>
+  {% include 'include/pagination.html' %}
 </article>
 {% endblock %}
