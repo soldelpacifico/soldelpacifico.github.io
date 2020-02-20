@@ -496,6 +496,17 @@ button {
     font-size: 22px;
 }
 
+.quienesSomos h2 {
+    text-align: start;
+    margin: 20px 0;
+    font-size: 34px;
+    color: #ff9000;
+}
+
+.letraPersonal {
+    font-weight: 600;
+}
+
 @media (min-width: 991px) {
     #contHistSlid {
         margin-top: 122px;
