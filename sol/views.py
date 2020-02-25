@@ -170,7 +170,7 @@ def pregunta_new(request):
     return render(request, 'sol/new_pregunta.html', {'form':form})
 
 def pregunta_responder(request, pk):
-    if not request.user.is_authenticated:
+    if not request.user.is_superuser:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     pregunta = get_object_or_404(Pregunta, pk=pk)
     if request.method == "POST":
@@ -185,7 +185,7 @@ def pregunta_responder(request, pk):
     return render(request, 'sol/pregunta_responder.html', {'form':form,'pregunta':pregunta})
 
 def pregunta_eliminar(request, pk):
-    if not request.user.is_authenticated:
+    if not request.user.is_superuser:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     pregunta = get_object_or_404(Pregunta, pk=pk)
     pregunta.delete()
@@ -252,9 +252,18 @@ def administrar_ideas(request):
     return render(request, 'sol/idea/administrar_ideas.html', {"Ideas":Ideas})
 
 def idea_eliminar(request, pk):
-    if not request.user.is_authenticated:
+    if not request.user.is_superuser:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
-    pregunta = get_object_or_404(Pregunta, pk=pk)
-    pregunta.delete()
-    messages.success(request,'¡Pregunta eliminada exitosamente!')
-    return redirect('respPreguntas')
+    idea = get_object_or_404(Idea, pk=pk)
+    idea.delete()
+    messages.success(request,'¡Idea eliminada exitosamente!')
+    return redirect('administrar_ideas')
+
+def idea_aprobar(request, pk):
+    if not request.user.is_superuser:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    idea = get_object_or_404(Idea, pk=pk)
+    idea.publicada=True
+    idea.save()
+    messages.success(request,'¡Idea aprobada exitosamente!')
+    return redirect('administrar_ideas')

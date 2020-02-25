@@ -11,7 +11,7 @@
                 <h1><i class="material-icons md-30">emoji_objects</i> {{idea.idea}}</h1>
                 <p><i class="material-icons md-20">person</i> {{idea.nombre}}</p>
                 <p><i class="material-icons md-20">email</i> {{idea.email}}</p>
-                <a href="" class="btnA"><i class="material-icons md-20">done</i> Publicar idea</a><a href="" class="btnA"><i class="material-icons md-20">clear</i> Eliminar idea</a>
+                <a href="{% url 'aprobar_idea' pk=idea.pk %}" class="btnA"><i class="material-icons md-20">done</i> Publicar idea</a><a href="{% url 'eliminar_idea' pk=idea.pk %}" class="btnA"><i class="material-icons md-20">clear</i> Eliminar idea</a>
             </div>
         </div>
         {% endfor %}
