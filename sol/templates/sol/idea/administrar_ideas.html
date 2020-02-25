@@ -2,6 +2,16 @@
 
 {% block content %}
 <article class="ideas">
+    {% if messages %}
+  <ul class="mensajes">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+          {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}{% endif %}
+          {{ message }}
+      </li>
+      {% endfor %}
+  </ul>
+  {% endif %}
     <h1 class="center">Aprobación de ideas</h1>
     <div class="row">
         {% if Ideas %}
