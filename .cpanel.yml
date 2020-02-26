@@ -2,3 +2,4 @@ deployment:
   tasks:
     - python3 /home/soldelpa/djangoweb/manage.py makemigrations
     - python3 /home/soldelpa/djangoweb/manage.py migrate --run-syncdb
+    - python3 /home/soldelpa/djangoweb/manage.py runserver
